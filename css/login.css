@@ -12,14 +12,14 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(rgb(147, 1, 160), rgb(187, 184, 184));
+    background: linear-gradient(rgb(36, 150, 202), rgb(187, 184, 184));
     background-size: cover ;
     background-position: center;
     
 }
 .wrapper{
     width: 420px;
-    background-color: purple;
+    background-color: rgb(18, 133, 199);
     border: 2px solid rgba(255, 255,255, .2);
     backdrop-filter: blur(20px);
     box-shadow: 0 0 10px rgba(0, 0, 0,.2);

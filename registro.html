@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/registro.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+        <form action="">
+            <h1>Registro</h1>
+            <div class="input-box">
+                <label for="lang"> Tipo de documento:  </label>
+                <select name="documento" id="lang">
+                    <option value="CC">Cédula de ciudadanía</option>
+                    <option value="CE">Cédula de extranjería</option>
+                    <option value="DE">Documento de extranjería</option>
+                    <option value="PA">Pasaporte</option>
+                    <option value="RC">Registro Civil</option>
+                    <option value="TI">Tarjeta de identidad</option>
+                    <option value="PE">Permiso especial</option>
+                    <option value="CD">Carnet diplomático</option>
+                    <option value="SC">Salvoconducto</option>
+                    <option value="PPT">Permiso por Protección Temporal</option>
+                </select>
+            </div>
+            <div class="input-box">
+                <label for="lang"> Número de documento:  </label>
+                <input type="text" placeholder="Número de documento" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <div class="input-box  pt-4">
+                <label for="lang"> Ingrese su nombre completo:  </label>
+                <input type="text" placeholder="Nombres" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box pt-4">
+                <label for="lang"> Ingrese su apellido completo:  </label>
+                <input type="text" placeholder="Apellidos" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box pt-4">
+                <label for="lang"> Ingrese su correo electrónico:  </label>
+                <input type="email" placeholder="E-mail" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box pt-4">
+                <label for="lang"> Nombre de usuario:  </label>
+                <input type="text" placeholder="Usuario" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box pt-4">
+                <label for="lang"> Ingrese una contraseña:  </label>
+                <input type="password" placeholder="Contraseña" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <div class="input-box pt-4">
+                <label for="lang"> Confirme su contraseña  </label>
+                <input type="password" placeholder="Confirme su contraseña" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+           
+            
+
+
+
+            <button type="submit" class="btn">Login</button>
+
+        </form>
+    </div>
+    
+
+</body>
+</html>
