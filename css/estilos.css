@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Courgette&family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
+
+.colorg {
+    background-color: rgb(231, 226, 226);
+    height: 45vh;
+}
+
+.popo {
+    background-color: transparent;
+    margin-bottom: 20px;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.bolita {
+    background-color: aqua;
+    margin-top: 40px;
+    width: 30vh;
+    height: 60%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 34px;
+    margin-right: 44px;
+}
+
+.tamaño {
+    height: 15vh;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.fa-user {
+    margin-right: 10px;
+}
+
+.img-logo {
+    margin-right: 150px;
+}
+
+.texto {
+    color: black;
+}
+
+p {
+    margin-top: 20px;
+}
+
+.citas {
+    margin-left: 110px;
+    font-family: 'Courgette', cursive;
+    font-size: 30px;
+    color: black;
+}
+
+.recomendaciones {
+    margin-left: 38px;
+    font-family: 'Courgette', cursive;
+    font-size: 30px;
+    color: black;
+}
+
+.programas {
+    margin-left: 78px;
+    font-family: 'Courgette', cursive;
+    font-size: 30px;
+    color: black;
+}
+
+.profesionales {
+    margin-left: 65px;
+    font-family: 'Courgette', cursive;
+    font-size: 30px;
+    color: black;
+}
+
+.profesionales:hover,
+.programas:hover,
+.recomendaciones:hover,
+.citas:hover {
+    color: gray;
+}
+
+.fondoBlanco {
+    background-color: rgba(255, 255, 255, 0.651);
+}
+
+.fondoC {
+    background-color: rgba(150, 177, 179, 0.397);
+
+}
+
+.fondoAzul {
+    background-color: rgba(204, 7, 243, 0.788) !important;
+
+}
+
+.fondoF {
+    height: 250px;
+}
+
+.fondoClaro {
+    background-color: rgba(79, 80, 80, 0.699);
+}
+
+.fondoA {
+    background-color: rgba(160, 163, 165, 0.671);
+}
+
+.boton {
+    background: red;
+}
+
+.plan {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.cerdo {
+    height: 70px;
+    margin-top: 10px;
+}
+
+.xd {
+    margin-bottom: 20px;
+}
+
+.video {
+    width: 100%;
+    height: 88vh;
+
+}
+
+.gif {
+    width: 100%;
+    height: 100%;
+}
+
+.color1 {
+    background-color: rgb(4, 152, 189);
+}
+
+.color2 {
+    background-color: rgb(139, 7, 128);
+}
+
+.color3 {
+    background-color: blue;
+}
+
+.color4 {
+    background-color: rgb(116, 116, 116);
+}
+
+.login {
+    border-radius: 10px;
+    background-color: rgb(144, 208, 245);
+}
+
+.nav {
+    z-index: 100;
+}
+
+.mapa iframe {
+    width: 100%;
+}
+
+.fondoContacto {
+    background-color:  rgb(138, 162, 241);
+    height: 250px;
+    background-size: cover;
+}
+
+.icon {
+    display: inline-block;
+    font-size: 10px;
+    margin: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.445);
+    padding: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.icon:hover {
+    background-color: white;
+    color: #000;
+}
+
+.ola {
+    font-family: 'Borel', cursive;
+    font-size: 25px;
+}
+
+.card{
+    border-radius: 5%;
+    border: solid 3px black;
+}
+.transp{
+    background-color: transparent;
+}

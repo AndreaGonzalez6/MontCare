@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/all.css" />
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="css/estilos.css" />
+  <link rel="shortcut icon" href="imágenes/loguito.png" type="image/x-icon" />
+  <title>Centro Hospitalario MontCare</title>
+</head>
+
+<body>
+  <!-- navbar -->
+
+  <nav class="navbar navbar-expand-md bg-white nav position-sticky top-0">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="imágenes/logo.png" alt="MontCare" style="width: 19rem" class="img-logo" />
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link texto" href="#carouselExample">Inicio</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle texto" href="#" id="paquetesDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              ¿Quiénes somos?
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="paquetesDropdown">
+              <li>
+                <a class="dropdown-item texto" href="#">Nosotros</a>
+              </li>
+              <li>
+                <a class="dropdown-item texto" href="#">Misión</a>
+              </li>
+              <li>
+                <a class="dropdown-item texto" href="#">Visión</a>
+              </li>
+              <li>
+                <a class="dropdown-item texto" href="#">Profesionales</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link texto texto" href="#">Servicios</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle texto" href="#" id="elementosDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Planes
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="elementosDropdown">
+              <li>
+                <a class="dropdown-item texto" href="#">Básico</a>
+              </li>
+              <li>
+                <a class="dropdown-item texto" href="#">Profesional</a>
+              </li>
+              <li>
+                <a class="dropdown-item texto" href="#">Business</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link texto" href="#">Recomendaciones</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link texto" href="#">PQRS</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link texto" href="#">Contacto</a>
+          </li>
+        </ul>
+
+        <!-- Search form (visible on medium-sized screens and above) -->
+        <a href="login.html">
+          <button class="login">
+            <i class="fa-solid fa-user" style="color: #000000"></i> Iniciar la
+            sesión
+          </button>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Video -->
+  <div class="video">
+    <img src="imágenes/54ff724656bdb3b5eef034926bc65e61_1.gif" alt="" class="gif">
+  </div>
+
+  <!-- Circulitos -->
+  <div class="colorg">
+    <div class="container popo">
+      <div class="row">
+
+        <div class="col-md-3 col-lg-3">
+          <a href="login.html" style="text-decoration:none">
+            <div class="bolita color1">
+              <i class="tamaño iconos fa-solid fa-stethoscope" style="color: #ffffff"></i>
+            </div>
+            <p class="citas">Citas</p>
+          </a>
+        </div>
+
+        <div class="col-md-3 col-lg-3">
+          <a href="#" style="text-decoration:none">
+            <div class="bolita color2">
+              <i class="tamaño iconos fa-solid fa-heart-pulse" style="color: #ffffff"></i>
+            </div>
+            <p class="recomendaciones">Recomendaciones</p>
+          </a>
+        </div>
+
+        <div class="col-md-3 col-lg-3">
+          <a href="#" style="text-decoration:none">
+            <div class="bolita color3">
+              <i class="tamaño iconos fa-regular fa-clipboard" style="color: #ffffff"></i>
+            </div>
+            <p class="programas">Programas</p>
+          </a>
+        </div>
+
+        <div class="col-md-3 col-lg-3">
+          <a href="#" style="text-decoration:none">
+            <div class="bolita color4">
+              <i class="tamaño iconos fa-solid fa-user-doctor" style="color: #ffffff"></i>
+            </div>
+            <p class="profesionales">Profesionales</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Planes-->
+  <div id="planes" class="fondoPlan">
+    <div class="card-group bg3 p-5" id="secPaquetes">
+      <div class="card fondoClaro">
+        <div class="card-body fondoC text-center transp">
+          <p class="ola">BÁSICO</p>
+          <i class="fa-solid fa-piggy-bank fa-bounce cerdo" style="color: #e9cf3f;"></i>
+        </div>
+        <div class=" fondoBlanco text-center">
+          <p>7 Especialidades</p>
+        </div>
+        <div class="fondoC text-center">
+          <p>Pruebas y Tratamientos</p>
+        </div>
+        <div class="fondoBlanco text-center">
+          <p>Medicamentos</p>
+        </div>
+        <div class="fondoC text-center">
+          <p>Exámenes de laboratorio</p>
+        </div>
+        <div class="fondoBlanco text-center">
+          <p>Consultas Médicas</p>
+        </div>
+        <div class="card-bod fondoC text-center">
+          <p class="card-text">Chat <i class="fa-solid fa-x" style="color: #ed0707;"></i></p>
+          <a href="#">
+            <button type="button" class="btn btn-outline-dark xd" disabled>
+              <i class="fa-solid fa-circle-info" style="color: #000000;"></i> Más información
+            </button>
+          </a>
+          <a href="login.html">
+            <button type="button" class="btn btn-outline-dark xd" disabled>
+              <i class="fa-solid fa-cart-shopping" style="color: #000000;"></i> 29.90
+            </button>
+          </a>
+        </div>
+      </div>
+
+
+      <div class="card fondoA">
+        <div class="card-body fondoC text-center">
+          <p class="ola">PROFESIONAL</p>
+          <i class="fa-solid fa-money-bill-wave fa-fade cerdo" style="color: #38aa3e;"></i>
+        </div>
+        <div class=" fondoBlanco text-center">
+          <p>15 Especialidades</p>
+        </div>
+        <div class="fondoC text-center">
+          <p>Pruebas y Tratamientos+</i></p>
+        </div>
+        <div class="fondoBlanco text-center">
+          <p>Medicamentos+</p>
+        </div>
+        <div class="fondoC text-center">
+          <p>Exámenes de laboratorio+</p>
+        </div>
+        <div class="fondoBlanco text-center">
+          <p>Consultas Médicas+</p>
+        </div>
+        <div class="card-bod fondoC text-center">
+          <p class="card-text">Chat <i class="fa-solid fa-check" style="color: #35a31f;"></i></p>
+          <a href="#">
+            <button type="button" class="btn btn-outline-dark xd" disabled>
+              <i class="fa-solid fa-circle-info" style="color: #000000;"></i> Más información
+            </button>
+          </a>
+          <a href="login.html">
+            <button type="button" class="btn btn-outline-dark xd" disabled>
+              <i class="fa-solid fa-cart-shopping" style="color: #000000;"></i> $49.90
+            </button>
+          </a>
+        </div>
+      </div>
+
+
+      <div class="card fondoClaro">
+        <div class="card-body fondoC text-center transp">
+          <p class="ola">BUSINESS</p>
+          <i class="fa-regular fa-credit-card cerdo" style="color: #000000;"></i>
+        </div>
+        <div class=" fondoBlanco text-center">
+          <p>15 Especialidades</p>
+        </div>
+        <div class="fondoC text-center">
+          <p>Pruebas y Tratamientos++</p>
+        </div>
+        <div class="fondoBlanco text-center">
+          <p>Medicamentos++</p>
+        </div>
+        <div class="fondoC text-center">
+          <p>Exámenes de laboratorio++</p>
+        </div>
+        <div class="fondoBlanco text-center">
+          <p>Consultas Médicas++</p>
+        </div>
+        <div class="card-bod fondoC text-center">
+          <p class="card-text">Chat <i class="fa-solid fa-check" style="color: #35a31f;"></i></p>
+          <a href="#">
+            <button type="button" class="btn btn-outline-dark xd" disabled>
+              <i class="fa-solid fa-circle-info" style="color: #000000;"></i> Más información
+            </button>
+          </a>
+          <a href="login.html">
+            <button type="button" class="btn btn-outline-dark xd" disabled>
+              <i class="fa-solid fa-cart-shopping" style="color: #000000;"></i> $79.90
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- mapa-->
+  <div class="mapa container-fluid">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1012038.5073239644!2d-76.87803499835161!3d7.760587790236882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e5b1bdbcca8e949%3A0x4915ae745046fafe!2zTW9udGVsw61iYW5vLCBDw7NyZG9iYQ!5e0!3m2!1ses-419!2sco!4v1692743172174!5m2!1ses-419!2sco"
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <!-- contacto -->
+  <div class="row fondoContacto">
+
+    <div class="col-md-3 col-sm-6 pt-4">
+      <h5>DIRECCIÓN</h5>
+      <p>Barrio piñalito calle #11 carrera #11 -43</p>
+    </div>
+
+
+    <div class="col-md-3 col-sm-6 pt-4">
+      <h5>TELÉFONO</h5>
+      <p>604 463760</p>
+    </div>
+
+
+    <div class="col-md-3 col-sm-6 pt-4">
+      <h5>EMAIL</h5>
+      <p>CentroHospitalario@MontCare.com</p>
+    </div>
+
+
+    <div class="col-md-3 col-sm-6 pt-4">
+      <h5 class="text-center">SOCIAL</h5>
+      <div class="text-center text-white">
+        <i class="icon fab fa-facebook-f"></i>
+        <i class="icon fab fa-twitter"></i>
+        <i class="icon fab fa-instagram"></i>
+        <i class="icon fas fa-envelope"></i>
+      </div>
+    </div>
+  </div>
+  <!-- jQuery and Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+  <script src="js/all.js"></script>
+  <script src="js/bootstrap.js"></script>
+</body>
+
+</html>
