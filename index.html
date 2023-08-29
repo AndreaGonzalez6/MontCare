@@ -1,24 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/all.css" />
   <link rel="stylesheet" href="css/bootstrap.css" />
   <link rel="stylesheet" href="css/estilos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="shortcut icon" href="imágenes/loguito.png" type="image/x-icon" />
   <title>Centro Hospitalario MontCare</title>
 </head>
 
 <body>
-  <!-- navbar -->
+<!-- navbar -->
 
-  <nav class="navbar navbar-expand-md bg-white nav position-sticky top-0">
+  <nav class="navbar navbar-expand-lg bg-white nav sticky-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <img src="imágenes/logo.png" alt="MontCare" style="width: 19rem" class="img-logo" />
@@ -29,14 +28,14 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link texto" href="#carouselExample">Inicio</a>
           </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle texto" href="#" id="paquetesDropdown" role="button"
+            <a class="nav-link dropdown-toggle texto" href="#" id="quienesSomos" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">
               ¿Quiénes somos?
             </a>
@@ -90,13 +89,10 @@
             <a class="nav-link texto" href="#">Contacto</a>
           </li>
         </ul>
-
-        <!-- Search form (visible on medium-sized screens and above) -->
-        <a href="login.html">
+        <a href="login.html" class="ms-lg-3">
           <button class="login">
-            <i class="fa-solid fa-user" style="color: #000000"></i> Iniciar la
-            sesión
-          </button>
+            <img src="/imágenes/iniciar.png" alt="Imagen de Inicio de Sesión">Ingresar
+        </button>        
         </a>
       </div>
     </div>
@@ -108,157 +104,198 @@
   </div>
 
   <!-- Circulitos -->
-  <div class="colorg">
-    <div class="container popo">
-      <div class="row">
-
-        <div class="col-md-3 col-lg-3">
-          <a href="login.html" style="text-decoration:none">
-            <div class="bolita color1">
-              <i class="tamaño iconos fa-solid fa-stethoscope" style="color: #ffffff"></i>
-            </div>
-            <p class="citas">Citas</p>
-          </a>
-        </div>
-
-        <div class="col-md-3 col-lg-3">
-          <a href="#" style="text-decoration:none">
-            <div class="bolita color2">
-              <i class="tamaño iconos fa-solid fa-heart-pulse" style="color: #ffffff"></i>
-            </div>
-            <p class="recomendaciones">Recomendaciones</p>
-          </a>
-        </div>
-
-        <div class="col-md-3 col-lg-3">
-          <a href="#" style="text-decoration:none">
-            <div class="bolita color3">
-              <i class="tamaño iconos fa-regular fa-clipboard" style="color: #ffffff"></i>
-            </div>
-            <p class="programas">Programas</p>
-          </a>
-        </div>
-
-        <div class="col-md-3 col-lg-3">
-          <a href="#" style="text-decoration:none">
-            <div class="bolita color4">
-              <i class="tamaño iconos fa-solid fa-user-doctor" style="color: #ffffff"></i>
-            </div>
-            <p class="profesionales">Profesionales</p>
-          </a>
-        </div>
+  <div class="container colorg">
+    <div class="row forma">
+      <div class="col-lg-3">
+        <a href="login.html" class="text-decoration-none">
+          <div class="bolita color1">
+            <i class="tamaño iconos fa-solid fa-stethoscope" style="color: #ffffff"></i>
+          </div>
+          <p class="citas">Citas</p>
+        </a>
+      </div>
+      <div class="col-lg-3">
+        <a href="#" class="text-decoration-none">
+          <div class="bolita color2">
+            <i class="tamaño iconos fa-solid fa-heart-pulse" style="color: #ffffff"></i>
+          </div>
+          <p class="recomendaciones">Recomendaciones</p>
+        </a>
+      </div>
+      <div class="col-lg-3">
+        <a href="#" class="text-decoration-none">
+          <div class="bolita color3">
+            <i class="tamaño iconos fa-regular fa-clipboard" style="color: #ffffff"></i>
+          </div>
+          <p class="programas">Programas</p>
+        </a>
+      </div>
+      <div class="col-lg-3">
+        <a href="#" class="text-decoration-none">
+          <div class="bolita color4">
+            <i class="tamaño iconos fa-solid fa-user-doctor" style="color: #ffffff"></i>
+          </div>
+          <p class="profesionales">Profesionales</p>
+        </a>
       </div>
     </div>
   </div>
 
+    <!-- Profesiones -->
+    <div class="container-fluid profesiones">
+      <input type="radio" name="slider" class="d-none" id="s1" checked>
+      <input type="radio" name="slider" class="d-none" id="s2">
+      <input type="radio" name="slider" class="d-none" id="s3">
+      <input type="radio" name="slider" class="d-none" id="s4">
+      <input type="radio" name="slider" class="d-none" id="s5">
+  
+      <div class="cards">
+        <label for="s1" id="slide1">
+          <div class="card">
+            <div class="image">
+              <img src="imágenes/cardiologo3.jpg" alt="">
+              <div class="dots">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+            <div class="infos">
+              <span class="name">CARDIOLOGÍA</span>
+              <span class="lorem">Especialista en enfermedades del corazón y los vasos sanguíneos. Diagnostican y tratan afecciones como enfermedad coronaria, insuficiencia cardíaca, hipertensión y realizan procedimientos como cateterismos cardíacos.</span>
+            </div>
+            <a href="profesionales.html" href="#cardiologia" class="btn-contact">Especialistas</a>
+          </div>
+        </label>
+  
+        <label for="s2" id="slide2">
+          <div class="card">
+            <div class="image">
+              <img src="imágenes/radiologo.jpg" alt="">
+              <div class="dots">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+                <div class="dot3"></div>
+              </div>
+            </div>
+            <div class="infos">
+              <span class="name">RADIÓLOGO</span>
+              <span class="lorem">Interpreta imágenes médicas como radiografías, resonancias magnéticas y tomografías para diagnosticar afecciones internas.</span>
+            </div>
+            <a href="/contact" class="btn-contact">Especialistas</a>
+          </div>
+        </label>
+  
+        <label for="s3" id="slide3">
+          <div class="card">
+            <div class="image">
+              <img src="img/Black Toe Union.jpg" alt="">
+              <div class="dots">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+                <div class="dot3"></div>
+              </div>
+            </div>
+            <div class="infos">
+              <span class="name">Black Toe Union</span>
+              <span class="lorem">Lorem ipsum dolor, sit amet let kar adipiscing. Aenean vel velit sit ansd . Nullam
+                lorem. Nulla karma stellus</span>
+            </div>
+            <a href="/contact" class="btn-contact">details</a>
+            <div class="socials">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <i class="fa-regular fa-heart"></i>
+              <i class="fa-regular fa-bookmark"></i>
+              <i class="fa-solid fa-share-nodes"></i>
+            </div>
+          </div>
+        </label>
+  
+        <label for="s4" id="slide4">
+          <div class="card">
+            <div class="image">
+              <img src="img/Retro High Og.jpg" alt="">
+              <div class="dots">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+                <div class="dot3"></div>
+              </div>
+            </div>
+            <div class="infos">
+              <span class="name">Retro High Og</span>
+              <span class="lorem">Lorem ipsum dolor sit, sit amet elit. Aenean sit amet sit amet vel velit sit ansd. Nulla eu
+                sodales stellus</span>
+            </div>
+            <a href="/contact" class="btn-contact">details</a>
+            <div class="socials">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <i class="fa-regular fa-heart"></i>
+              <i class="fa-regular fa-bookmark"></i>
+              <i class="fa-solid fa-share-nodes"></i>
+            </div>
+          </div>
+        </label>
+  
+        <label for="s5" id="slide5">
+          <div class="card">
+            <div class="image">
+              <img src="img/Off-White x Air Jordan.jpg" alt="">
+              <div class="dots">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+                <div class="dot3"></div>
+              </div>
+            </div>
+            <div class="infos">
+              <span class="name">Off-White Air Jordan</span>
+              <span class="lorem">Lorem ipsum sit amet, sit amet elit. Aenean vel velit ansd . Nullam
+                lorem. Nulla eu
+                sodales stellus</span>
+            </div>
+            <a href="/contact" class="btn-contact">details</a>
+            <div class="socials">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <i class="fa-regular fa-heart"></i>
+              <i class="fa-regular fa-bookmark"></i>
+              <i class="fa-solid fa-share-nodes"></i>
+            </div>
+          </div>
+        </label>
+      </div>
+  
+    </div>
+  
+
+
+
   <!-- Planes-->
-  <div id="planes" class="fondoPlan">
-    <div class="card-group bg3 p-5" id="secPaquetes">
-      <div class="card fondoClaro">
-        <div class="card-body fondoC text-center transp">
-          <p class="ola">BÁSICO</p>
-          <i class="fa-solid fa-piggy-bank fa-bounce cerdo" style="color: #e9cf3f;"></i>
-        </div>
-        <div class=" fondoBlanco text-center">
-          <p>7 Especialidades</p>
-        </div>
-        <div class="fondoC text-center">
-          <p>Pruebas y Tratamientos</p>
-        </div>
-        <div class="fondoBlanco text-center">
-          <p>Medicamentos</p>
-        </div>
-        <div class="fondoC text-center">
-          <p>Exámenes de laboratorio</p>
-        </div>
-        <div class="fondoBlanco text-center">
-          <p>Consultas Médicas</p>
-        </div>
-        <div class="card-bod fondoC text-center">
-          <p class="card-text">Chat <i class="fa-solid fa-x" style="color: #ed0707;"></i></p>
-          <a href="#">
-            <button type="button" class="btn btn-outline-dark xd" disabled>
-              <i class="fa-solid fa-circle-info" style="color: #000000;"></i> Más información
-            </button>
-          </a>
-          <a href="login.html">
-            <button type="button" class="btn btn-outline-dark xd" disabled>
-              <i class="fa-solid fa-cart-shopping" style="color: #000000;"></i> 29.90
-            </button>
-          </a>
-        </div>
+  <div class="contenedor_planes">
+    <div class="planes"> 
+      <div class="planes_header">
+        <h2>BÁSICO</h2>
+        
       </div>
-
-
-      <div class="card fondoA">
-        <div class="card-body fondoC text-center">
-          <p class="ola">PROFESIONAL</p>
-          <i class="fa-solid fa-money-bill-wave fa-fade cerdo" style="color: #38aa3e;"></i>
-        </div>
-        <div class=" fondoBlanco text-center">
-          <p>15 Especialidades</p>
-        </div>
-        <div class="fondoC text-center">
-          <p>Pruebas y Tratamientos+</i></p>
-        </div>
-        <div class="fondoBlanco text-center">
-          <p>Medicamentos+</p>
-        </div>
-        <div class="fondoC text-center">
-          <p>Exámenes de laboratorio+</p>
-        </div>
-        <div class="fondoBlanco text-center">
-          <p>Consultas Médicas+</p>
-        </div>
-        <div class="card-bod fondoC text-center">
-          <p class="card-text">Chat <i class="fa-solid fa-check" style="color: #35a31f;"></i></p>
-          <a href="#">
-            <button type="button" class="btn btn-outline-dark xd" disabled>
-              <i class="fa-solid fa-circle-info" style="color: #000000;"></i> Más información
-            </button>
-          </a>
-          <a href="login.html">
-            <button type="button" class="btn btn-outline-dark xd" disabled>
-              <i class="fa-solid fa-cart-shopping" style="color: #000000;"></i> $49.90
-            </button>
-          </a>
-        </div>
+      <div class="colita_header"></div>
+      <div class="contenedor_price">
+        <p class="price">110.000 COP</p>
       </div>
-
-
-      <div class="card fondoClaro">
-        <div class="card-body fondoC text-center transp">
-          <p class="ola">BUSINESS</p>
-          <i class="fa-regular fa-credit-card cerdo" style="color: #000000;"></i>
-        </div>
-        <div class=" fondoBlanco text-center">
-          <p>15 Especialidades</p>
-        </div>
-        <div class="fondoC text-center">
-          <p>Pruebas y Tratamientos++</p>
-        </div>
-        <div class="fondoBlanco text-center">
-          <p>Medicamentos++</p>
-        </div>
-        <div class="fondoC text-center">
-          <p>Exámenes de laboratorio++</p>
-        </div>
-        <div class="fondoBlanco text-center">
-          <p>Consultas Médicas++</p>
-        </div>
-        <div class="card-bod fondoC text-center">
-          <p class="card-text">Chat <i class="fa-solid fa-check" style="color: #35a31f;"></i></p>
-          <a href="#">
-            <button type="button" class="btn btn-outline-dark xd" disabled>
-              <i class="fa-solid fa-circle-info" style="color: #000000;"></i> Más información
-            </button>
-          </a>
-          <a href="login.html">
-            <button type="button" class="btn btn-outline-dark xd" disabled>
-              <i class="fa-solid fa-cart-shopping" style="color: #000000;"></i> $79.90
-            </button>
-          </a>
-        </div>
+    </div>
+    <div class="planes"> 
+      <div class="planes_header" id="planes_p">
+        <h2>PROFESIONAL</h2>
+      </div>
+      <div class="colita_header"></div>
+      <div class="contenedor_price">
+        <p class="price">200.000 COP</p>
+      </div>
+    </div>
+    <div class="planes"> 
+      <div class="planes_header" id="planes_e">
+        <h2>EMPRESARIAL</h2>
+      </div>
+      <div class="colita_header"></div>
+      <div class="contenedor_price">
+        <p class="price">310.000 COP</p>
       </div>
     </div>
   </div>
@@ -270,41 +307,35 @@
       width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
-  <!-- contacto -->
-  <div class="row fondoContacto">
-
-    <div class="col-md-3 col-sm-6 pt-4 centrar">
-      <h5>DIRECCIÓN</h5>
-      <p>Barrio piñalito calle #11 carrera #11 -43</p>
+  <!--Contacto-->
+  <div class="container-fluid fondoContacto">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Información de Contacto</h2>
+            <p><strong>Dirección:</strong> Barrio piñalito calle 11 carrera #11-43<br> Montelíbano-Córdoba <br> <strong>Código postal:</strong> 234001</p>
+            <p><strong>Teléfono:</strong> 604-342-3954</p>
+            <p><strong>Email: </strong> CentroHospitalario@MontCare.com</p>
+            <p><strong>Horario de atención:</strong> Lunes a Viernes: 7:00 AM - 5:00 PM<br> Sábados: 7:00 AM - 2:00 PM</p>
+            <p><strong>Redes Sociales:</strong><br>
+                <a href="#" target="_blank"><i class="icon1 fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="icon2 fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="icon3 fab fa-instagram"></i></a>
+            </p>
+        </div>
+        <div class="col-md-6">
+            <h2>Números de Contacto</h2>
+            <p><strong>Emergencias:</strong> 911</p>
+            <p><strong>Citas Médicas:</strong> 604-386-4391</p>
+            <p><strong>Laboratorio:</strong> 604-234-2813</p>
+        </div>
     </div>
-
-
-    <div class="col-md-3 col-sm-6 pt-4 centrar">
-      <h5>TELÉFONO</h5>
-      <p>604 463760</p>
-    </div>
-
-
-    <div class="col-md-3 col-sm-6 pt-4 centrar">
-      <h5>EMAIL</h5>
-      <p>CentroHospitalario@MontCare.com</p>
-    </div>
-
-
-    <div class="col-md-3 col-sm-6 pt-4 centrar">
-      <h5 class="text-center">SOCIAL</h5>
-      <div class="text-center text-white">
-        <i class="icon fab fa-facebook-f"></i>
-        <i class="icon fab fa-twitter"></i>
-        <i class="icon fab fa-instagram"></i>
-        <i class="icon fas fa-envelope"></i>
-      </div>
-    </div>
-  </div>
+</div>  
   <!-- jQuery and Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/all.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/javaScript.js"></script>
 </body>
 
 </html>
