@@ -102,7 +102,7 @@ section .card .image img{
 }
 
 .card .button button{
-    background-color: aquamarine;
+    background-color: aqua;
     outline: none;
     border: none;
     color: black;
