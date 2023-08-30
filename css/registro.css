@@ -1,115 +1,214 @@
-/*-----------------Login-------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 *{
-    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
 }
+
 body{
+    background-image: url(../imágenes/practica.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+main{
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.contenedor_todo{
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+.caja_trasera{
+    width: 100%;
+    padding: 10px 20px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(rgb(36, 150, 202), rgb(187, 184, 184));
-    background-size: cover ;
-    background-position: center;
-    
-}
-.wrapper{
-    width: 420px;
-    background-color: rgb(18, 133, 199);
-    border: 2px solid rgba(255, 255,255, .2);
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 10px rgba(0, 0, 0,.2);
-    color: white;
-    border-radius: 10px;
-    padding: 30px 40px;
-}
-.wrapper h1{
-    font-size: 36px;
-    text-align: center;
-}
-.wrapper .input-box{
-    position: relative;
-    width: 100%;
-    height: 50px;
-    background-color:transparent;
-    margin: 30px 0px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 128, 255, 0.5);
 
 }
-.input-box input{
-    width: 100%;
-    height: 100%;
+
+.caja_trasera div{
+    margin: 100px 40px;
+    color: white;
+    transition: all 500ms;
+}
+
+
+.caja_trasera div p,
+.caja_trasera button{
+    margin-top: 30px;
+}
+
+.caja_trasera div h3{
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.caja_trasera div p{
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.caja_trasera button{
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    font-size: 14px;
     background: transparent;
-    border: none;
-    outline: none;
-    border: 2px solid rgba(255, 255, 255, .2);
-    border-radius: 40px;
-    font-size: 16px;
-    color: white;
-    padding: 20px 45px 20px 20px;
-
-}
-
-.input-box input::placeholder {
-    color: white;
-
-}
-.input-box i{
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 20px;
-
-}
-.wrapper .remember-forgot{
-display: flex;
-justify-content: space-between;
-font-size: 14.5px;
-margin: -15px 0 15px;
-}
-.remember-forgot label input {
-    accent-color: white;
-    margin-right: 3px;
-
-}
-.remember-forgot a {
-    color: white;
-    text-decoration: none;
-
-}
-.remember-forgot a:hover {
-    text-decoration: underline;
-
-}
-.wrapper .btn{
-    width: 100%;
-    height: 45px;
-    background: white;
-    border: none;
-    outline: none;
-    border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    font-weight: 600; 
     cursor: pointer;
-    font-size: 16px;
-    color: #333;
-    font-weight: 600;
-}
-.wrapper .register-link{
-    font-size: 14.5px;
-    text-align: center;
-    margin: 20px 0 15px;
-
-}
-.register-link p a {
     color: white;
-    text-decoration: none;
-    font-weight: 600;
+    outline: none;
+    transition: all 300ms;
 }
-.register-link p a:hover{
-    text-decoration: underline;
 
+.caja_trasera button:hover{
+    background: #fff;
+    color: #46A2FD;
 }
+
+/*Formularios*/
+
+.contenedor_login_register{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+    top: -185px;
+    left: 10px;
+
+    /*La transición va después del código JS*/
+    transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+.contenedor_login_register form{
+    width: 100%;
+    padding: 80px 20px;
+    background: white;
+    position: absolute;
+    border-radius: 20px;
+}
+
+.contenedor_login_register > .formulario_register{
+    padding: 15px 20px;
+    margin-top: 140px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.contenedor_login_register form h2{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #46A2FD;
+}
+
+.contenedor_login_register form input, .ola{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #F2F2F2;
+    font-size: 16px;
+    outline: none;
+}
+
+#format{
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    color: rgb(94, 95, 96);
+}
+.date{
+    color: rgb(94, 95, 96);
+}
+
+.ola2{
+    color: black;
+}
+
+.contenedor_login_register form button{
+    padding: 10px 40px;
+    margin-top: 16px;
+    border: none;
+    font-size: 14px;
+    background: #46A2FD;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+}
+
+.formulario_login{
+    opacity: 1;
+    display: block;
+}
+.formulario_register{
+    display: none;
+}
+
+.caja_trasera_register{
+    margin: 80px 40px;
+}
+
+#format{
+    width: 100%;
+}
+.formulario_login{
+    text-align: center;
+}
+
+
+/* Responsive */ 
+
+@media screen and (max-width: 850px){
+
+    main{
+        margin-top: 50px;
+    }
+
+    .caja_trasera{
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .caja_trasera div{
+        margin: 0px;
+        position: absolute;
+    }
+
+
+    /*Formularios*/
+
+    .contenedor_login_register{
+        top: -10px;
+        left: -5px;
+        margin: auto;
+    }
+
+    .contenedor_login_register form{
+        position: relative;
+    }
+
+    .contenedor_login_register > .formulario_register{
+        padding: 15px 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}
+
