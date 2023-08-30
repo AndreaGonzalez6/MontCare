@@ -39,7 +39,7 @@ section .card .image{
     width: 140px;
     border-radius: 50%;
     padding: 3px;
-    background: aquamarine;
+    background: aqua;
 }
 
 section .card .image img{
@@ -62,7 +62,7 @@ section .card .image img{
     position: absolute;
     height: 40%;
     width: 100%;
-    background-color: aquamarine;
+    background-color: aqua;
     border-radius: 20px 20px 0 0;
 }
 
@@ -136,3 +136,4 @@ section .card .image img{
     opacity: 1;
     color: rgb(8, 78, 78);
 }
+
