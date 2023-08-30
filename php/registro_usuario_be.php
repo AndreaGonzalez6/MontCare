@@ -33,7 +33,7 @@ if(mysqli_num_rows($verificar_correo) > 0){
 }
 
 //Verificar que el usuario no se repita
-$verificar_usuario = mysqli_query($conexion, "SELECT * FROM usuarios WHERE usuario='$usuario' ");
+/*$verificar_usuario = mysqli_query($conexion, "SELECT * FROM usuarios WHERE usuario='$usuario' ");
 
 if(mysqli_num_rows($verificar_usuario) > 0){
     echo '
@@ -43,10 +43,10 @@ if(mysqli_num_rows($verificar_usuario) > 0){
        </script>
     ';
     exit();
-}
+}*/
 
 //Verificar que el número de documento no se repita
-$verificar_documento = mysqli_query($conexion, "SELECT * FROM usuarios WHERE usuario='$usuario' ");
+/*$verificar_documento = mysqli_query($conexion, "SELECT * FROM usuarios WHERE usuario='$usuario' ");
 
 if(mysqli_num_rows($verificar_documento) > 0){
     echo '
@@ -56,7 +56,7 @@ if(mysqli_num_rows($verificar_documento) > 0){
        </script>
     ';
     exit();
-}
+}*/
 
 
 $ejecutar = mysqli_query($conexion, $query);
