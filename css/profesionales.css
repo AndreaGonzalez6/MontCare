@@ -1,6 +1,9 @@
 /* Google Font Import - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+
+
+
 *{
     margin: 0;
     padding: 0;
@@ -31,7 +34,16 @@ body{
     display: flex;
     align-items: center;
 }
-.swiper{
+/* Estilos para pantallas pequeñas (menos de 768px de ancho) */
+@media (max-width: 767px) {
+    .carousel-item.row .col {
+        width: 100%;
+        flex: none; /* Evita que las columnas se ajusten automáticamente */
+        margin-right: 0; /* Elimina el margen derecho entre las columnas */
+    }
+}
+
+.sw{
     width: 950px;
 }
 section .card .image{
