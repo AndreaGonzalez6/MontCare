@@ -83,6 +83,54 @@ p {
     color: rgb(56, 12, 250);
 }
 
+/* Urgencias */
+.container1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F3F3F3;
+}
+
+.left {
+    position: absolute;
+    background-color: white;
+    padding: 20px;
+    z-index: 1;
+    max-width: 50%;
+    margin-right: 458px;
+}
+
+.right img {
+    margin-left: 500px;
+    width: 800px;
+}
+
+.col-6 ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 80px;
+    font-size: 20px;
+}
+.col-6 li {
+    cursor: pointer;
+}
+
+.col-6 li a {
+    color: inherit; 
+}
+
+.col-6 li::after {
+    content: "\2192"; /* Código de flecha hacia la derecha en Unicode */
+    width: 6px;
+    float: right;
+    margin-right: 40px;
+    transition: margin-right 0.2s;
+}
+.col-6 li:hover::after {
+    margin-right: 20px; /* Cambiar el margen derecho al pasar el cursor */
+}
+
 
 /* planes */
 .contenedor_planes{
