@@ -13,7 +13,6 @@
 
 body{
     height: 100vh;
-    display: flex;
     align-items: center;
     justify-content: center;
     background: #f2f2f2;
@@ -26,6 +25,7 @@ body{
     padding: 30px;
     font-size: 40px;
     font-weight: 600;
+    margin-top: 30px;
 }
 .container{
     position: relative;
@@ -43,9 +43,7 @@ body{
     }
 }
 
-.sw{
-    width: 950px;
-}
+
 section .card .image{
     height: 140px;
     width: 140px;
@@ -168,4 +166,24 @@ section .card .image img{
     border: 0;
     opacity: 0.5;
     transition: opacity 0.15s ease;
+}
+
+
+.carousel-indicators [data-bs-target] {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 34px;
+    height: 6px;
+    padding: 0;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: aqua;
+    background-clip: padding-box;
+    border: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    opacity: 0.5;
+    transition: opacity 0.6s ease;
 }
