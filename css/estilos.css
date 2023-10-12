@@ -303,8 +303,8 @@ p {
 /* Contacto y mapa */
 
 .fondoContacto {
-    height: 50vh;
     background-color: rgb(22, 22, 22);
+    padding-bottom: 15px;
 }
 
 .color-blanco {
@@ -318,8 +318,38 @@ p {
     padding-bottom: 0;
     margin-top: 10px;
     padding-top: 10px;
+    transition: .2s;
 }
 
+.wpp, .ig, .fb, .tk, .tw{
+    color:  #797979;
+}
+  
+  .redes a:hover .wpp {
+    transform: translateY(-3px) scale(1.2);
+    color: #25D366; 
+  }
+  
+  .redes a:hover .ig {
+    transform: translateY(-3px) scale(1.2);
+    color: #E4405F; 
+  }
+  
+  .redes a:hover .tw {
+    transform: translateY(-3px) scale(1.2);
+    color: #1DA1F2; 
+  }
+  
+  .redes a:hover .fb {
+    transform: translateY(-3px) scale(1.2);
+    color: #1877F2; 
+  }
+  
+  .redes a:hover .tk {
+    transform: translateY(-3px) scale(1.2);
+    color: #000; 
+  }
+  
 .fila{
     margin-left: 15px;
     margin-right: 0px;
@@ -331,6 +361,7 @@ p {
 }
 
 .titulo{
+    text-align: center;
     font-family: 'Bebas Neue', sans-serif;
     margin-top: 10px;
 }
@@ -352,7 +383,7 @@ p {
     width: 100%;
     height: 50vh;
 }
-    
+
 .ayno{
     margin-right: 0;
     margin-left: 50px;
@@ -428,12 +459,6 @@ a{
 
     text-decoration: none;
 }
-
-input {
-
-    display: none;
-}
-
 
 
 .cards label {
