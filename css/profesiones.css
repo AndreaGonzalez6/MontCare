@@ -120,8 +120,7 @@ input {
 }
 
 .infos .name{
-
-    font-size: 28px;
+    font-size: 25px;
     color: rgb(110, 190, 243);
     letter-spacing: 3px;
     margin-top: 20px;
@@ -129,7 +128,14 @@ input {
     padding-left: 25%;
     transition: all .6s ease;
 }
+.infos .name1{
 
+    font-size: 25px;
+    color: rgb(110, 190, 243);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: all .6s ease;
+}
 .infos .lorem{
 
     font-size: 16px;
