@@ -882,5 +882,17 @@ header h2 {
 /*Recomendaciones*/
 #recomendaciones{
     text-align: center;
-   
+}
+
+ /* footer */
+ footer {
+    background-color: #1E4BAF;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 10px 0;
 }
