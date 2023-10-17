@@ -14,6 +14,9 @@ $usuario = $_POST['usuario'];
 $contrasena = $_POST['contrasena'];
 $confirm_contrasena = $_POST['confirm_contrasena'];
 
+//Encriptamiento de contraseña
+$contrasena = hash('sha512', $contrasena);
+$confirm_contrasena = hash('sha512', $confirm_contrasena);
 
 $query = "INSERT INTO usuarios(tipo_id, num_id, nombre_completo, apellidos, fecha_nacimiento, email, telefono, usuario, contrasena, confirm_contra) 
 VALUES('$tipo_documento', '$numero_documento', '$nombre_completo', '$apellidos', '$fecha_nacimiento', '$correo', '$telefono', '$usuario', '$contrasena', '$confirm_contrasena')";
@@ -33,31 +36,42 @@ if(mysqli_num_rows($verificar_correo) > 0){
 }
 
 //Verificar que el usuario no se repita
-/*$verificar_usuario = mysqli_query($conexion, "SELECT * FROM usuarios WHERE usuario='$usuario' ");
+$verificar_usuario = mysqli_query($conexion, "SELECT * FROM usuarios WHERE usuario='$usuario' ");
 
 if(mysqli_num_rows($verificar_usuario) > 0){
     echo '
        <script> 
-          alert("Este correo usuario ya está registrado, intente con otro diferente");
+          alert("Este usuario ya está en uso, intente con otro diferente");
           window.location = "../index.php";
        </script>
     ';
     exit();
-}*/
+}
 
 //Verificar que el número de documento no se repita
-/*$verificar_documento = mysqli_query($conexion, "SELECT * FROM usuarios WHERE usuario='$usuario' ");
+$verificar_documento = mysqli_query($conexion, "SELECT * FROM usuarios WHERE num_id='$numero_documento' ");
 
 if(mysqli_num_rows($verificar_documento) > 0){
     echo '
        <script> 
-          alert("Este correo usuario ya está registrado, intente con otro diferente");
+          alert("Este número de documento ya está registrado, intente con otro diferente");
           window.location = "../index.php";
        </script>
     ';
     exit();
-}*/
+}
 
+//Verificar que la contraseña sea la misma
+
+if ($contrasena !== $confirm_contrasena) {
+    echo '
+       <script> 
+          alert("Las contraseñas no coinciden");
+          window.location = "../index.php";
+       </script>
+    ';
+    exit();
+}
 
 $ejecutar = mysqli_query($conexion, $query);
 
@@ -80,4 +94,5 @@ if($ejecutar){
 mysqli_close($conexion);
 
 ?>
+
 
