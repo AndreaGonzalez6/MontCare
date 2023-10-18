@@ -204,8 +204,14 @@ p {
 }
 .price{
     color: rgb(255, 255, 255);
-    font-size: 35px;
+    font-size: 25px;
     font-family: 'Mooli', sans-serif;
+}
+.parrafos-planes{
+    height: 13%;
+}
+.btn-planes{
+ margin-left: 5%;
 }
 .contenedor_price{
     display: flex;
