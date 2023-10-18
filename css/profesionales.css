@@ -45,8 +45,9 @@ p{
     display: flex;
     align-items: center;
 }
-.modal{
-    z-index: 1;
+
+.modal-backdrop{
+    z-index: none;
 }
 /* Estilos para pantallas pequeñas (menos de 768px de ancho) */
 @media (max-width: 767px) {
@@ -96,7 +97,7 @@ section .card .image img{
     align-items: center;
     padding: 30px;
     position: relative;
-    z-index: 100;
+   
 }
 
 
