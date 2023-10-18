@@ -24,8 +24,8 @@
     <form action="../functions.php" method="POST">
 
     <img src="../../img/logo.png" alt="">
-    <h2>Medical PC</h2>
-    <h1 class="l">INICIAR SESION</h1>
+    <h2>ADMINISTRADOR</h2>
+    <h1 class="l">INICIAR SESIÓN</h1>
    
     <div class="input-div nit">
     <div class="i">
