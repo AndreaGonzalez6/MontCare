@@ -45,6 +45,9 @@ p{
     display: flex;
     align-items: center;
 }
+.modal{
+    z-index: 1;
+}
 /* Estilos para pantallas pequeñas (menos de 768px de ancho) */
 @media (max-width: 767px) {
     .carousel-item.row .col {
