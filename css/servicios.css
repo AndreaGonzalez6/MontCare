@@ -16,7 +16,6 @@ body {
     position: relative;
 
 }
-
 .wrapper {
     perspective: 900px;
     margin-bottom: 20px;
@@ -33,7 +32,6 @@ body {
 }
 .front{
     display: flex;
-    
     align-items: flex-end;
     justify-content: center;
     
@@ -47,7 +45,7 @@ body {
     backface-visibility: hidden;
 }
 
-.back {
+.back{
     transform: rotateY(180deg);
     position: absolute;
     border-radius: 30px;
@@ -55,11 +53,11 @@ body {
     background: #fff;
 }
 
-.content, .especial {
+.content {
     padding-top: 5%;
 }
 
-.content h2, .especial h2 {
+.content h2{
     font-size: 35px;
     margin: 0;
     font-weight: 300;
@@ -72,12 +70,6 @@ body {
     margin: 0;
 }
 
-.especial p {
-    padding-top: 10px;
-    font-size: 16.5px;
-    font-family: poppins;
-    margin: 0;
-}
 
 /* Imágenes */
 
@@ -94,7 +86,6 @@ body {
 
 .front1 {
     background-image: url(../imágenes/cardiologia.png) ;
-    
 }
 .front2 {
     background-image: url(../imágenes/radiologia.jpg);
@@ -152,82 +143,39 @@ body {
     z-index: 1; 
 }
 
-.front1 h2{
-    color: transparent;
-    
-}
 
-.front1 p{
+.front1 p, .front2 p, .front4 p, .front5 p, .front6 p, .front7 p, .front8 p,
+.front9 p, .front11 p, .front12 p, .front13 p, .front14 p, .front15 p{
     justify-content: center;
     align-items: center;
     display: flex;
     text-align: center;
     height: 45px;
     width: 92%;
-    
-    
     font-size: 32px;
     font-weight: 500;
     color: rgb(77, 73, 73);
     background-color: rgba(255, 247, 247, 0.541);
     border-radius: 2vh;
-    
 }
 
-.front2 h2{
-    color: transparent;
-    padding-bottom: 150px;
-}
-
-.front2 p{
-    height: 45px;
-    width: 100%;
-    padding-left: 18px;
+.front3 p, .front10 p{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    height: 80px;
+    width: 92%;
     font-size: 32px;
     font-weight: 500;
-    color: rgb(255, 255, 255);
+    color: rgb(77, 73, 73);
+    background-color: rgba(255, 247, 247, 0.541);
+    border-radius: 2vh;
 }
 
-.front3 h2{
-    color: transparent;
-    padding-bottom: 120px;
-}
 
-.front3 p{
-    height: 45px;
-    width: 100%;
-    font-size: 24px;
-    font-weight: 500;
-    color: rgb(255, 255, 255);
-}
 
-.front4 h2{
-    color: transparent;
-    padding-bottom: 150px;
-}
 
-.front4 p{
-    height: 45px;
-    width: 100%;
-    padding-left: 30px;
-    font-size: 32px;
-    font-weight: 500;
-    color: rgb(255, 255, 255);
-}
-
-.front5 h2{
-    color: transparent;
-    padding-bottom: 150px;
-}
-
-.front5 p{
-    height: 45px;
-    width: 100%;
-    padding-left: 2px;
-    font-size: 32px;
-    font-weight: 500;
-    color: rgb(255, 255, 255);
-}
 
 
 
