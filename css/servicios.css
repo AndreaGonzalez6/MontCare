@@ -1,6 +1,6 @@
 body {
     height: 100vh;
-    background: #e69898 !important;
+    background: #98e1e6 !important;
 }
 
 .titulo {
@@ -31,7 +31,13 @@ body {
 .wrapper:hover .single-card {
     transform: rotateY(180deg);
 }
-
+.front{
+    display: flex;
+    
+    align-items: flex-end;
+    justify-content: center;
+    
+}
 .front,
 .back {
     width: 320px;
@@ -83,10 +89,12 @@ body {
     border-radius: 50px;
     background-size: cover;
     background-position: center center;
+    background-color: rgba(240, 255, 255, 0.616);
 }
 
 .front1 {
     background-image: url(../imágenes/cardiologia.png) ;
+    
 }
 .front2 {
     background-image: url(../imágenes/radiologia.jpg);
@@ -140,22 +148,30 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 50px;
-    background-color: rgba(0, 0, 0, 0.3); 
+    background-color: rgba(0, 0, 0, 0.2); 
     z-index: 1; 
 }
 
 .front1 h2{
     color: transparent;
-    padding-bottom: 155px;
+    
 }
 
 .front1 p{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
     height: 45px;
-    width: 100%;
-    padding-right: 18px;
+    width: 92%;
+    
+    
     font-size: 32px;
     font-weight: 500;
-    color: rgb(255, 255, 255);
+    color: rgb(77, 73, 73);
+    background-color: rgba(255, 247, 247, 0.541);
+    border-radius: 2vh;
+    
 }
 
 .front2 h2{
