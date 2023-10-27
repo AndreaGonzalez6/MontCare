@@ -1,0 +1,181 @@
+body {
+    height: 100vh;
+    background: #98e1e6 !important;
+}
+
+.titulo {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.wrapper,
+.single-card {
+    height: 450px;
+    max-width: 310px;
+    margin: auto;
+    position: relative;
+
+}
+.wrapper {
+    perspective: 900px;
+    margin-bottom: 20px;
+}
+
+.single-card {
+    text-align: center;
+    transition: all 1.5s cubic-bezier(0.7, -.05, 0.3, 1.8);
+    transform-style: preserve-3d;
+}
+
+.wrapper:hover .single-card {
+    transform: rotateY(180deg);
+}
+.front{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    
+}
+.front,
+.back {
+    width: 320px;
+    position: relative;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+}
+
+.back{
+    transform: rotateY(180deg);
+    position: absolute;
+    border-radius: 30px;
+    height: 450px;
+    background: #fff;
+}
+
+.content {
+    padding-top: 5%;
+}
+
+.content h2{
+    font-size: 35px;
+    margin: 0;
+    font-weight: 300;
+}
+
+.content p {
+    padding-top: 10px;
+    font-size: 18px;
+    font-family: poppins;
+    margin: 0;
+}
+
+
+/* Imágenes */
+
+.front1, .front2, .front3, .front4, .front5, .front6, .front7, .front8,
+.front9, .front10, .front11, .front12, .front13, .front14, .front15 {
+    cursor: pointer;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 50px;
+    background-size: cover;
+    background-position: center center;
+    background-color: rgba(240, 255, 255, 0.616);
+}
+
+.front1 {
+    background-image: url(../imágenes/cardiologia.png) ;
+}
+.front2 {
+    background-image: url(../imágenes/radiologia.jpg);
+}
+.front3 {
+    background-image: url(../imágenes/ginecologia.jpg);
+}
+.front4 {
+    background-image: url(../imágenes/dermatologia.jpg);
+}
+.front5 {
+    background-image: url(../imágenes/pediatria.jpg)
+}
+.front6 {
+    background-image: url(../imágenes/nefrologia.jpg);
+}
+.front7 {
+    background-image: url(../imágenes/neumologia.jpg);
+}
+.front8 {
+    background-image: url(../imágenes/oncologia.jpg);
+}
+.front9 {
+    background-image: url(../imágenes/otorrino.jpg);
+}
+.front10 {
+    background-image: url(../imágenes/traumatologiaa.jpg);
+}
+.front11 {
+    background-image: url(../imágenes/neurologia.jpg);
+}
+.front12 {
+    background-image: url(../imágenes/neurocirugia.jpg);
+}
+.front13 {
+    background-image: url(../imágenes/cirugia.jpg);
+}
+.front14 {
+    background-image: url(../imágenes/fisioterapia.jpg);
+}
+.front15 {
+    background-image: url(../imágenes/urologia.jpg);
+}
+
+.front1::before, .front2::before, .front3::before, .front4::before, .front5::before, .front6::before, .front7::before, .front8::before, 
+.front9::before, .front10::before, .front11::before, .front12::before, .front13::before, .front14::before, .front15::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.2); 
+    z-index: 1; 
+}
+
+
+.front1 p, .front2 p, .front4 p, .front5 p, .front6 p, .front7 p, .front8 p,
+.front9 p, .front11 p, .front12 p, .front13 p, .front14 p, .front15 p{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    height: 45px;
+    width: 92%;
+    font-size: 32px;
+    font-weight: 500;
+    color: rgb(77, 73, 73);
+    background-color: rgba(255, 247, 247, 0.541);
+    border-radius: 2vh;
+}
+
+.front3 p, .front10 p{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    height: 80px;
+    width: 92%;
+    font-size: 32px;
+    font-weight: 500;
+    color: rgb(77, 73, 73);
+    background-color: rgba(255, 247, 247, 0.541);
+    border-radius: 2vh;
+}
+
+
+
+
+
+
+
