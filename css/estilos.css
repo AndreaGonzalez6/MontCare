@@ -478,6 +478,7 @@ input:focus, textarea:focus {
     height: 100%;
 }
 
+
 .profesiones {
     display: flex;
     flex-direction: column; /* Cambia la dirección de flex a columna */
