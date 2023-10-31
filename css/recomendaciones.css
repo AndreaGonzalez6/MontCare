@@ -86,6 +86,9 @@ p{
     align-items: center;
     margin-left: 2%;
 }
+.clickeable:hover{
+    color: rgb(15, 114, 167);
+}
 .fondoBlanco{
     background-color: rgba(255, 255, 255, 0.861);
     width: 80%;
@@ -131,9 +134,10 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
     
 }
 .imagen img{
-    width: 50%;
+    width: 100%;
     
 }
