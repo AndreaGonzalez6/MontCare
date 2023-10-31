@@ -141,3 +141,8 @@ p{
     width: 100%;
     
 }
+#urgenciasGenerales,
+#urgenciasPediatricas,
+#urgenciasObstetricia {
+  scroll-margin-top: 100px; 
+}
