@@ -2,13 +2,11 @@
     width: 100%;
     height: 70vh;
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
     background-color: rgb(76, 191, 206);
-    flex-direction: column;
+    flex-direction: row;
 }
 .imagenPlanes{
-    width: 60%;
+    width: 100%;
     height: 50vh;
     background-image: url("../imágenes/planesImagen.jpg");
     background-size: 100% 100%;
@@ -20,14 +18,55 @@
     align-self: flex-start;
     color: white;
     margin-top: 10vh;
-    margin-left: 10vh;
+    margin-left: 15vh;
 }
 .parrafoPlanes{
     width: 25%;
     align-self: flex-start;
     color: white;
-    margin-left: 10vh;
+    margin-left: 15vh;
 }
-.tamañoTitulos{
-    
+.mid-1,.mid-2{
+    width: 50%;
+}
+.mid-1{
+    display: flex;
+    flex-direction: column;
+}
+.imagenCorazon{
+    margin-left: 45vh;
+    width: 20%;
+    height: 20%;
+    background-image:url("../imágenes/imagenCorazon.png") ;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.mid-2{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+table, th, td,tr{
+    border: 1px solid black;
+}
+.fondoMarino{
+    background-color:rgb(102, 170, 173);
+    color: white;
+}
+.fondoAzul-morado{
+    background-color:rgb(75, 97, 155);
+    color: white;
+}
+.fondoVerde{
+    background-color: rgb(160, 190, 108);
+}
+.fondoEncabezado{
+    background-color: rgb(84, 159, 191);
+    color: white;
+}
+table{
+    margin-top:5vh ;
+}
+.centrar-texto{
+    text-align: center;
 }
