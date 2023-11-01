@@ -41,7 +41,7 @@ if ($varsesion == null || $varsesion = '') {
 
                             include("db.php");
                             //Codigo para mostrar categorias desde otra tabla
-                            $sql = "SELECT * FROM pacientes ";
+                            $sql = "SELECT * FROM usuarios ";
                             $resultado = mysqli_query($conexion, $sql);
                             while ($consulta = mysqli_fetch_array($resultado)) {
                                 echo '<option value="' . $consulta['id'] . '">' . $consulta['nombre'] . '</option>';

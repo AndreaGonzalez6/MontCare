@@ -13,7 +13,7 @@ $varsesion = $_SESSION['nombre'];
 ////////////////// CONEXION A LA BASE DE DATOS ////////////////////////////////////
 $id = $_GET['id'];
 include "db.php"; 
-$consulta = "SELECT * FROM pacientes WHERE id = $id";
+$consulta = "SELECT * FROM usuarios WHERE id = $id";
 $resultado = mysqli_query($conexion, $consulta);
 $usuario = mysqli_fetch_assoc($resultado);
 ?>

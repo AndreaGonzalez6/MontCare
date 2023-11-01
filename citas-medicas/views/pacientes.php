@@ -49,32 +49,45 @@ if ($varsesion == null || $varsesion = '') {
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>Folio#</th>
-                                <th>Nombre/Apellido</th>
-                                <th>Sexo</th>
-                                <th>Correo</th>
-                                <th>Telefono#</th>
-                                <th>Estado</th>
-                                <th>Fecha_Registro</th>
-                                <th>Acciones..</th>
+                                <th>id#</th>
+                                <th>Tipo_documento</th>
+                                <th>Número_Documento</th>
+                                <th>Nombres</th>
+                                <th>Apellidos</th>
+                                <th>Fecha_Nacimiento</th>
+                                <th>Email</th>
+                                <th>Teléfono</th>
+                                <th>Usuario</th>
+                                <th>Contraseña</th>
+                                <th>Acciones...</th>
+
+
                             </tr>
                         </thead>
 
                         <?php
 
                         include "../includes/db.php";
-                        $result = mysqli_query($conexion, "SELECT * FROM pacientes ");
+                        $result = mysqli_query($conexion, "SELECT * FROM usuarios ");
                         while ($fila = mysqli_fetch_assoc($result)) :
 
                         ?>
                             <tr>
                                 <td><?php echo $fila['id']; ?></td>
-                                <td><?php echo $fila['nombre']; ?></td>
-                                <td><?php echo $fila['sexo']; ?></td>
-                                <td><?php echo $fila['correo']; ?></td>
+                                <td><?php echo $fila['tipo_id']; ?></td>
+                                <td><?php echo $fila['num_id']; ?></td>
+                                <td><?php echo $fila['nombre_completo']; ?></td>
+                                <td><?php echo $fila['apellidos']; ?></td>
+                                <td><?php echo $fila['fecha_nacimiento']; ?></td>
+                                <td><?php echo $fila['email']; ?></td>
                                 <td><?php echo $fila['telefono']; ?></td>
-                                <td><?php echo $fila['estado']; ?></td>
-                                <td><?php echo $fila['fecha']; ?></td>
+                                <td><?php echo $fila['usuario']; ?></td>
+                                <td><?php echo $fila['contrasena']; ?></td>
+                                
+
+
+
+
 
 
                                 <td>

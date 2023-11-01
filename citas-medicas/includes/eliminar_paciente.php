@@ -10,7 +10,7 @@ $varsesion = $_SESSION['nombre'];
 	}
 	$id = $_GET['id'];
 	include "db.php"; 
-	$query = mysqli_query($conexion,"DELETE FROM pacientes WHERE id = '$id'");
+	$query = mysqli_query($conexion,"DELETE FROM usuarios WHERE id = '$id'");
 	
 	header ('Location: ../views/pacientes.php?m=1');
 

@@ -32,7 +32,7 @@
             
             <!-- Login -->
             <div class="contenedor_login_register">
-                <form action="" class="formulario_login">
+                <form action="php/login_usuario_be.php" method="POST" class="formulario_login">
                     <h2>Iniciar Sesión</h2>
                     <input type="text" placeholder="Usuario" required>
                     <input type="password" placeholder="Contraseña" required> 

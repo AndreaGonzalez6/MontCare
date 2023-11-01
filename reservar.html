@@ -2,51 +2,13 @@
 <html lang='en'>
   <head>
     <meta charset='utf-8' />
+    <link rel="stylesheet" href="css/bootstrap.css">
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
-    <script>
-
-      document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: 'dayGridMonth',
-          locale: 'es',
-          events: [
-    { // this object will be "parsed" into an Event Object
-      title: 'The Title', // a property!
-      start: '2023-11-01', // a property!
-      end: '2023-11-01', // a property! ** see important note below about 'end' **
-      color: 'red'
-    }
-  ]
-        });
-        calendar.render();
-      });
-      var boton = document.querySelector('.fc-today-button');
-      boton.innerHTML = "Hoy";
-
-
-    </script>
-    <style>
-        .fc th {
-    text-align: center;
-    color: black;
-    background-color: aqua;
-}
-.fc table {
-    border-collapse: collapse;
-    border-spacing: 0px;
-    font-size: 1em;
-    background-color: aliceblue;
-}
-#calendar{
-  width: 50%;
-}
-.fc-today-button{
-  content: "Hoy";
-}
-    </style>
+    
   </head>
   <body>
-    <div id='calendar'></div>
+    <a href="http://localhost/MontCare/reservar.php"><button class="card-text btn btn-warning">Citas</button></a>
+
+  
   </body>
 </html>
