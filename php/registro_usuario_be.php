@@ -79,7 +79,7 @@ if($ejecutar){
     echo '
         <script>
         alert("Usuario registrado exitosamente");
-        window.location = "../index.php";
+        window.location = "../plaaanes.html";
         </script>
     ';
 }else{
@@ -94,6 +94,7 @@ if($ejecutar){
 mysqli_close($conexion);
 
 ?>
+
 
 
 

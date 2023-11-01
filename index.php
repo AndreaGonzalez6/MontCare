@@ -34,8 +34,8 @@
             <div class="contenedor_login_register">
                 <form action="php/login_usuario_be.php" method="POST" class="formulario_login">
                     <h2>Iniciar Sesión</h2>
-                    <input type="text" placeholder="Usuario" required>
-                    <input type="password" placeholder="Contraseña" required> 
+                    <input type="text" placeholder="Usuario" name="usuario" required>
+                    <input type="password" placeholder="Contraseña" name="contrasena" required> 
                     <button type="submit" class="entrar"> Ingresar </button>
                 </form>
 
