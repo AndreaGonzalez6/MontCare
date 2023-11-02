@@ -1,3 +1,19 @@
+<?php
+
+session_start();
+
+if(!isset($_SESSION['usuario'])){
+    echo'
+      <script> 
+      alert("Debes iniciar sesión para acceder a esta página");
+      window.location = "index.php"; 
+      </script>    
+    ';
+    session_destroy();
+    die();
+}
+?>
+
 <!DOCTYPE html>
 <!-- Coding by CodingNepal || www.codingnepalweb.com -->
 <html lang="en">
@@ -114,5 +130,12 @@
         <img src="images/profile.jpg" alt="logo_img" />
       </span>
     </nav> -->
+  </body>
+</html>
+
+    <div class="rodar"><h1> Este es un ejemplo xdxd </h1>
+    <a href="php/cerrar_sesion.php"> Cerrar sesión </a> </div>
+    
+     
   </body>
 </html>
