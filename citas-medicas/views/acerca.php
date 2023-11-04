@@ -40,10 +40,10 @@ if ($varsesion == null || $varsesion = '') {
             <div class="table-responsive">
 
 
-                <h1>Sistema Administrativo de Citas Medicas "Medical PC" Version 1.0</h1>
+                <h1>Sistema Administrativo de Citas Medicas "MontCare" Version 1.0</h1>
                 <br>
 
-                <p> Medical PC es un sistema administrativo de citas medicas web <b>basico</b> su funcion principal
+                <p> MontCare es un sistema administrativo de citas medicas web <b>basico</b> su funcion principal
                     es llevar una mejor gestion sobre las operaciones administrativas que se tiene en un consultorio
                     medico, de esta manera se lleva un mejor control de las citas medicas atravez de este sistema .
                 </p>

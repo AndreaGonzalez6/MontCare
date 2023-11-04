@@ -56,7 +56,7 @@ foreach($usuarios as $key => $fila ){
             </div>
             <div class="datos-perfil">
                 <h4 class="titulo-usuario"><?php echo $fila['nombre']; ?></h4>
-                <p class="bio-usuario">Medical PC - Sistema Administrativo de Citas Medicas</p>
+                <p class="bio-usuario">MontCare - Sistema Administrativo de Citas Medicas</p>
                 <ul class="lista-perfil">
                    <!-- <li>Rol de usuario</li>
                     <li>Correo</li>

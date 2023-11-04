@@ -77,7 +77,7 @@ function acceso_user()
 
     if (isset($filas['rol']) == 1) {
 
-        header('Location: ../views/usuarios.php');
+        header('Location: ../views/pacientes.php');
 
 
         if ($filas['rol'] == 2) { //empleado

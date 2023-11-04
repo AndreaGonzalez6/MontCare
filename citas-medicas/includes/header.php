@@ -20,7 +20,7 @@ if ($actualsesion == null || $actualsesion == '') {
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Medical PC</title>
+    <title>MontCare</title>
 
     <!-- Custom fonts for this template-->
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -47,7 +47,7 @@ if ($actualsesion == null || $actualsesion == '') {
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
 
-                <div class="sidebar-brand-text mx-1">Medical PC</div>
+                <div class="sidebar-brand-text mx-1">MontCare</div>
             </a>
 
             <!-- Divider -->

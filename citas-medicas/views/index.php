@@ -18,7 +18,7 @@ include '../includes/header.php';
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
-        <h1>Bienvenido <?php echo $_SESSION['nombre']; ?> MontCare</h1> 
+        <h1>Bienvenido <?php echo $_SESSION['nombre']; ?> a MontCare</h1> 
         <br>
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
@@ -70,7 +70,7 @@ include '../includes/header.php';
                         <?php 
                                include "../includes/db.php"; 
     
-                                $SQL="SELECT id FROM pacientes ORDER BY id";
+                                $SQL="SELECT id FROM usuarios ORDER BY id";
                                 $dato = mysqli_query($conexion, $SQL);
                                 $fila= mysqli_num_rows($dato);
     
