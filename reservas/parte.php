@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Mi Página con Modal</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="ruta_a_bootstrap/css/bootstrap.min.css">
     <script src="ruta_a_bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="/node_modules/jquery/dist/jquery.min.js"></script>

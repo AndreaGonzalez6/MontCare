@@ -18,23 +18,27 @@ include("citas-medicas/includes/db.php");
         var a = info.dateStr;
         const fechaComoCadena = a;
         var numeroDia = new Date(fechaComoCadena).getDay();
-
-        if((numeroDia == "6")){
+        var dias = ['LUNES', 'MARTES', 'MIÉRCOLES', 'JUEVES', 'VIERNES'];
+        if ((numeroDia == "6")) {
           alert("No hay atención el día domingo");
-        }else{
+        } else {
           $('#modal_reservas').modal("show");
+          $('#dia_de_la_semana').html(dias[numeroDia] + " " + a);
         }
       },
     });
     calendar.render();
   });
-  
 </script>
 <style>
-  a {
-    color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+  .fc .fc-col-header-cell-cushion {
     text-decoration: none;
+  }
+
+  .fc .fc-daygrid-day-number {
+
     color: black;
+    text-decoration: none;
   }
 
   .fc .fc-multimonth-title {
@@ -47,42 +51,56 @@ include("citas-medicas/includes/db.php");
   }
 
   #calendar {
-    margin: 80px;
+    margin: 60px;
   }
 </style>
 <div id='calendar'></div>
 
 <?php
-include ('reservas/parte.php');
+include('reservas/parte.php');
 ?>
 
 
-    
 
-    <!-- Botón para abrir el modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_reservas">
-        Abrir Modal
-    </button>
 
-    <!-- Modal -->
-    <div class="modal fade" id="modal_reservas" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalLabel">Título del Modal</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- Contenido del modal -->
-                    <p>Este es el contenido del modal.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary">Guardar cambios</button>
-                </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="modal_reservas" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalLabel">Reserva tu cita para el día <span id="dia_de_la_semana"></span></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6">
+            <center><b>Turno Mañana</b></center>
+            <br>
+            <div class="d-grid gap-2">
+              <button class="btn btn-success" id="btn_h1" type="button">08:00 - 08:20</button>
+              <button class="btn btn-success" id="btn_h2" type="button">08:20 - 08:40</button>
+              <button class="btn btn-success" id="btn_h1" type="button">08:40 - 09:00</button>
+              <button class="btn btn-success" id="btn_h2" type="button">09:00 - 09:20</button>
             </div>
+          </div>
+          <div class="col-md-6">
+          <center><b>Turno Tarde</b></center>
+            <br>
+          <div class="d-grid gap-2">
+              <button class="btn btn-success" id="btn_h1" type="button">08:00 - 08:20</button>
+              <button class="btn btn-success" id="btn_h2" type="button">08:20 - 08:40</button>
+              <button class="btn btn-success" id="btn_h1" type="button">08:40 - 09:00</button>
+              <button class="btn btn-success" id="btn_h2" type="button">09:00 - 09:20</button>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Guardar cambios</button>
+      </div>
     </div>
-
-
-
+  </div>
+</div>
