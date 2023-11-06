@@ -1,25 +1,28 @@
 
 .inicio{
     width: 100%;
-    height: 65vh;
+    height: 90vh;
     display: flex;
-    
-}
-.contenedor{
-    width: 70%;
-    height: 100%;
     background-image: url("../imágenes/recomendacionesPrueba.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    margin-bottom: 5vh;
+    flex-wrap: wrap;
+}
+.contenedor{
+    width: 50%;
+    height: 50%;
+  
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 1%;
+    
+    
 }
 .urgenciasGeneral{
+    margin-top: 3vh;
+    margin-left: 3vh;
     background-color: rgba(255, 255, 255, 0.861);
-    width: 70%;
-    height: 70%;
+    width: 95%;
+    height: 88%;
     border-radius: 20px;
 }
 .urgenciasGeneral h1, .urgenciasGeneral p, .background-urgencia-pediatrica h2, .background-urgencia-pediatrica p,
@@ -28,9 +31,13 @@
 }
 p{
     font-family: 'Mooli', sans-serif;
+    font-size: 15px;
+}
+h1{
+    font-family: initial;
 }
 .urgenciasGeneral p{
-    font-size: 20px;
+    font-size: 15px;
 }
 .urgenciasGeneral a, .background-urgencia-pediatrica a, .urgenciasGinecologia a, .urgenciasTraumatologia a{
     color: rgb(77, 133, 163);
@@ -143,6 +150,6 @@ p{
 }
 #urgenciasGenerales,
 #urgenciasPediatricas,
-#urgenciasObstetricia {
+#urgenciasObstetricia,#urgenciasTraumatologia {
   scroll-margin-top: 100px; 
 }
