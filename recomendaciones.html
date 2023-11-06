@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="css/bootstrap.css" />
   <link rel="stylesheet" href="css/estilos.css">
   <link rel="stylesheet" href="css/recomendaciones.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -111,10 +114,10 @@
         </p>
       </div>
     </div>
-    <div class="urgencia-pediatrica">
-      <div class="background-urgencia-pediatrica">
+    <div class="contenedor">
+      <div class="urgenciasGeneral">
         <a href="#urgenciasPediatricas">
-          <h2 class="clickeable">Urgencias Pediátricas:</h2>
+          <h1 class="clickeable">Urgencias Pediátricas:</h1>
         </a>
         <p>La seguridad y salud de tus hijos son de suma importancia.
           En esta sección, te ofrecemos consejos esenciales sobre cómo proteger a tus pequeños y prevenir urgencias
@@ -123,12 +126,10 @@
         </p>
       </div>
     </div>
-  </div>
-  <div class="segunda-seccion">
-    <div class="urgenciasGinecologia">
-      <div class="fondoBlanco">
+    <div class="contenedor">
+      <div class="urgenciasGeneral">
         <a href="#urgenciasObstetricia">
-          <h2 class="clickeable">Urgencias de Obstetricia y Ginecología:</h2>
+          <h1 class="clickeable">Urgencias de Obstetricia y Ginecología:</h2>
         </a>
         <p>Durante el embarazo, es fundamental recibir atención prenatal adecuada y estar informada sobre la salud
           materna e infantil.
@@ -136,12 +137,11 @@
           cómo reconocer signos de alarma y la importancia de elegir una instalación médica segura para el parto.
         </p>
       </div>
-
     </div>
-    <div class="urgenciasTraumatologia">
-      <div class="fondoBlanco">
-        <a href="#">
-          <h2 class="clickeable">Urgencias de Traumatología:</h2>
+     <div class="contenedor">
+      <div class="urgenciasGeneral">
+        <a href="#urgenciasTraumatologia">
+          <h1 class="clickeable">Urgencias de Traumatología:</h2>
         </a>
         <p>La prevención de lesiones es esencial para una vida activa y saludable.
           En esta sección, te proporcionamos consejos para evitar urgencias relacionadas con traumatismos,
@@ -152,6 +152,7 @@
       </div>
     </div>
   </div>
+   
   <div id="urgenciasGenerales" class="tituloGeneral">
     <h2>Prevención de Urgencias Generales</h2>
   </div>
@@ -276,7 +277,7 @@
 
   </div>
 
-  <div id="urgenciasObstetricia" class="tituloGeneral">
+  <div id="urgenciasTraumatologia" class="tituloGeneral">
     <h2>Prevención de Urgencias de Traumatología, Rehabilitación y Quemados:</h2>
   </div>
   <div class="imagen">
@@ -313,6 +314,66 @@
 
   </div>
 
+ <!-- comentarios -->
+ <div class="row">
+  <div class="col-md-4 text-light centrar" style="background-color: rgb(67, 101, 104);">
+    <form action="#" method="post">
+      <h2 class="titulo"> ¡Sección de comentarios! </h2> 
+
+      <i class="fa-solid fa-user nombre"></i>
+      <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required> <br>
+
+      <i class="fa-solid fa-envelope correo"></i>
+      <input type="email" id="correo" name="correo" placeholder="Ingrese su correo" required> <br>
+
+      <i class="fa-regular fa-comment comentario"></i>
+      <textarea id="comentario" name="comentario" rows="5" placeholder="Comentario" required></textarea> <br> <br>
+
+      <button type="submit" class="btn btn-primary"> Enviar </button>
+    </form>
+  </div>
+
+  <div class="col-md-2 centrar" style="background-color: rgb(67, 101, 104);">
+    <img src="imágenes/intento1.png" height="306vh">
+  </div>
+
+
+  <!-- contacto -->
+  <div class="col-md-6 text-light fondoContacto" id="contact">
+    <div class="row fila">
+      <div class="col-md-12">
+        <h2 class="titulo pt-1">Información de Contacto</h2>
+        <p><strong class="letra"><i class="fa-solid fa-location-dot" style="color: #e8e8e8;"></i> Dirección:
+          </strong>
+          Barrio piñalito Calle -11 Carrera - #11-43 <br> Montelíbano-Córdoba
+
+        </p>
+        <p><strong class="letra"><i class="fa-solid fa-phone" style="color: #e8e8e8;"></i> Teléfono:</strong>
+          604-342-3954</p>
+        <p><strong class="letra"> <i class="fa-solid fa-envelope" style="color: #e8e8e8;"></i> Email: </strong>
+          CentroHospitalario@MontCare.com</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="redes">
+          <a href="#" target="_blank"> <i class="fab fa-brands fa-whatsapp tamaños wpp"></i></a>
+          <a href="#" target="_blank"> <i class="fab fa-brands fa-instagram tamaños ig"></i></a>
+          <a href="#" target="_blank"> <i class="fa-brands fa-twitter tamaños tw"></i> </a>
+          <a href="#" target="_blank"> <i class="fa-brands fa-facebook-f tamaños fb"></i> </a>
+          <a href="#" target="_blank"> <i class="fa-brands fa-tiktok tamaños tk"></i> </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+<hr class="lineap">
+<footer>
+    <p>Derechos Reservados &copy; 2023 Hospital Privado MontCare</p>
+</footer>
 
 
 </body>
