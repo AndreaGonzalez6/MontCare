@@ -1,6 +1,8 @@
 <?php
 include("citas-medicas/includes/db.php");
+include('reservas/parte.php');
 ?>
+
 
 <head>
     <meta charset="UTF-8" />
@@ -177,9 +179,6 @@ include("citas-medicas/includes/db.php");
 </style>
 <div id='calendar'></div>
 
-<?php
-include('reservas/parte.php');
-?>
 
 
 
@@ -242,6 +241,14 @@ include('reservas/parte.php');
         <div class="row">
           <form action="">
             <div class="row">
+              <div class="col-md-6">
+              <label for="">Nombre usuario</label>
+              <input type="text" class="form-control" value="<?php echo $nombre_completo_sesion ?>">
+              </div>
+              <div class="col-md-6">
+              <label for="">email usuario</label>
+              <input type="text" class="form-control" value="<?php echo $email_sesion ?>">
+              </div>
               <div class="col-md-6">
                 <label for="">Nombre</label>
                 <input type="text" class="form-control">

@@ -1,6 +1,6 @@
 <?php
 include("citas-medicas/includes/db.php");
-
+$nombre_completo_sesion = $_POST['nombre_completo'];
 
 session_start();
 $usuario_sesion = "";
@@ -12,8 +12,7 @@ if (isset($_SESSION['sesion_usuario'])) {
   $usuarios = $query->fetchAll(PDO::FETCH_ASSOC);
   foreach ($usuarios as $usuario) {
     $id = $usuario["id"];
-    
-
+    $nombre_completo_sesion = $usuario["nombre_completo"];
 }
 }else{
     //echo "no";
