@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Courgette&family=Yusei+Magic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@1,300;1,400&display=swap');
+
+.container-fluid {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.tarjeta {
+    width: 350px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px;
+    margin-top: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contenido {
+    padding: 10px;
+    background-color: aquamarine;
+}
+
+.titulo{
+    text-align: center;
+    font-size: 45px;
+    font-family: 'Yusei Magic', sans-serif;
+}
+
+h1{
+    padding-top: 20px;
+    font-family: 'Courgette', cursive;
+}
+
+h3{
+    padding-top: 6px;
+    padding-bottom: 20px;
+    font-family: 'Yusei Magic', sans-serif;
+}
+
+p{
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 20px;
+}
+
+.ultimo{
+    padding-bottom: 10px;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+}

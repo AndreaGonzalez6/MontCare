@@ -2,8 +2,120 @@
 include("citas-medicas/includes/db.php");
 ?>
 
-
-<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+    
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="preload" href="css/normalize.css" as="style"> <!--Para cargar la hoja de estilos más rápido -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="shortcut icon" href="imágenes/loguito.png" type="image/x-icon" />
+    <title>Centro Hospitalario MontCare</title>
+    <link rel="preload" href="css/estilos.css" as="style">
+    <link rel="stylesheet" href="css/estilos.css" />
+    <!-- Boxicons CSS -->
+    <link flex href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    
+  </head>
+<div class="container-1">
+        <aside class="sidebar">
+          <!-- Contenido del sidebar -->
+          <nav class="sidebar locked">
+            <div class="logo_items flex">
+              <span class="nav_image">
+                <img src="imágenes/logo.png" alt="logo_img" />
+              </span>
+              <span class="logo_name">MontCare</span>
+            </div>
+      
+            <div class="menu_container">
+              <div class="menu_items">
+                <ul class="menu_item">
+                  
+                  <li class="item">
+                    <a href="despues_ingreso.html" class="link flex">
+                      <i class="bx bx-home-alt"></i>
+                      <span>Inicio</span>
+                    </a>
+                  </li>
+                  <li class="item">
+                    <a href="des_ing_info_planes.html" class="link flex">
+                      <i class="bx bx-grid-alt"></i>
+                      <span>Planes</span>
+                    </a>
+                  </li>
+                </ul>
+      
+                <ul class="menu_item">
+                  <li class="item">
+                    <a href="des_ingre_nosotros.html" class="link flex">
+                      <i class="bx bxs-magic-wand"></i>
+                      <span>¿Quiénes somos?</span>
+                    </a>
+                  </li>
+                  <li class="item">
+                    <a href="#" class="link flex">
+                      <i class="bx bx-folder"></i>
+                      <span>Citas</span>
+                    </a>
+                  </li>
+                </ul>
+      
+                <ul class="menu_item">
+                  <li class="item">
+                    <a href="despues_ingreso_recomendaciones.html" class="link flex">
+                      <i class="bx bx-flag"></i>
+                      <span>Recomendaciones</span>
+                    </a>
+                  </li>
+                  <li class="item">
+                    <a href="#" class="link flex">
+                      <i class="bx bx-award"></i>
+                      <span>Award</span>
+                    </a>
+                  </li>
+                  <li class="item">
+                    <a href="#" class="link flex">
+                      <i class="bx bx-cog"></i>
+                      <span>Setting</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+      
+              <div class="sidebar_profile flex">
+                <span class="nav_image">
+                    <i class="fa-solid fa-user"></i>
+                </span>
+                <?php
+                if($email_sesion == ""){
+                  echo "sin";
+                }else{
+                  echo "Ya";  
+                }
+                ?>
+                <div class="data_text">
+                  <span class="name">Alexa Bedoya</span>
+                  <span class="email">alexabedoyarojas123@gmail.com</span>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </aside>
+        <main class="content">
+          <!-- Contenido principal -->
+          <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
 <script>
   var a;
   document.addEventListener('DOMContentLoaded', function() {
@@ -31,6 +143,10 @@ include("citas-medicas/includes/db.php");
     calendar.render();
   });
 </script>
+        </main>
+</div>
+
+
 <style>
   .fc .fc-col-header-cell-cushion {
     text-decoration: none;
@@ -41,7 +157,11 @@ include("citas-medicas/includes/db.php");
     color: black;
     text-decoration: none;
   }
-
+  .fc .fc-view-harness-active > .fc-view {
+    inset: 0px;
+    position: absolute;
+    margin-left: 200px;
+}
   .fc .fc-multimonth-title {
     font-size: 1.2em;
     font-weight: 700;

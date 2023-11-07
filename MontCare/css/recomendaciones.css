@@ -1,0 +1,148 @@
+
+.inicio{
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    
+}
+.contenedor{
+    width: 70%;
+    height: 100%;
+    background-image: url("../imágenes/recomendacionesPrueba.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1%;
+}
+.urgenciasGeneral{
+    background-color: rgba(255, 255, 255, 0.861);
+    width: 70%;
+    height: 70%;
+    border-radius: 20px;
+}
+.urgenciasGeneral h1, .urgenciasGeneral p, .background-urgencia-pediatrica h2, .background-urgencia-pediatrica p,
+ .urgenciasGinecologia h2, .urgenciasGinecologia p, .urgenciasTraumatologia h2, .urgenciasTraumatologia p{
+    text-align: center;  
+}
+p{
+    font-family: 'Mooli', sans-serif;
+}
+.urgenciasGeneral p{
+    font-size: 20px;
+}
+.urgenciasGeneral a, .background-urgencia-pediatrica a, .urgenciasGinecologia a, .urgenciasTraumatologia a{
+    color: rgb(77, 133, 163);
+}
+.urgencia-pediatrica{
+    width: 27%;
+    height: 100%;
+    background-image: url("../imágenes/recomendacionesUrgenciasPediatricas.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-left: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-urgencia-pediatrica{
+    background-color: rgba(255, 255, 255, 0.861);
+    width: 80%;
+    height: 87%;
+    border-radius: 20px;
+}
+.segunda-seccion{
+    margin-top: 2vh;
+    width: 98%;
+    margin: 1% 1%;
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+    background-image: url("../imágenes/shutterstock_718097074.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.urgenciasGinecologia{
+    
+    width: 48%;
+    height: 100%;
+    
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.urgenciasTraumatologia{
+    width: 48%;
+    height: 100%;
+   
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2%;
+}
+.clickeable:hover{
+    color: rgb(15, 114, 167);
+}
+.fondoBlanco{
+    background-color: rgba(255, 255, 255, 0.861);
+    width: 80%;
+    height: 80%;
+    border-radius: 20px;
+}
+.informacion{
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    
+}
+.info-general{
+    width: 100%;
+    display: flex;
+}
+ .informacion h5, .informacion ul{
+    text-align: center;
+}
+.informacion li{
+    font-size: 18px;
+}
+.tituloGeneral{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    background-image: url("../imágenes/fondoTitulo.jpg");
+    color:white ;
+    text-shadow:
+    1px 1px 0 #000,
+    -1px 1px 0 #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000;
+}
+.estiloVida{
+    width: 33%;
+    height: 90%;
+    color: gray;
+}
+.imagen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
+.imagen img{
+    width: 100%;
+    
+}
+#urgenciasGenerales,
+#urgenciasPediatricas,
+#urgenciasObstetricia {
+  scroll-margin-top: 100px; 
+}
