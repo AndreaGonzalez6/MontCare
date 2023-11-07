@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 include 'conexion_be.php';
 
 $usuario = $_POST['usuario'];
