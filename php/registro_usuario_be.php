@@ -16,8 +16,6 @@ $confirm_contrasena = $_POST['confirm_contrasena'];
 
 //Encriptamiento de contraseña
 
-
-
 $query = "INSERT INTO usuarios(tipo_id, num_id, nombre_completo, apellidos, fecha_nacimiento, email, telefono, usuario, contrasena, confirm_contra) 
 VALUES('$tipo_documento', '$numero_documento', '$nombre_completo', '$apellidos', '$fecha_nacimiento', '$correo', '$telefono', '$usuario', '$contrasena', '$confirm_contrasena')";
 
@@ -94,7 +92,3 @@ if($ejecutar){
 mysqli_close($conexion);
 
 ?>
-
-
-
-

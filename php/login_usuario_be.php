@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 include 'conexion_be.php';
@@ -17,7 +16,7 @@ if(mysqli_num_rows($validar_login) > 0){
 }else{
     echo '
     <script> 
-    alert("Usuario o contraseña no encontrados");
+    alert("Usuario o contraseña incorrectos");
     window.location = "../index.php";
     </script>';
     exit;
