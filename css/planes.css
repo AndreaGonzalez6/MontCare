@@ -65,8 +65,12 @@ table, th, td,tr{
     color: white;
 }
 table{
-    margin-top:5vh ;
+    margin:7vh 0;
 }
 .centrar-texto{
     text-align: center;
+}
+.tabla{
+    width: 80%;
+    margin: 0 10%;
 }
