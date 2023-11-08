@@ -5,6 +5,7 @@ include 'conexion_be.php';
 
 $usuario = $_POST['usuario'];
 $contrasena = $_POST['contrasena'];
+//$contrasena = hash('sha512', $contrasena);
 
 // Verifica si el usuario y contraseña existen en la tabla "usuarios"
 $consulta_usuarios = "SELECT * FROM usuarios WHERE usuario = '$usuario' AND contrasena = '$contrasena'";
