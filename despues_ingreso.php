@@ -22,30 +22,37 @@ if (isset($_SESSION['sesion_usuario'])) {
 ?>
 
 
+
+<!DOCTYPE html>
+<!-- Coding by CodingNepal || www.codingnepalweb.com -->
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-
-  <link rel="stylesheet" href="css/all.css" />
-  <link rel="stylesheet" href="css/bootstrap.css" />
-  <link rel="preload" href="css/normalize.css" as="style"> <!--Para cargar la hoja de estilos más rápido -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
-  <link rel="shortcut icon" href="imágenes/loguito.png" type="image/x-icon" />
-  <title>Centro Hospitalario MontCare</title>
-  <link rel="preload" href="css/estilos.css" as="style">
-  <link rel="stylesheet" href="css/estilos.css" />
-  <!-- Boxicons CSS -->
-  <link flex href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-
-</head>
-
-<body>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+    
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="preload" href="css/normalize.css" as="style"> <!--Para cargar la hoja de estilos más rápido -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="shortcut icon" href="imágenes/loguito.png" type="image/x-icon" />
+    <title>Centro Hospitalario MontCare</title>
+    <link rel="preload" href="css/estilos.css" as="style">
+    <link rel="stylesheet" href="css/estilos.css" />
+    <!-- Boxicons CSS -->
+    <link flex href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    
+  </head>
+  <body>
 
 
   <div class="container-1">
@@ -129,7 +136,7 @@ if (isset($_SESSION['sesion_usuario'])) {
             
             <div class="data_text">
               <a href="roles.html" class="ms-lg-3">
-                <p style="color: #000000"><i class="fa-solid fa-user" style="color: #000000"></i>Bienvenido <?php echo $usuario_sesion ?> </p>
+                <p style="color: #000000"><i class="fa-solid fa-user" style="color: #000000"></i>Bienvenido <?php echo $_SESSION['sesion_usuario']; ?> </p>
               </a>
             </div>
           </div>

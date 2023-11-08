@@ -1,0 +1,70 @@
+/* Sección "Tus Datos" */
+.container{
+    margin-top: 5px;
+    border: solid black 1px;
+}
+.gris{
+    background-color: rgb(207, 207, 207);
+}
+.bolita-negra{
+    background-color: black;
+    border-radius: 40px;
+    margin: 5px;
+    padding: 10px;
+    padding-right: 14px;
+    padding-left: 14px;
+}
+.bolita-negra2{
+    background-color: black;
+    border-radius: 40px;
+    margin: 5px;
+    padding: 10px;
+    padding-right: 13px;
+    padding-left: 13px;
+}
+.tusdatos, .Mdatos{
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+}
+.Mdatos{
+    color:  #c9a645;
+    font-weight: 300;
+    text-decoration: underline;
+}
+.lapiz{
+        margin: 5px;
+        padding: 10px;
+        padding-right: 5px;
+}
+.cara_niño{
+    background-color: blueviolet;
+    border-radius: 65px;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.margin{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.espaciado{
+    margin-left: 10px;
+}
+.boton{
+    border: none;
+    background-color: #fff;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.peque{
+    width: 50px;
+}
