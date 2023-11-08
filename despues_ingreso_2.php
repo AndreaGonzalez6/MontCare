@@ -108,14 +108,14 @@ if (isset($_SESSION['sesion_usuario'])) {
               </li>
               <li class="item">
                 <a href="#" class="link flex">
-                  <i class="bx bx-award"></i>
-                  <span>Award</span>
+                  <i class="bx bx-cog"></i>
+                  <span>Configuraciones</span>
                 </a>
               </li>
               <li class="item">
-                <a href="#" class="link flex">
-                  <i class="bx bx-cog"></i>
-                  <span>Setting</span>
+                <a href="php/cerrar_sesion.php" class="link flex">
+                  <i class="bx bx-award"></i>
+                  <span>Cerrar Sesión</span>
                 </a>
               </li>
             </ul>
