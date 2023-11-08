@@ -25,7 +25,7 @@ if (mysqli_num_rows($resultado_usuarios) > 0) {
         // Redirige a la página correspondiente según el valor del plan
         if ($plan == 1) {
             $_SESSION['usuario'] = $usuario;
-            header("location: ../bienvenida.php");
+            header("location: ../despues_ingreso.php");
             exit;
         } elseif ($plan == 2) {
             $_SESSION['usuario'] = $usuario;
