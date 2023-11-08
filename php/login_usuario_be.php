@@ -25,15 +25,15 @@ if (mysqli_num_rows($resultado_usuarios) > 0) {
         // Redirige a la página correspondiente según el valor del plan
         if ($plan == 1) {
             $_SESSION['usuario'] = $usuario;
-            header("location: ../index.html");
+            header("location: ../bienvenida.php");
             exit;
         } elseif ($plan == 2) {
             $_SESSION['usuario'] = $usuario;
-            header("location: ../planes.html");
+            header("location: ../despues_ingreso_2.php");
             exit;
         } elseif ($plan == 3) {
             $_SESSION['usuario'] = $usuario;
-            header("location: ../profesionales.html");
+            header("location: ../despues_ingreso_2.php");
             exit;
         }
     } else {
