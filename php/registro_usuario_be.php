@@ -1,6 +1,6 @@
 <?php
 include("citas-medicas/includes/db.php");
-include "conexion_be.php";
+
 
 
 $tipo_documento = $_POST['format'];
@@ -15,6 +15,8 @@ $contrasena = $_POST['contrasena'];
 $confirm_contrasena = $_POST['confirm_contrasena'];
 
 //Encriptamiento de contraseña
+//$contrasena = hash('sha512', $contrasena);
+//$confirm_contrasena = hash('sha512', $confirm_contrasena);
 
 $query = "INSERT INTO usuarios(tipo_id, num_id, nombre_completo, apellidos, fecha_nacimiento, email, telefono, usuario, contrasena, confirm_contra) 
 VALUES('$tipo_documento', '$numero_documento', '$nombre_completo', '$apellidos', '$fecha_nacimiento', '$correo', '$telefono', '$usuario', '$contrasena', '$confirm_contrasena')";

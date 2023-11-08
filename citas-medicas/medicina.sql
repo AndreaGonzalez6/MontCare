@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-11-2023 a las 17:19:34
+-- Tiempo de generación: 08-11-2023 a las 04:58:46
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -141,6 +141,21 @@ INSERT INTO `horario` (`id`, `dias`, `id_doctor`, `fecha`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `pagos`
+--
+
+CREATE TABLE `pagos` (
+  `id` int(15) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  `tipo_id` varchar(50) NOT NULL,
+  `num_id` varchar(50) NOT NULL,
+  `usuario` varchar(50) NOT NULL,
+  `plan` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `reservas`
 --
 
@@ -236,10 +251,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `tipo_id`, `num_id`, `nombre_completo`, `apellidos`, `fecha_nacimiento`, `email`, `telefono`, `usuario`, `contrasena`, `confirm_contra`) VALUES
-(1, 'CC', '23334', 'laura', 'lopera', '2023-09-15', 'laura@gmail.com', '32455', 'Laura', '123', '123'),
-(3, 'CC', '122', 'sofia', 'arias', '2023-11-10', 'sofia@gmail.com', '32455', 'sofia', 'c82b8f1d225bf2f00fe91b6f238203', 'c82b8f1d225bf2f00fe91b6f238203'),
-(4, 'CC', '44444', 'mari', 'lopera', '2023-11-03', 'mari@gmail.com', '3444', 'mari', 'd404559f602eab6fd602ac7680dacb', 'd404559f602eab6fd602ac7680dacb'),
-(5, 'CC', '232333', 'maria', 'lopera', '2023-11-02', 'maria@gmail.com', '3333', 'Maria', '3627909a29c31381a071ec27f7c9ca', '3627909a29c31381a071ec27f7c9ca');
+(1, 'CC', '23334', 'laura', 'lopera', '2023-09-15', 'laura@gmail.com', '32455', 'Laura', '123', '123');
 
 --
 -- Índices para tablas volcadas
@@ -273,6 +285,12 @@ ALTER TABLE `estado`
 -- Indices de la tabla `horario`
 --
 ALTER TABLE `horario`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `pagos`
+--
+ALTER TABLE `pagos`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -340,6 +358,12 @@ ALTER TABLE `estado`
 --
 ALTER TABLE `horario`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT de la tabla `pagos`
+--
+ALTER TABLE `pagos`
+  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `reservas`
