@@ -61,7 +61,7 @@
                     <input type="text" placeholder="Número de documento"  name="numero_documento" required >
                     <input type="text" placeholder="Nombre completo"  name="nombre_completo" required >
                     <input type="text" placeholder="Apellidos"  name="apellidos" required >
-                    <input type="date" class="date" placeholder="Fecha de nacimiento"  name="fecha_nacimiento" required >
+                    <input type="date" class="date" placeholder="Fecha de nacimiento" max="2023-11-03" id="fechaInput"  name="fecha_nacimiento" required >
                     <input type="email" placeholder="E-mail"  name="correo" required >
                     <input type="text" placeholder="Número de teléfono"  name="telefono" required >
                     <input type="text" placeholder="Usuario"  name="usuario" required >
@@ -87,3 +87,4 @@
 </body>
 
 </html>
+
