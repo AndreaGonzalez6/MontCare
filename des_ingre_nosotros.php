@@ -1,5 +1,5 @@
 <?php
-include("citas-medicas/includes/db.php");
+
 include("php/conexion_be.php");
 
 

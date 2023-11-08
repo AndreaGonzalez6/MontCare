@@ -22,7 +22,19 @@ if (isset($_SESSION['usuario'])) {
   // Puedes agregar un mensaje o redirigir al usuario si lo deseas
 }
 
+if(!isset($_SESSION['usuario'])){
+  echo'
+    <script> 
+    alert("Debes iniciar sesión para acceder a esta página");
+    window.location = "index.php"; 
+    </script>    
+  ';
+  session_destroy();
+  die();
+}
+
 ?>
+
 
 
 

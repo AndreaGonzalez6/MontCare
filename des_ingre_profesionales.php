@@ -1,3 +1,23 @@
+<?php
+include("citas-medicas/includes/db.php");
+include("php/conexion_be.php");
+
+
+
+session_start();
+
+if(!isset($_SESSION['usuario'])){
+    echo'
+      <script> 
+      alert("Debes iniciar sesión para acceder a esta página");
+      window.location = "index.php"; 
+      </script>    
+    ';
+    session_destroy();
+    die();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
