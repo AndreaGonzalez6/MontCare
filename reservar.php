@@ -209,17 +209,17 @@ include('reservas/parte.php');
           <center><b>Turno Tarde</b></center>
             <br>
           <div class="d-grid gap-2">
-              <button class="btn btn-success" id="btn_h5" data-bs-dismiss="modal" type="button">08:00 - 08:20</button>
-              <button class="btn btn-success" id="btn_h6" data-bs-dismiss="modal" type="button">08:20 - 08:40</button>
-              <button class="btn btn-success" id="btn_h7" data-bs-dismiss="modal" type="button">08:40 - 09:00</button>
-              <button class="btn btn-success" id="btn_h8" data-bs-dismiss="modal" type="button">09:00 - 09:20</button>
+              <button class="btn btn-success" id="btn_h5" data-bs-dismiss="modal" type="button">13:00 - 13:20</button>
+              <button class="btn btn-success" id="btn_h6" data-bs-dismiss="modal" type="button">13:20 - 13:40</button>
+              <button class="btn btn-success" id="btn_h7" data-bs-dismiss="modal" type="button">13:40 - 14:00</button>
+              <button class="btn btn-success" id="btn_h8" data-bs-dismiss="modal" type="button">14:00 - 14:20</button>
             </div>
           </div>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Guardar cambios</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar cita</button>
+        
       </div>
     </div>
   </div>
@@ -239,15 +239,15 @@ include('reservas/parte.php');
       </div>
       <div class="modal-body">
         <div class="row">
-          <form action="">
+          <form action="http://localhost/MontCare/reservas/controller_citas.php" method="post">
             <div class="row">
               <div class="col-md-6">
               <label for="">Nombre usuario</label>
-              <input type="text" class="form-control" value="<?php echo $nombre_completo_sesion ?>">
+              <input type="text" class="form-control">
               </div>
               <div class="col-md-6">
               <label for="">email usuario</label>
-              <input type="text" class="form-control" value="<?php echo $email_sesion ?>">
+              <input type="text" class="form-control">
               </div>
               <div class="col-md-6">
                 <label for="">Nombre</label>
@@ -267,19 +267,20 @@ include('reservas/parte.php');
               <div class="col-md-6">
                 <label for="">Fecha de la cita</label>
                 <input type="text" class="form-control" id="fecha_cita" disabled>
+                <input type="text" name="fecha_cita" class="form-control" id="fecha_cita2" hidden>
               </div>
               <div class="col-md-6">
                 <label for="">Hora de la cita</label>
                 <input type="text" class="form-control" id="hora_cita" disabled>
               </div>
             </div>
-          </form>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Guardar cambios</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar Cita</button>
+        <button type="submit" class="btn btn-primary">Registrar Cita</button>
       </div>
+      </form>
     </div>
   </div>
 </div>
@@ -292,6 +293,56 @@ include('reservas/parte.php');
     var h1 = "08:00 - 08:20";
     $('#hora_cita').val(h1);
   });
+
+  $('#btn_h2').click(function(){
+    $('#modal_formulario').modal("show");
+    $('#fecha_cita').val(a);
+    var h2 = "08:20 - 08:40";
+    $('#hora_cita').val(h2);
+  });
+
+  $('#btn_h3').click(function(){
+    $('#modal_formulario').modal("show");
+    $('#fecha_cita').val(a);
+    var h3 = "08:40 - 09:00";
+    $('#hora_cita').val(h3);
+  });
+
+  $('#btn_h4').click(function(){
+    $('#modal_formulario').modal("show");
+    $('#fecha_cita').val(a);
+    var h4 = "09:00 - 09:20";
+    $('#hora_cita').val(h4);
+  });
+
+  $('#btn_h5').click(function(){
+    $('#modal_formulario').modal("show");
+    $('#fecha_cita').val(a);
+    var h5 = "13:00 - 13:20";
+    $('#hora_cita').val(h5);
+  });
+
+  $('#btn_h6').click(function(){
+    $('#modal_formulario').modal("show");
+    $('#fecha_cita').val(a);
+    var h6 = "13:20 - 13:40";
+    $('#hora_cita').val(h6);
+  });
+
+  $('#btn_h7').click(function(){
+    $('#modal_formulario').modal("show");
+    $('#fecha_cita').val(a);
+    var h7 = "13:40 - 14:00";
+    $('#hora_cita').val(h7);
+  });
+
+  $('#btn_h8').click(function(){
+    $('#modal_formulario').modal("show");
+    $('#fecha_cita').val(a);
+    var h8 = "14:00 - 14:20";
+    $('#hora_cita').val(h8);
+  });
+
 </script>
 
 

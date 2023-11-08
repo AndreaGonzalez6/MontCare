@@ -12,12 +12,15 @@ if (isset($_SESSION['sesion_usuario'])) {
   $usuarios = $query->fetchAll(PDO::FETCH_ASSOC);
   foreach ($usuarios as $usuario) {
     $id = $usuario["id"];
+    $nombre = $usuario["nombre_completo"];
+    $email = $usuario["email"];
 
 }
 }else{
     //echo "no";
 }
 ?>
+
 
 <head>
   <meta charset="UTF-8" />
@@ -126,7 +129,7 @@ if (isset($_SESSION['sesion_usuario'])) {
             
             <div class="data_text">
               <a href="roles.html" class="ms-lg-3">
-                <p style="color: #000000"><i class="fa-solid fa-user" style="color: #000000"></i>Bienvenido <?php echo $_SESSION['sesion_usuario']; ?> </p>
+                <p style="color: #000000"><i class="fa-solid fa-user" style="color: #000000"></i>Bienvenido <?php echo $usuario_sesion ?> </p>
               </a>
             </div>
           </div>
