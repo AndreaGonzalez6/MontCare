@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-11-2023 a las 04:58:46
+-- Tiempo de generación: 08-11-2023 a las 14:14:15
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -145,8 +145,8 @@ INSERT INTO `horario` (`id`, `dias`, `id_doctor`, `fecha`) VALUES
 --
 
 CREATE TABLE `pagos` (
-  `id` int(15) NOT NULL,
-  `nombre` varchar(50) NOT NULL,
+  `id` int(10) NOT NULL,
+  `nombre` varchar(255) NOT NULL,
   `tipo_id` varchar(50) NOT NULL,
   `num_id` varchar(50) NOT NULL,
   `usuario` varchar(50) NOT NULL,
@@ -179,7 +179,9 @@ CREATE TABLE `reservas` (
 --
 
 INSERT INTO `reservas` (`id_reserva`, `id_usuario`, `nombre_medico`, `tipo_especialista`, `fecha_cita`, `hora_cita`, `title`, `start`, `end`, `color`, `fyh_creacion`, `fyh_actualizacion`) VALUES
-(1, 1, 6, 6, '2023-11-01', '09:00 - 9:20am', 'Cita Pediatra', '2023-11-01', '2023-11-01', '#2324ff', '2023-11-02 02:31:34', '2023-11-02 02:31:34');
+(1, 1, 6, 6, '2023-11-01', '09:00 - 9:20am', 'Cita Pediatra', '2023-11-01', '2023-11-01', '#2324ff', '2023-11-02 02:31:34', '2023-11-02 02:31:34'),
+(10, 3, 7, 7, '2023-11-12', '08:20 - 08:40', 'Cita Dermatologia', '2023-11-11', '2023-11-11', '#2324ff', '2023-11-08 13:35:57', '2023-11-08 13:35:57'),
+(13, 6, 9, 5, '2023-11-20', '09:40 - 10:00', 'Cita Cardiología', '2023-11-20', '2023-11-11', '#2324ff', '2023-11-08 13:41:56', '2023-11-08 13:41:56');
 
 -- --------------------------------------------------------
 
@@ -251,7 +253,13 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `tipo_id`, `num_id`, `nombre_completo`, `apellidos`, `fecha_nacimiento`, `email`, `telefono`, `usuario`, `contrasena`, `confirm_contra`) VALUES
-(1, 'CC', '23334', 'laura', 'lopera', '2023-09-15', 'laura@gmail.com', '32455', 'Laura', '123', '123');
+(1, 'CC', '23334', 'laura', 'lopera', '2023-09-15', 'laura@gmail.com', '32455', 'Laura', '123', '123'),
+(3, 'CC', '122', 'sofia', 'arias', '2023-11-10', 'sofia@gmail.com', '32455', 'sofia', 'c82b8f1d225bf2f00fe91b6f238203', 'c82b8f1d225bf2f00fe91b6f238203'),
+(4, 'CC', '44444', 'mari', 'lopera', '2023-11-03', 'mari@gmail.com', '3444', 'mari', 'd404559f602eab6fd602ac7680dacb', 'd404559f602eab6fd602ac7680dacb'),
+(5, 'CC', '232333', 'maria', 'lopera', '2023-11-02', 'maria@gmail.com', '3333', 'Maria', '3627909a29c31381a071ec27f7c9ca', '3627909a29c31381a071ec27f7c9ca'),
+(6, 'CC', '23334555', 'sofia', 'lopera', '2023-10-31', 'sofiaL@gmail.com', '44444555', 'sofiaL', 'd404559f602eab6fd602ac7680dacb', 'd404559f602eab6fd602ac7680dacb'),
+(7, 'CC', '2333422', 'sofia', 'lopera', '2023-11-10', 'sofia1@gmail.com', '333322', 'sofia1', '133', '133'),
+(8, 'CC', '23334223', 'andrea', 'lopera', '2023-11-08', 'andrea@gmail.com', '32455', 'andrea', '1223', '1223');
 
 --
 -- Índices para tablas volcadas
@@ -363,13 +371,13 @@ ALTER TABLE `horario`
 -- AUTO_INCREMENT de la tabla `pagos`
 --
 ALTER TABLE `pagos`
-  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `reservas`
 --
 ALTER TABLE `reservas`
-  MODIFY `id_reserva` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_reserva` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
@@ -387,7 +395,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Restricciones para tablas volcadas
@@ -398,8 +406,8 @@ ALTER TABLE `usuarios`
 --
 ALTER TABLE `reservas`
   ADD CONSTRAINT `reservas_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `reservas_ibfk_2` FOREIGN KEY (`tipo_especialista`) REFERENCES `especialidades` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `reservas_ibfk_3` FOREIGN KEY (`nombre_medico`) REFERENCES `doctor` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `reservas_ibfk_2` FOREIGN KEY (`nombre_medico`) REFERENCES `doctor` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `reservas_ibfk_3` FOREIGN KEY (`tipo_especialista`) REFERENCES `especialidades` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Filtros para la tabla `user`
