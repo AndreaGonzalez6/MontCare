@@ -1,23 +1,20 @@
 <?php
-include 'php/conexion_be.php';
+include("citas-medicas/includes/db.php");
+include("php/conexion_be.php");
+
 
 
 session_start();
-$usuario_sesion = "";
-if (isset($_SESSION['sesion_usuario'])) {
-  $usuario_sesion = $_SESSION['sesion_usuario'];
-  $sql = "SELECT * FROM usuarios WHERE usuario ='$usuario_sesion' ";
-  $query = $pdo->prepare($sql);
-  $query->execute();
-  $usuarios = $query->fetchAll(PDO::FETCH_ASSOC);
-  foreach ($usuarios as $usuario) {
-    $id = $usuario["id"];
-    $nombre = $usuario["nombre_completo"];
-    $email = $usuario["email"];
 
-}
-}else{
-    //echo "no";
+if(!isset($_SESSION['usuario'])){
+    echo'
+      <script> 
+      alert("Debes iniciar sesión para acceder a esta página");
+      window.location = "index.php"; 
+      </script>    
+    ';
+    session_destroy();
+    die();
 }
 ?>
 
@@ -71,13 +68,13 @@ if (isset($_SESSION['sesion_usuario'])) {
             <ul class="menu_item">
 
               <li class="item">
-                <a href="despues_ingreso.html" class="link flex">
+                <a href="despues_ingreso.php" class="link flex">
                   <i class="bx bx-home-alt"></i>
                   <span>Inicio</span>
                 </a>
               </li>
               <li class="item">
-                <a href="des_ing_info_planes.html" class="link flex">
+                <a href="des_ing_info_planes.php" class="link flex">
                   <i class="bx bx-grid-alt"></i>
                   <span>Planes</span>
                 </a>
@@ -86,13 +83,13 @@ if (isset($_SESSION['sesion_usuario'])) {
 
             <ul class="menu_item">
               <li class="item">
-                <a href="des_ingre_nosotros.html" class="link flex">
+                <a href="des_ingre_nosotros.php" class="link flex">
                   <i class="bx bxs-magic-wand"></i>
                   <span>¿Quiénes somos?</span>
                 </a>
               </li>
               <li class="item">
-                <a href="#" class="link flex">
+                <a href="http://localhost/MontCare/reservar.php" class="link flex">
                   <i class="bx bx-folder"></i>
                   <span>Citas</span>
                 </a>
@@ -101,7 +98,7 @@ if (isset($_SESSION['sesion_usuario'])) {
 
             <ul class="menu_item">
               <li class="item">
-                <a href="despues_ingreso_recomendaciones.html" class="link flex">
+                <a href="despues_ingreso_recomendaciones.php" class="link flex">
                   <i class="bx bx-flag"></i>
                   <span>Recomendaciones</span>
                 </a>
@@ -113,32 +110,27 @@ if (isset($_SESSION['sesion_usuario'])) {
                 </a>
               </li>
               <li class="item">
-                <a href="php/cerrar_sesion.php" class="link flex">
-                  <i class="bx bx-award"></i>
-                  <span>Cerrar Sesión</span>
-                </a>
-              </li>
+                    <a href="php/cerrar_sesion.php" class="link flex">
+                      <i class="bx bx-award"></i>
+                      <span>Cerrar Sesión</span>
+                    </a>
+                  </li>
             </ul>
+            <div class="sidebar_profile flex">
+                <span class="nav_image">
+                    <i class="fa-solid fa-user"></i>
+                </span>
+                <div class="data_text">
+                  <span class="name">Bienvenid@</span>
+                  
+                </div>
           </div>
 
           <div class="sidebar_profile flex">
             
-            <?php
-            if ($usuario_sesion == "") {
-              //echo "sin";
-            ?>
-              
-            <?php
-            } else {
-              //echo "Ya";
-            }
-            ?>
+        
             
-            <div class="data_text">
-              <a href="roles.html" class="ms-lg-3">
-                <p style="color: #000000"><i class="fa-solid fa-user" style="color: #000000"></i>Bienvenido <?php echo $usuario_sesion; ?> </p>
-              </a>
-            </div>
+            
           </div>
         </div>
       </nav>
@@ -175,7 +167,7 @@ if (isset($_SESSION['sesion_usuario'])) {
             </a>
           </div>
           <div class="col-lg-3">
-            <a href="profesionales.html" class="text-decoration-none">
+            <a href="des_ingre_profesionales.php" class="text-decoration-none">
               <div class="bolita color4">
                 <i class="tamaño iconos fa-solid fa-user-doctor" style="color: #ffffff"></i>
               </div>
@@ -212,7 +204,7 @@ if (isset($_SESSION['sesion_usuario'])) {
                   afecciones como enfermedad coronaria, insuficiencia cardíaca, hipertensión y realizan procedimientos como
                   cateterismos cardíacos.</span>
               </div>
-              <a href="profesionales.html#cardiologia" class="btn-contact">Ver Especialistas</a>
+              <a href="des_ingre_profesionales.php#cardiologia" class="btn-contact">Ver Especialistas</a>
             </div>
           </label>
 
@@ -232,7 +224,7 @@ if (isset($_SESSION['sesion_usuario'])) {
                   Utilizan radiografías, tomografías computarizadas, resonancias magnéticas y otras técnicas avanzadas para
                   ayudar en el diagnóstico preciso de diversas enfermedades y lesiones.</span>
               </div>
-              <a href="profesionales.html#radiologia" class="btn-contact">Ver Especialistas</a>
+              <a href="des_ingre_profesionales.php#radiologia" class="btn-contact">Ver Especialistas</a>
             </div>
           </label>
 
@@ -251,7 +243,7 @@ if (isset($_SESSION['sesion_usuario'])) {
                 <span class="lorem"> Especialista en la salud de la mujer. Diagnostican y tratan trastornos ginecológicos,
                   brindan atención prenatal, asisten en el parto y ofrecen cuidado postparto.</span>
               </div>
-              <a href="profesionales.html#ginecologoObstetra" class="btn-contact">Ver Especialistas</a>
+              <a href="des_ingre_profesionales.php#ginecologoObstetra" class="btn-contact">Ver Especialistas</a>
             </div>
           </label>
 
@@ -271,7 +263,7 @@ if (isset($_SESSION['sesion_usuario'])) {
                   cutáneas. Pueden tratar afecciones como acné, dermatitis, infecciones cutáneas, alergias, así como
                   realizar detección y tratamiento temprano de cáncer de piel.</span>
               </div>
-              <a href="profesionales.html#dermatologo" class="btn-contact">Ver Especialistas</a>
+              <a href="des_ingre_profesionales.php#dermatologo" class="btn-contact">Ver Especialistas</a>
             </div>
           </label>
 
@@ -291,7 +283,7 @@ if (isset($_SESSION['sesion_usuario'])) {
                   Monitorean el crecimiento y desarrollo, manejan enfermedades pediátricas comunes y brindan orientación
                   sobre la salud infantil y el bienestar.</span>
               </div>
-              <a href="profesionales.html#pediatra" class="btn-contact">Ver Especialistas</a>
+              <a href="des_ingre_profesionales.php#pediatra" class="btn-contact">Ver Especialistas</a>
             </div>
           </label>
 
@@ -351,12 +343,12 @@ if (isset($_SESSION['sesion_usuario'])) {
           </div>
           <div class="contenedor_price">
             <a href="planes.html">
-              <button type="button" class="btn btn-planes btn-warning xd cursive_font">
+              <button type="button" class="btn btn-planes btn-secondary xd cursive_font">
                 <i class="fa-solid fa-circle-info" style="color: #000000;"></i> Más información
               </button>
             </a>
 
-            <button type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal1" class="btn btn-danger xd cursive_font">
+            <button type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal1" class="btn btn-light xd cursive_font">
               <i class="fa-solid fa-cart-shopping " style="color: #000000;"></i> Comprar
             </button>
 
@@ -372,11 +364,12 @@ if (isset($_SESSION['sesion_usuario'])) {
                 </div>
                 <div class="modal-body">
                   <!-- Contenido del modal -->
-                  <p>Para poder adquirir este plan debes tener una cuenta</p>
+                  <p>Será dirigido al portal de pagos, ¿desea continuar?</p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                  <a href="http://localhost/MontCare/index.php"> <button type="button" class="btn btn-primary">Registrarme</button></a>
+                  <a href="http://localhost/MontCare/portaldepagos.php"> <button type="button" class="btn btn-primary">Comprar</button></a>
+
                 </div>
               </div>
             </div>
@@ -402,12 +395,12 @@ if (isset($_SESSION['sesion_usuario'])) {
           </div>
           <div class="contenedor_price">
             <a href="planes.html">
-              <button type="button" class="btn btn-planes btn-warning xd cursive_font">
+              <button type="button" class="btn btn-planes btn-secondary xd cursive_font">
                 <i class="fa-solid fa-circle-info" style="color: #000000;"></i> Más información
               </button>
             </a>
 
-            <button type="button" class="btn btn-danger xd cursive_font" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+            <button type="button" class="btn btn-light xd cursive_font" data-bs-toggle="modal" data-bs-target="#exampleModal2">
               <i class="fa-solid fa-cart-shopping" style="color: #000000;"></i> Comprar
             </button>
 
@@ -423,11 +416,11 @@ if (isset($_SESSION['sesion_usuario'])) {
                 </div>
                 <div class="modal-body">
                   <!-- Contenido del modal -->
-                  <p>Para poder adquirir este plan debes tener una cuenta</p>
+                  <p>Será dirigido al portal de pagos, ¿desea continuar?</p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                  <a href="http://localhost/MontCare/index.php"> <button type="button" class="btn btn-primary">Registrarme</button></a>
+                  <a href="http://localhost/MontCare/portaldepagos2.php"> <button type="button" class="btn btn-primary">Comprar</button></a>
                 </div>
               </div>
             </div>
@@ -454,11 +447,11 @@ if (isset($_SESSION['sesion_usuario'])) {
           </div>
           <div class="contenedor_price">
             <a href="planes.html">
-              <button type="button" class="btn btn-planes btn-warning xd cursive_font">
+              <button type="button" class="btn btn-planes btn-secondary xd cursive_font">
                 <i class="fa-solid fa-circle-info" style="color: #000000;"></i> Más información
               </button>
             </a>
-            <button type="button" class="btn btn-danger xd cursive_font" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+            <button type="button" class="btn btn-light xd cursive_font" data-bs-toggle="modal" data-bs-target="#exampleModal3">
               <i class="fa-solid fa-cart-shopping" style="color: #000000;"></i> Comprar
             </button>
           </div>
@@ -473,11 +466,11 @@ if (isset($_SESSION['sesion_usuario'])) {
                 </div>
                 <div class="modal-body">
                   <!-- Contenido del modal -->
-                  <p>Para poder adquirir este plan debes tener una cuenta</p>
+                  <p>Será dirigido al portal de pagos, ¿desea continuar?</p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                  <a href="http://localhost/MontCare/index.php"> <button type="button" class="btn btn-primary">Registrarme</button></a>
+                  <a href="http://localhost/MontCare/portaldepagos3.php"> <button type="button" class="btn btn-primary">Comprar</button></a>
                 </div>
               </div>
             </div>
