@@ -124,15 +124,7 @@ if (isset($_SESSION['usuario'])) {
                     </a>
                   </li>
             </ul>
-            <div class="sidebar_profile flex">
-                <span class="nav_image">
-                    <i class="fa-solid fa-user"></i>
-                </span>
-                <div class="data_text">
-                  <span class="name">Bienvenid@</span>
-                  
-                </div>
-          </div>
+            
 
           <div class="sidebar_profile flex">
           <?php
