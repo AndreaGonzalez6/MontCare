@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-11-2023 a las 14:14:15
+-- Tiempo de generación: 08-11-2023 a las 15:45:20
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -162,8 +162,8 @@ CREATE TABLE `pagos` (
 CREATE TABLE `reservas` (
   `id_reserva` int(11) NOT NULL,
   `id_usuario` int(11) NOT NULL,
-  `nombre_medico` int(11) NOT NULL,
-  `tipo_especialista` int(11) NOT NULL,
+  `nombre_medico` varchar(50) NOT NULL,
+  `tipo_especialista` varchar(50) NOT NULL,
   `fecha_cita` date NOT NULL,
   `hora_cita` varchar(100) NOT NULL,
   `title` varchar(100) NOT NULL,
@@ -179,9 +179,11 @@ CREATE TABLE `reservas` (
 --
 
 INSERT INTO `reservas` (`id_reserva`, `id_usuario`, `nombre_medico`, `tipo_especialista`, `fecha_cita`, `hora_cita`, `title`, `start`, `end`, `color`, `fyh_creacion`, `fyh_actualizacion`) VALUES
-(1, 1, 6, 6, '2023-11-01', '09:00 - 9:20am', 'Cita Pediatra', '2023-11-01', '2023-11-01', '#2324ff', '2023-11-02 02:31:34', '2023-11-02 02:31:34'),
-(10, 3, 7, 7, '2023-11-12', '08:20 - 08:40', 'Cita Dermatologia', '2023-11-11', '2023-11-11', '#2324ff', '2023-11-08 13:35:57', '2023-11-08 13:35:57'),
-(13, 6, 9, 5, '2023-11-20', '09:40 - 10:00', 'Cita Cardiología', '2023-11-20', '2023-11-11', '#2324ff', '2023-11-08 13:41:56', '2023-11-08 13:41:56');
+(1, 1, '6', '6', '2023-11-01', '09:00 - 9:20am', 'Cita Pediatra', '2023-11-01', '2023-11-01', '#2324ff', '2023-11-02 02:31:34', '2023-11-02 02:31:34'),
+(10, 3, '7', '7', '2023-11-12', '08:20 - 08:40', 'Cita Dermatologia', '2023-11-11', '2023-11-11', '#2324ff', '2023-11-08 13:35:57', '2023-11-08 13:35:57'),
+(13, 6, '9', '5', '2023-11-20', '09:40 - 10:00', 'Cita Cardiología', '2023-11-20', '2023-11-11', '#2324ff', '2023-11-08 13:41:56', '2023-11-08 13:41:56'),
+(20, 8, 'carlos gonzalez', 'CARDIOLOGIA', '2023-11-16', '08:00 - 08:20', 'CARDIOLOGIA', '2023-11-16', '2023-11-16', '#2324ff', '2023-11-08 15:30:49', '2023-11-08 15:30:49'),
+(21, 8, 'mario gonzalez', 'TRAUMATOLOGIA', '2023-12-13', '13:20 - 13:40', 'TRAUMATOLOGIA', '2023-12-13', '2023-12-13', '#2324ff', '2023-11-08 15:42:11', '2023-11-08 15:42:11');
 
 -- --------------------------------------------------------
 
@@ -377,7 +379,7 @@ ALTER TABLE `pagos`
 -- AUTO_INCREMENT de la tabla `reservas`
 --
 ALTER TABLE `reservas`
-  MODIFY `id_reserva` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_reserva` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
@@ -405,9 +407,7 @@ ALTER TABLE `usuarios`
 -- Filtros para la tabla `reservas`
 --
 ALTER TABLE `reservas`
-  ADD CONSTRAINT `reservas_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `reservas_ibfk_2` FOREIGN KEY (`nombre_medico`) REFERENCES `doctor` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `reservas_ibfk_3` FOREIGN KEY (`tipo_especialista`) REFERENCES `especialidades` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `reservas_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Filtros para la tabla `user`
