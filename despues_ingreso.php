@@ -1,5 +1,8 @@
 <?php
 include("citas-medicas/includes/db.php");
+include("php/conexion_be.php");
+
+
 
 
 session_start();
@@ -125,20 +128,25 @@ if (isset($_SESSION['sesion_usuario'])) {
             
             <?php
             if ($usuario_sesion == "") {
-              //echo "sin";
+              echo "sin";
             ?>
-              
+              <div class="data_text">
+            <a href="http://localhost/MontCare/roles.html" class="ms-lg-3">
+              <p style="color: #000000"><i class="fa-solid fa-user" style="color: #000000"></i>ingresar </p>
+            </a>
+            </div>
+
             <?php
             } else {
-              //echo "Ya";
+              echo "Ya";
             }
             ?>
-            
             <div class="data_text">
-              <a href="roles.html" class="ms-lg-3">
-                <p style="color: #000000"><i class="fa-solid fa-user" style="color: #000000"></i>Bienvenido <?php echo $_SESSION['sesion_usuario']; ?> </p>
-              </a>
+            <a href="http://localhost/MontCare/roles.html" class="ms-lg-3">
+              <p style="color: #000000"><i class="fa-solid fa-user" style="color: #000000"></i>ingresar </p>
+            </a>
             </div>
+            
           </div>
         </div>
       </nav>

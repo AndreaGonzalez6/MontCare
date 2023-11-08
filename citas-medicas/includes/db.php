@@ -25,4 +25,4 @@ mysqli_connect_error() ;
 
 }
 
-?>
+$fechaHora = date("Y-m-d H:i:s");

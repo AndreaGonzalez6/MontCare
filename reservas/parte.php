@@ -1,6 +1,7 @@
 <?php
-include("citas-medicas/includes/db.php");
-$nombre_completo_sesion = $_POST['nombre_completo'];
+include ("citas-medicas/includes/db.php");
+include ("php/conexion_be.php");
+
 
 session_start();
 $usuario_sesion = "";
@@ -11,8 +12,9 @@ if (isset($_SESSION['sesion_usuario'])) {
   $query->execute();
   $usuarios = $query->fetchAll(PDO::FETCH_ASSOC);
   foreach ($usuarios as $usuario) {
-    $id = $usuario["id"];
+    $id_usuario_sesion = $usuario["id"];
     $nombre_completo_sesion = $usuario["nombre_completo"];
+    $email = $usuario["email"];
 }
 }else{
     //echo "no";
