@@ -45,13 +45,13 @@ include("php/conexion_be.php");
           <ul class="menu_item">
 
             <li class="item">
-              <a href="despues_ingreso.html" class="link flex">
+              <a href="despues_ingreso.php" class="link flex">
                 <i class="bx bx-home-alt"></i>
                 <span>Inicio</span>
               </a>
             </li>
             <li class="item">
-              <a href="des_ing_info_planes.html" class="link flex">
+              <a href="des_ing_info_planes.php" class="link flex">
                 <i class="bx bx-grid-alt"></i>
                 <span>Planes</span>
               </a>
@@ -60,7 +60,7 @@ include("php/conexion_be.php");
 
           <ul class="menu_item">
             <li class="item">
-              <a href="des_ingre_nosotros.html" class="link flex">
+              <a href="des_ingre_nosotros.php" class="link flex">
                 <i class="bx bxs-magic-wand"></i>
                 <span>¿Quiénes somos?</span>
               </a>
@@ -75,7 +75,7 @@ include("php/conexion_be.php");
 
           <ul class="menu_item">
             <li class="item">
-              <a href="despues_ingreso_recomendaciones.html" class="link flex">
+              <a href="despues_ingreso_recomendaciones.php" class="link flex">
                 <i class="bx bx-flag"></i>
                 <span>Recomendaciones</span>
               </a>
