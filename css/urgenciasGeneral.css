@@ -38,6 +38,10 @@ a{
     vertical-align: middle;
     max-width: 100%;
 }
+.bajar{
+    padding-top: 30px;
+    padding-left: 10px;
+}
 
  /* footer */
  footer {

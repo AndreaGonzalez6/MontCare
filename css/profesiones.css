@@ -9,6 +9,16 @@ body{
     justify-content: center;
     font-family: 'Urbanist', sans-serif;
 }
+.cards {
+    position: relative;
+    width: 100%;
+    max-width: 430px;
+    margin-bottom: -2340px;
+    margin-left: 350px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    align-self: center;
+}
 
 .container {
     width: 100%;

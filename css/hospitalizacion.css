@@ -7,6 +7,15 @@ body {
     height: auto;
     vertical-align: middle;
 }
+.subir{
+    padding-top: -130px;
+    padding-left: 20px;
+}
+
+.cambio{
+    text-decoration: none;
+}
+
 div > img{
     height: 288px;
     width: 100%;

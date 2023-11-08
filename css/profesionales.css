@@ -18,8 +18,8 @@ body{
     background: #f2f2f2;
     
 }
-p{
-    font-size: 23px !important;
+.bajar{
+    text-decoration: none;
 }
 
 .textoP{
