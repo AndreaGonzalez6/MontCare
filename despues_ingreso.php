@@ -1,27 +1,27 @@
 <?php
-include("citas-medicas/includes/db.php");
 include("php/conexion_be.php");
-
-
 
 
 session_start();
 $usuario_sesion = "";
-if (isset($_SESSION['sesion_usuario'])) {
-  $usuario_sesion = $_SESSION['sesion_usuario'];
-  $sql = "SELECT * FROM usuarios WHERE usuario ='$usuario_sesion' ";
+
+if (isset($_SESSION['usuario'])) {
+  $usuario_sesion = $_SESSION['usuario'];
+  $sql = "SELECT * FROM usuarios WHERE usuario = '$usuario_sesion'";
   $query = $pdo->prepare($sql);
   $query->execute();
   $usuarios = $query->fetchAll(PDO::FETCH_ASSOC);
-  foreach ($usuarios as $usuario) {
-    $id = $usuario["id"];
-    $nombre = $usuario["nombre_completo"];
-    $email = $usuario["email"];
 
+  foreach ($usuarios as $usuario) {
+    $id_usuario_sesion = $usuario["id"];
+    $nombre_completo_sesion = $usuario["nombre_completo"];
+    $email = $usuario["email"];
+  }
+} else {
+  // No se ha iniciado sesión
+  // Puedes agregar un mensaje o redirigir al usuario si lo deseas
 }
-}else{
-    //echo "no";
-}
+
 ?>
 
 
@@ -125,25 +125,23 @@ if (isset($_SESSION['sesion_usuario'])) {
           </div>
 
           <div class="sidebar_profile flex">
-            
-            <?php
-            if ($usuario_sesion == "") {
-              echo "sin";
+          <?php
+          if ($usuario_sesion == "") {
+            //echo "sin";
             ?>
-              <div class="data_text">
-            <a href="http://localhost/MontCare/roles.html" class="ms-lg-3">
+            <div class="data_text">
+            <a href="http://localhost/MontCare/" class="ms-lg-3">
               <p style="color: #000000"><i class="fa-solid fa-user" style="color: #000000"></i>ingresar </p>
             </a>
             </div>
-
-            <?php
-            } else {
-              echo "Ya";
-            }
-            ?>
-            <div class="data_text">
-            <a href="http://localhost/MontCare/roles.html" class="ms-lg-3">
-              <p style="color: #000000"><i class="fa-solid fa-user" style="color: #000000"></i>ingresar </p>
+          <?php
+          } else {
+            //echo "Ya";
+          }
+          ?>
+          <div class="data_text">
+            <a href="http://localhost/MontCare/" class="ms-lg-3">
+              <p style="color: #000000"><i class="fa-solid fa-user" style="color: #000000"></i>Bienvenid@ <?php echo $usuario_sesion; ?> </p>
             </a>
             </div>
             

@@ -1,24 +1,27 @@
 <?php
-include ("citas-medicas/includes/db.php");
 include ("php/conexion_be.php");
 
 
 session_start();
 $usuario_sesion = "";
-if (isset($_SESSION['sesion_usuario'])) {
-  $usuario_sesion = $_SESSION['sesion_usuario'];
-  $sql = "SELECT * FROM usuarios WHERE usuario ='$usuario_sesion' ";
+
+if (isset($_SESSION['usuario'])) {
+  $usuario_sesion = $_SESSION['usuario'];
+  $sql = "SELECT * FROM usuarios WHERE usuario = '$usuario_sesion'";
   $query = $pdo->prepare($sql);
   $query->execute();
   $usuarios = $query->fetchAll(PDO::FETCH_ASSOC);
+
   foreach ($usuarios as $usuario) {
-    $id_usuario_sesion = $usuario["id"];
-    $nombre_completo_sesion = $usuario["nombre_completo"];
+    $id = $usuario["id"];
+    $nombre_completo = $usuario["nombre_completo"];
     $email = $usuario["email"];
+  }
+} else {
+  // No se ha iniciado sesión
+  // Puedes agregar un mensaje o redirigir al usuario si lo deseas
 }
-}else{
-    //echo "no";
-}
+
 ?>
 
 

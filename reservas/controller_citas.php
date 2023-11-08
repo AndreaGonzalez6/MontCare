@@ -14,8 +14,8 @@ $end = $fecha_cita;
 $color = "#2324ff";
 
 $sentencia = $pdo->prepare('INSERT INTO reservas
-(id_usuario,nombre_medico,tipo_especialista,fecha_cita,hora_cita,title,start,end,color, fyh_creacion)
-VALUES ( :id_usuario,:nombre_medico,:tipo_especialista,:fecha_cita,:hora_cita,:title,:start,:end,:color,:fyh_creacion)');
+(id_usuario,nombre_medico,tipo_especialista,fecha_cita,hora_cita,title,start,end,color, fyh_creacion, fyh_actualizacion)
+VALUES ( :id_usuario,:nombre_medico,:tipo_especialista,:fecha_cita,:hora_cita,:title,:start,:end,:color,:fyh_creacion,:fyh_actualizacion)');
 
 $sentencia->bindParam(':id_usuario',$id_usuario);
 $sentencia->bindParam(':nombre_medico',$nombre_medico);
@@ -27,10 +27,12 @@ $sentencia->bindParam(':start',$start);
 $sentencia->bindParam(':end',$end);
 $sentencia->bindParam(':color',$color);
 $sentencia->bindParam('fyh_creacion',$fechaHora);
+$sentencia->bindParam('fyh_actualizacion',$fechaHora);
+
 
 if($sentencia->execute()){
-echo 'success';
+echo 'Su cita ha sido agendada correctamente';
 //header('Location:' .$URL.'/');
 }else{
-echo 'error al registrar a la base de datos';
+echo 'Lo siento, su cita no se pudo agendar';
 }

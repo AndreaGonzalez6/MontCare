@@ -1,5 +1,4 @@
 <?php
-include("citas-medicas/includes/db.php");
 include('reservas/parte.php');
 include("php/conexion_be.php");
 
@@ -15,7 +14,7 @@ include("php/conexion_be.php");
 
 
   <link rel="stylesheet" href="css/all.css" />
-  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="css/bootstrap.css"/>
   <link rel="preload" href="css/normalize.css" as="style"> <!--Para cargar la hoja de estilos más rápido -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -97,20 +96,26 @@ include("php/conexion_be.php");
         </div>
 
         <div class="sidebar_profile flex">
-         
-          <?php
+        <?php
           if ($usuario_sesion == "") {
-            echo "sin";
-          } else {
-            echo "Ya";
-          }
-          ?>
-           
+            //echo "sin";
+            ?>
             <div class="data_text">
             <a href="http://localhost/MontCare/" class="ms-lg-3">
               <p style="color: #000000"><i class="fa-solid fa-user" style="color: #000000"></i>ingresar </p>
             </a>
             </div>
+          <?php
+          } else {
+            //echo "Ya";
+          }
+          ?>
+          <div class="data_text">
+            <a href="http://localhost/MontCare/" class="ms-lg-3">
+              <p style="color: #000000"><i class="fa-solid fa-user" style="color: #000000"></i>Bienvenid@ <?php echo $usuario_sesion; ?> </p>
+            </a>
+            </div>
+            
         </div>
       </div>
     </nav>
@@ -245,12 +250,12 @@ include("php/conexion_be.php");
             <div class="row">
               <div class="col-md-6">
                 <label for="">Nombre usuario</label>
-                <input type="text" class="form-control" value="<?php echo $nombre_completo_sesion; ?>" hidden>
+                <input type="text" class="form-control" value="<?php echo $nombre_completo;?>" disabled>
               </div>
               <div class="col-md-6">
                 <label for="">email usuario</label>
-                <input type="text" class="form-control">
-                <input type="text" name="id_usuario" value="<?php echo $id_usuario_sesion; ?>" hidden>
+                <input type="text" class="form-control" value="<?php echo $email;?>" disabled>
+                <input type="text" name="id_usuario" value="<?php echo $id;?>" hidden>
               </div>
               <div class="col-md-6">
                 <label for="">Nombre Medico</label>
