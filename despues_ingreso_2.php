@@ -1,30 +1,22 @@
 <?php
+include("citas-medicas/includes/db.php");
 include("php/conexion_be.php");
 
 
+
 session_start();
-$usuario_sesion = "";
 
-if (isset($_SESSION['usuario'])) {
-  $usuario_sesion = $_SESSION['usuario'];
-  $sql = "SELECT * FROM usuarios WHERE usuario = '$usuario_sesion'";
-  $query = $pdo->prepare($sql);
-  $query->execute();
-  $usuarios = $query->fetchAll(PDO::FETCH_ASSOC);
-
-  foreach ($usuarios as $usuario) {
-    $id_usuario_sesion = $usuario["id"];
-    $nombre_completo_sesion = $usuario["nombre_completo"];
-    $email = $usuario["email"];
-  }
-} else {
-  // No se ha iniciado sesión
-  // Puedes agregar un mensaje o redirigir al usuario si lo deseas
+if(!isset($_SESSION['usuario'])){
+    echo'
+      <script> 
+      alert("Debes iniciar sesión para acceder a esta página");
+      window.location = "index.php"; 
+      </script>    
+    ';
+    session_destroy();
+    die();
 }
-
 ?>
-
-
 
 
 
@@ -135,25 +127,9 @@ if (isset($_SESSION['usuario'])) {
           </div>
 
           <div class="sidebar_profile flex">
-          <?php
-          if ($usuario_sesion == "") {
-            //echo "sin";
-            ?>
-            <div class="data_text">
-            <a href="http://localhost/MontCare/" class="ms-lg-3">
-              <p style="color: #000000"><i class="fa-solid fa-user" style="color: #000000"></i>ingresar </p>
-            </a>
-            </div>
-          <?php
-          } else {
-            //echo "Ya";
-          }
-          ?>
-          <div class="data_text">
-            <a href="http://localhost/MontCare/" class="ms-lg-3">
-              <p style="color: #000000"><i class="fa-solid fa-user" style="color: #000000"></i>Bienvenid@ <?php echo $usuario_sesion; ?> </p>
-            </a>
-            </div>
+            
+        
+            
             
           </div>
         </div>
@@ -372,14 +348,14 @@ if (isset($_SESSION['usuario'])) {
               </button>
             </a>
 
-            <button type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal1" class="btn btn-light  xd cursive_font">
+            <button type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal1" class="btn btn-light xd cursive_font">
               <i class="fa-solid fa-cart-shopping " style="color: #000000;"></i> Comprar
             </button>
 
           </div>
 
-             <!-- Modal 1-->
-             <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <!-- Modal 1-->
+          <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
               <div class="modal-content">
                 <div class="modal-header">
@@ -424,14 +400,14 @@ if (isset($_SESSION['usuario'])) {
               </button>
             </a>
 
-            <button type="button" class="btn btn-light  xd cursive_font" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+            <button type="button" class="btn btn-light xd cursive_font" data-bs-toggle="modal" data-bs-target="#exampleModal2">
               <i class="fa-solid fa-cart-shopping" style="color: #000000;"></i> Comprar
             </button>
 
           </div>
 
-        <!-- Modal 2-->
-        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <!-- Modal 2-->
+          <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
               <div class="modal-content">
                 <div class="modal-header">
@@ -475,13 +451,13 @@ if (isset($_SESSION['usuario'])) {
                 <i class="fa-solid fa-circle-info" style="color: #000000;"></i> Más información
               </button>
             </a>
-            <button type="button" class="btn btn-light  xd cursive_font" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+            <button type="button" class="btn btn-light xd cursive_font" data-bs-toggle="modal" data-bs-target="#exampleModal3">
               <i class="fa-solid fa-cart-shopping" style="color: #000000;"></i> Comprar
             </button>
           </div>
 
-         <!-- Modal 3-->
-         <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <!-- Modal 3-->
+          <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
               <div class="modal-content">
                 <div class="modal-header">
@@ -583,7 +559,7 @@ if (isset($_SESSION['usuario'])) {
   <script src="js/all.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/javaScript.js"></script>
-  
+  <script src="//code.tidio.co/ptgoankg7hqle2tty7pkcysd7hzrikor.js" async></script>
 
 
 </body>

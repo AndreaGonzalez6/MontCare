@@ -1,3 +1,22 @@
+<?php
+include("citas-medicas/includes/db.php");
+include("php/conexion_be.php");
+
+
+
+session_start();
+
+if(!isset($_SESSION['usuario'])){
+    echo'
+      <script> 
+      alert("Debes iniciar sesión para acceder a esta página");
+      window.location = "index.php"; 
+      </script>    
+    ';
+    session_destroy();
+    die();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,79 +49,84 @@
         <aside class="sidebar">
           <!-- Contenido del sidebar -->
           <nav class="sidebar locked">
-            <div class="logo_items flex">
-              <span class="nav_image">
-                <img src="imágenes/logo.png" alt="logo_img" />
-              </span>
-              <span class="logo_name">MontCare</span>
-            </div>
-      
-            <div class="menu_container">
-              <div class="menu_items">
-                <ul class="menu_item">
-                  
-                  <li class="item">
-                    <a href="despues_ingreso.html" class="link flex">
-                      <i class="bx bx-home-alt"></i>
-                      <span>Inicio</span>
-                    </a>
-                  </li>
-                  <li class="item">
-                    <a href="des_ing_info_planes.html" class="link flex">
-                      <i class="bx bx-grid-alt"></i>
-                      <span>Planes</span>
-                    </a>
-                  </li>
-                </ul>
-      
-                <ul class="menu_item">
-                  <li class="item">
-                    <a href="des_ingre_nosotros.html" class="link flex">
-                      <i class="bx bxs-magic-wand"></i>
-                      <span>¿Quiénes somos?</span>
-                    </a>
-                  </li>
-                  <li class="item">
-                    <a href="#" class="link flex">
-                      <i class="bx bx-folder"></i>
-                      <span>Citas</span>
-                    </a>
-                  </li>
-                </ul>
-      
-                <ul class="menu_item">
-                  <li class="item">
-                    <a href="despues_ingreso_recomendaciones.html" class="link flex">
-                      <i class="bx bx-flag"></i>
-                      <span>Recomendaciones</span>
-                    </a>
-                  </li>
-                  <li class="item">
-                    <a href="#" class="link flex">
+        <div class="logo_items flex">
+          <span class="nav_image">
+            <img src="imágenes/logo.png" alt="logo_img" />
+          </span>
+          <span class="logo_name">MontCare</span>
+        </div>
+
+        <div class="menu_container">
+          <div class="menu_items">
+            <ul class="menu_item">
+
+              <li class="item">
+                <a href="despues_ingreso.php" class="link flex">
+                  <i class="bx bx-home-alt"></i>
+                  <span>Inicio</span>
+                </a>
+              </li>
+              <li class="item">
+                <a href="des_ing_info_planes.php" class="link flex">
+                  <i class="bx bx-grid-alt"></i>
+                  <span>Planes</span>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="menu_item">
+              <li class="item">
+                <a href="des_ingre_nosotros.php" class="link flex">
+                  <i class="bx bxs-magic-wand"></i>
+                  <span>¿Quiénes somos?</span>
+                </a>
+              </li>
+              <li class="item">
+                <a href="http://localhost/MontCare/reservar.php" class="link flex">
+                  <i class="bx bx-folder"></i>
+                  <span>Citas</span>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="menu_item">
+              <li class="item">
+                <a href="despues_ingreso_recomendaciones.php" class="link flex">
+                  <i class="bx bx-flag"></i>
+                  <span>Recomendaciones</span>
+                </a>
+              </li>
+              <li class="item">
+                <a href="#" class="link flex">
+                  <i class="bx bx-cog"></i>
+                  <span>Configuraciones</span>
+                </a>
+              </li>
+              <li class="item">
+                    <a href="php/cerrar_sesion.php" class="link flex">
                       <i class="bx bx-award"></i>
-                      <span>Award</span>
+                      <span>Cerrar Sesión</span>
                     </a>
                   </li>
-                  <li class="item">
-                    <a href="#" class="link flex">
-                      <i class="bx bx-cog"></i>
-                      <span>Setting</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-      
-              <div class="sidebar_profile flex">
+            </ul>
+            <div class="sidebar_profile flex">
                 <span class="nav_image">
                     <i class="fa-solid fa-user"></i>
                 </span>
                 <div class="data_text">
-                  <span class="name">Alexa Bedoya</span>
-                  <span class="email">alexabedoyarojas123@gmail.com</span>
+                  <span class="name">Bienvenid@</span>
+                  
                 </div>
-              </div>
-            </div>
-          </nav>
+          </div>
+
+          <div class="sidebar_profile flex">
+            
+        
+            
+            
+          </div>
+        </div>
+      </nav>
         </aside>
         <main class="content">
           <!-- Contenido principal -->

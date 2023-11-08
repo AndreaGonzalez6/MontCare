@@ -11,8 +11,8 @@
   <link rel="stylesheet" href="css/estilos.css">
   <link rel="stylesheet" href="css/recomendaciones.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -20,6 +20,7 @@
   <!-- navbar  -->
   <nav class="navbar navbar-expand-lg bg-white nav sticky-top">
     <div class="container-fluid">
+
       <a class="navbar-brand" href="#">
         <img src="imágenes/logo.png" alt="MontCare" style="width: 19rem" class="img-logo" />
       </a>
@@ -28,7 +29,6 @@
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
 
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
@@ -41,340 +41,320 @@
               data-bs-toggle="dropdown" aria-expanded="false">
               ¿Quiénes somos?
             </a>
+
             <ul class="dropdown-menu" aria-labelledby="paquetesDropdown">
               <li>
-                <a class="dropdown-item texto" href="quienesSomos.html">Nosotros</a>
+                <a class="dropdown-item texto" href="quienesSomos.html#nosotros">Nosotros</a>
               </li>
               <li>
-                <a class="dropdown-item texto" href="quienesSomos.html">Misión</a>
+                <a class="dropdown-item texto" href="quienesSomos.html#mision">Misión</a>
               </li>
               <li>
-                <a class="dropdown-item texto" href="quienesSomos.html">Visión</a>
+                <a class="dropdown-item texto" href="quienesSomos.html#vision">Visión</a>
               </li>
               <li>
-                <a class="dropdown-item texto" href="quienesSomos.html">Profesionales</a>
+                <a class="dropdown-item texto" href="profesionales.html">Profesionales</a>
               </li>
             </ul>
+
           </li>
 
           <li class="nav-item">
-            <a class="nav-link texto texto" href="#">Servicios</a>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle texto" href="#" id="elementosDropdown" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              Planes
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="elementosDropdown">
-              <li>
-                <a class="dropdown-item texto" href="#">Básico</a>
-              </li>
-              <li>
-                <a class="dropdown-item texto" href="#">Profesional</a>
-              </li>
-              <li>
-                <a class="dropdown-item texto" href="#">Business</a>
-              </li>
-            </ul>
+            <a class="nav-link texto texto" href="servicios.html">Servicios</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link texto" href="recomendaciones.html">Recomendaciones</a>
+            <a class="nav-link texto" href="planes.html">Planes</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link texto" href="#">Comentarios</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link texto" href="#">Contacto</a>
+            <a class="nav-link texto" href="#contact">Contacto</a>
           </li>
         </ul>
-        <a href="http://localhost/MontCare/" class="ms-lg-3">
 
+        <a href="roles.html" class="ms-lg-3">
           <p style="color: #000000"><i class="fa-solid fa-user" style="color: #000000"></i> Ingresar</p>
-
         </a>
       </div>
     </div>
   </nav>
   <!-- Fin navbar  -->
   <div class="inicio">
-    <div class="contenedor">
-      <div class="urgenciasGeneral">
+
+  </div>
+  <div class="cuadros_links">
+    
+    <div class="cuadritos">
+
+        <i class="fa-solid fa-heart-pulse tamaño_icono"></i>
         <a href="#urgenciasGenerales">
-          <h1 class="clickeable">Urgencias General:</h1>
+        <h5>Urgencias Generales</h5>
         </a>
-        <p>En esta sección, te proporcionamos información vital sobre la prevención de urgencias médicas generales.
-          Aprenderás cómo mantener un estilo de vida saludable, tomar decisiones alimenticias inteligentes y evitar
-          factores de riesgo
-          que puedan conducir a problemas cardíacos, accidentes cerebrovasculares y otros eventos médicos críticos.
-          Nuestra misión es ayudarte a mantener tu bienestar y prevenir situaciones de emergencia.
-        </p>
-      </div>
     </div>
-    <div class="contenedor">
-      <div class="urgenciasGeneral">
-        <a href="#urgenciasPediatricas">
-          <h1 class="clickeable">Urgencias Pediátricas:</h1>
-        </a>
-        <p>La seguridad y salud de tus hijos son de suma importancia.
-          En esta sección, te ofrecemos consejos esenciales sobre cómo proteger a tus pequeños y prevenir urgencias
-          médicas pediátricas.
-          Aprenderás sobre la vacunación, la seguridad en el hogar y cómo identificar los signos de alarma en los niños.
-        </p>
-      </div>
+    <div class="cuadritos">
+      <i class="fa-solid fa-baby-carriage tamaño_icono"></i>
+      <a href="#urgenciasPediatricas">
+      <h5>Urgencias Pediátricas</h5>
+      </a>
     </div>
-    <div class="contenedor">
-      <div class="urgenciasGeneral">
-        <a href="#urgenciasObstetricia">
-          <h1 class="clickeable">Urgencias de Obstetricia y Ginecología:</h2>
-        </a>
-        <p>Durante el embarazo, es fundamental recibir atención prenatal adecuada y estar informada sobre la salud
-          materna e infantil.
-          Aquí, encontrarás información sobre la prevención de urgencias obstétricas,
-          cómo reconocer signos de alarma y la importancia de elegir una instalación médica segura para el parto.
-        </p>
-      </div>
+    <div class="cuadritos">
+      <i class="fa-solid fa-person-pregnant tamaño_icono"></i>
+      <a href="#urgenciasObstetricia">
+        <h5>Urgencias Obstetricia</h5>
+      </a>
     </div>
-     <div class="contenedor">
-      <div class="urgenciasGeneral">
-        <a href="#urgenciasTraumatologia">
-          <h1 class="clickeable">Urgencias de Traumatología:</h2>
-        </a>
-        <p>La prevención de lesiones es esencial para una vida activa y saludable.
-          En esta sección, te proporcionamos consejos para evitar urgencias relacionadas con traumatismos,
-          rehabilitación y quemaduras.
-          Aprenderás sobre la seguridad en el trabajo, la prevención de lesiones deportivas
-          y cómo proteger a tu familia de quemaduras accidentales.
-        </p>
-      </div>
+    <div class="cuadritos">
+      <i class="fa-solid fa-user-injured tamaño_icono"></i>
+      <a href="#urgenciasTraumatologia">
+        <h5 id="h5-traumatología">Urgencias Traumatología</h5>
+      </a>
     </div>
   </div>
-   
+
   <div id="urgenciasGenerales" class="tituloGeneral">
     <h2>Prevención de Urgencias Generales</h2>
   </div>
-  <div class="imagen">
-    <img src="imágenes/deporte.jpg" alt="">
-  </div>
-  <div class="informacion">
+  <div class="contenedor-1">
+    <div class="imagen">
+      <img src="imágenes/deporte.jpg" alt="">
+    </div>
+    <div class="informacion">
 
-    <div class="info-general">
-      <div class="estiloVida">
-        <h5>Mantén un Estilo de Vida Activo:</h6>
+      <div class="info-general">
+        <div class="estiloVida">
+          <h5>Mantén un Estilo de Vida Activo:</h6>
+            <ul>
+              <li><b>Realiza ejercicio regularmente:</b> Se recomienda al menos 150 minutos de actividad
+                física moderada por semana.
+                Esto puede incluir caminar, nadar, andar en bicicleta o actividades aeróbicas.</li>
+              <li><b>Mantén un peso saludable:</b> El sobrepeso y la obesidad aumentan el riesgo de problemas
+                de salud
+                como enfermedades cardíacas, diabetes y presión arterial alta.
+                Mantener un peso saludable es fundamental.</li>
+            </ul>
+        </div>
+        <div class="estiloVida">
+          <h5>Dieta Saludable:</h5>
           <ul>
-            <li><b>Realiza ejercicio regularmente:</b> Se recomienda al menos 150 minutos de actividad
-              física moderada por semana.
-              Esto puede incluir caminar, nadar, andar en bicicleta o actividades aeróbicas.</li>
-            <li><b>Mantén un peso saludable:</b> El sobrepeso y la obesidad aumentan el riesgo de problemas
-              de salud
-              como enfermedades cardíacas, diabetes y presión arterial alta.
-              Mantener un peso saludable es fundamental.</li>
+            <li><b>Come una variedad de alimentos:</b> Incluye frutas, verduras, granos enteros, proteínas
+              magras
+              y productos lácteos bajos en grasa en tu dieta diaria.</li>
+            <li><b>Limita la ingesta de sodio y grasas saturadas:</b> Reduce la cantidad de alimentos procesados
+              y ricos en grasas trans en tu dieta. Lee las etiquetas de los alimentos para controlar la
+              ingesta de sodio.</li>
           </ul>
-      </div>
-      <div class="estiloVida">
-        <h5>Dieta Saludable:</h5>
-        <ul>
-          <li><b>Come una variedad de alimentos:</b> Incluye frutas, verduras, granos enteros, proteínas
-            magras
-            y productos lácteos bajos en grasa en tu dieta diaria.</li>
-          <li><b>Limita la ingesta de sodio y grasas saturadas:</b> Reduce la cantidad de alimentos procesados
-            y ricos en grasas trans en tu dieta. Lee las etiquetas de los alimentos para controlar la
-            ingesta de sodio.</li>
-        </ul>
-      </div>
-      <div class="estiloVida">
-        <h5>Evita el Consumo Excesivo de Alcohol y Tabaco:</h5>
-        <ul>
-          <li><b>Bebe con moderación:</b> Si consumes alcohol, hazlo con moderación. El exceso de alcohol
-            puede dañar el hígado y aumentar el riesgo de accidentes.</li>
-          <li><b>Deja de fumar:</b> El tabaco aumenta el riesgo de enfermedades cardíacas, cáncer y
-            enfermedades respiratorias.
-            Busca ayuda para dejar de fumar si es necesario.</li>
-        </ul>
-      </div>
+        </div>
+        <div class="estiloVida">
+          <h5>Evita el Consumo Excesivo de Alcohol y Tabaco:</h5>
+          <ul>
+            <li><b>Bebe con moderación:</b> Si consumes alcohol, hazlo con moderación. El exceso de alcohol
+              puede dañar el hígado y aumentar el riesgo de accidentes.</li>
+            <li><b>Deja de fumar:</b> El tabaco aumenta el riesgo de enfermedades cardíacas, cáncer y
+              enfermedades respiratorias.
+              Busca ayuda para dejar de fumar si es necesario.</li>
+          </ul>
+        </div>
 
 
+      </div>
     </div>
 
   </div>
+
   <div id="urgenciasPediatricas" class="tituloGeneral">
     <h2>Prevención de Urgencias Pediátricas</h2>
   </div>
-  <div class="imagen">
-    <img src="imágenes/vacunacionPediatría.jpg" alt="">
-  </div>
-  <div class="informacion">
+  <div class="contenedor-1">
+    <div class="imagen">
+      <img src="imágenes/vacunacionPediatría.jpg" alt="">
+    </div>
+    <div class="informacion">
 
-    <div class="info-general">
-      <div class="estiloVida">
-        <h5>Vacunación:</h6>
-          <ul>
-            <li><b>Mantén el calendario de vacunación actualizado:</b>Las vacunas son esenciales para prevenir enfermedades graves como sarampión, paperas, rubéola, tos
+      <div class="info-general">
+        <div class="estiloVida">
+          <h5>Vacunación:</h6>
+            <ul>
+              <li><b>Mantén el calendario de vacunación actualizado:</b>Las vacunas son esenciales para prevenir
+                enfermedades graves como sarampión, paperas, rubéola, tos
                 ferina y más.</li>
+            </ul>
+        </div>
+        <div class="estiloVida">
+          <h5>Seguridad en el Hogar:</h5>
+          <ul>
+            <li><b>Asegura el hogar:</b>Instala cercas alrededor de piscinas, asegura muebles
+              peligrosos, guarda objetos afilados y productos químicos fuera del alcance de los niños.</li>
+            <li><b>Educación en Primeros Auxilios: </b> Aprende técnicas básicas de primeros auxilios para saber cómo
+              reaccionar
+              en caso de lesiones menores.</li>
+            <li><b>Educación Sobre el Uso de Dispositivos Electrónicos:</b> Limita el tiempo de pantalla de tus hijos y
+              enséñales
+              a usar dispositivos electrónicos de manera segura.</li>
           </ul>
-      </div>
-      <div class="estiloVida">
-        <h5>Seguridad en el Hogar:</h5>
-        <ul>
-          <li><b>Asegura el hogar:</b>Instala cercas alrededor de piscinas, asegura muebles
-            peligrosos, guarda objetos afilados y productos químicos fuera del alcance de los niños.</li>
-          <li><b>Educación en Primeros Auxilios: </b> Aprende técnicas básicas de primeros auxilios para saber cómo
-            reaccionar
-            en caso de lesiones menores.</li>
-          <li><b>Educación Sobre el Uso de Dispositivos Electrónicos:</b> Limita el tiempo de pantalla de tus hijos y
-            enséñales
-            a usar dispositivos electrónicos de manera segura.</li>
-        </ul>
-      </div>
-      <div class="estiloVida">
-        <h5>Supervisión:</h5>
-        <ul>
-          <li><b>Vigila a tus hijos de cerca: </b> Supervisa a los niños en todo momento,
-            especialmente en áreas potencialmente peligrosas, como piscinas y parques.</li>
-        </ul>
-      </div>
+        </div>
+        <div class="estiloVida">
+          <h5>Supervisión:</h5>
+          <ul>
+            <li><b>Vigila a tus hijos de cerca: </b> Supervisa a los niños en todo momento,
+              especialmente en áreas potencialmente peligrosas, como piscinas y parques.</li>
+          </ul>
+        </div>
 
+
+      </div>
 
     </div>
-
   </div>
+
 
   <div id="urgenciasObstetricia" class="tituloGeneral">
     <h2>Prevención de Urgencias de Obstetricia y Ginecología:</h2>
   </div>
-  <div class="imagen">
-    <img src="imágenes/recomendacionesObstetricia.jpg" alt="">
-  </div>
-  <div class="informacion">
+  <div class="contenedor-1">
+    <div class="imagen">
+      <img src="imágenes/recomendacionesObstetricia.jpg" alt="">
+    </div>
+    <div class="informacion">
 
-    <div class="info-general">
-      <div class="estiloVida">
-        <h5>Control Prenatal:</h6>
+      <div class="info-general">
+        <div class="estiloVida">
+          <h5>Control Prenatal:</h6>
+            <ul>
+              <li><b>Realiza visitas prenatales regulares:</b>El seguimiento médico durante el embarazo es esencial para
+                detectar y tratar problemas potenciales.
+                Sigue el plan de cuidado prenatal recomendado por tu médico.</li>
+            </ul>
+        </div>
+        <div class="estiloVida">
+          <h5>Educación Prenatal:</h5>
           <ul>
-            <li><b>Realiza visitas prenatales regulares:</b>El seguimiento médico durante el embarazo es esencial para detectar y tratar problemas potenciales.
-               Sigue el plan de cuidado prenatal recomendado por tu médico.</li>
+            <li><b>Aprende sobre los signos de alarma:</b>Conoce los síntomas que podrían indicar una emergencia
+              obstétrica,
+              como sangrado vaginal abundante, contracciones prematuras o disminución de la actividad fetal.</li>
           </ul>
-      </div>
-      <div class="estiloVida">
-        <h5>Educación Prenatal:</h5>
-        <ul>
-          <li><b>Aprende sobre los signos de alarma:</b>Conoce los síntomas que podrían indicar una emergencia obstétrica, 
-            como sangrado vaginal abundante, contracciones prematuras o disminución de la actividad fetal.</li>
-        </ul>
-      </div>
-      <div class="estiloVida">
-        <h5>Seguridad en el Parto:</h5>
-        <ul>
-          <li><b>Elige una instalación médica adecuada: </b> Asegúrate de dar a luz en un hospital o centro médico con personal y equipo capacitados para atender emergencias obstétricas.</li>
-        </ul>
-      </div>
+        </div>
+        <div class="estiloVida">
+          <h5>Seguridad en el Parto:</h5>
+          <ul>
+            <li><b>Elige una instalación médica adecuada: </b> Asegúrate de dar a luz en un hospital o centro médico con
+              personal y equipo capacitados para atender emergencias obstétricas.</li>
+          </ul>
+        </div>
 
+
+      </div>
 
     </div>
-
   </div>
+
 
   <div id="urgenciasTraumatologia" class="tituloGeneral">
     <h2>Prevención de Urgencias de Traumatología, Rehabilitación y Quemados:</h2>
   </div>
-  <div class="imagen">
-    <img src="imágenes/recomendacionesTraumatologiayQuemados.jpg" alt="">
-  </div>
-  <div class="informacion">
+  <div class="contenedor-1">
+    <div class="imagen">
+      <img src="imágenes/recomendacionesTraumatologiayQuemados.jpg" alt="">
+    </div>
+    <div class="informacion">
 
-    <div class="info-general">
-      <div class="estiloVida">
-        <h5>Seguridad en el Trabajo:</h6>
+      <div class="info-general">
+        <div class="estiloVida">
+          <h5>Seguridad en el Trabajo:</h6>
+            <ul>
+              <li><b>Sigue las normas de seguridad: </b>Cumple con las normas y prácticas
+                de seguridad en tu lugar de trabajo. Usa el equipo de protección personal proporcionado.</li>
+            </ul>
+        </div>
+        <div class="estiloVida">
+          <h5>Prevención de Quemaduras:</h5>
           <ul>
-            <li><b>Sigue las normas de seguridad: </b>Cumple con las normas y prácticas 
-              de seguridad en tu lugar de trabajo. Usa el equipo de protección personal proporcionado.</li>
+            <li><b>Mantén objetos calientes fuera del alcance de los niños: </b> Los niños pueden resultar quemados por
+              objetos calientes como planchas y sartenes. Manténlos fuera de su alcance.</li>
+            <li><b>Ten cuidado con líquidos calientes: </b> Manipula con cuidado líquidos calientes, como café y sopas,
+              para evitar quemaduras.</li>
           </ul>
-      </div>
-      <div class="estiloVida">
-        <h5>Prevención de Quemaduras:</h5>
-        <ul>
-          <li><b>Mantén objetos calientes fuera del alcance de los niños: </b> Los niños pueden resultar quemados por objetos calientes como planchas y sartenes. Manténlos fuera de su alcance.</li>
-          <li><b>Ten cuidado con líquidos calientes:  </b> Manipula con cuidado líquidos calientes, como café y sopas, para evitar quemaduras.</li>
-        </ul>
-      </div>
-      <div class="estiloVida">
-        <h5>Prevención de Lesiones Deportivas:</h5>
-        <ul>
-          <li><b>Practica deportes de manera segura:</b>Sigue las reglas del deporte y usa equipo
-             de protección adecuado, como cascos, protectores y rodilleras.</li>
-        </ul>
-      </div>
-      
+        </div>
+        <div class="estiloVida">
+          <h5>Prevención de Lesiones Deportivas:</h5>
+          <ul>
+            <li><b>Practica deportes de manera segura:</b>Sigue las reglas del deporte y usa equipo
+              de protección adecuado, como cascos, protectores y rodilleras.</li>
+          </ul>
+        </div>
 
+
+
+      </div>
 
     </div>
-
-  </div>
-
- <!-- comentarios -->
- <div class="row">
-  <div class="col-md-4 text-light centrar" style="background-color: rgb(67, 101, 104);">
-    <form action="#" method="post">
-      <h2 class="titulo"> ¡Sección de comentarios! </h2> 
-
-      <i class="fa-solid fa-user nombre"></i>
-      <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required> <br>
-
-      <i class="fa-solid fa-envelope correo"></i>
-      <input type="email" id="correo" name="correo" placeholder="Ingrese su correo" required> <br>
-
-      <i class="fa-regular fa-comment comentario"></i>
-      <textarea id="comentario" name="comentario" rows="5" placeholder="Comentario" required></textarea> <br> <br>
-
-      <button type="submit" class="btn btn-primary"> Enviar </button>
-    </form>
-  </div>
-
-  <div class="col-md-2 centrar" style="background-color: rgb(67, 101, 104);">
-    <img src="imágenes/intento1.png" height="306vh">
   </div>
 
 
-  <!-- contacto -->
-  <div class="col-md-6 text-light fondoContacto" id="contact">
-    <div class="row fila">
-      <div class="col-md-12">
-        <h2 class="titulo pt-1">Información de Contacto</h2>
-        <p><strong class="letra"><i class="fa-solid fa-location-dot" style="color: #e8e8e8;"></i> Dirección:
-          </strong>
-          Barrio piñalito Calle -11 Carrera - #11-43 <br> Montelíbano-Córdoba
+  <!-- comentarios -->
+  <div class="row">
+    <div class="col-md-4 text-light centrar" style="background-color: rgb(67, 101, 104);">
+      <form action="#" method="post">
+        <h2 class="titulo"> ¡Sección de comentarios! </h2>
 
-        </p>
-        <p><strong class="letra"><i class="fa-solid fa-phone" style="color: #e8e8e8;"></i> Teléfono:</strong>
-          604-342-3954</p>
-        <p><strong class="letra"> <i class="fa-solid fa-envelope" style="color: #e8e8e8;"></i> Email: </strong>
-          CentroHospitalario@MontCare.com</p>
-      </div>
+        <i class="fa-solid fa-user nombre"></i>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required> <br>
+
+        <i class="fa-solid fa-envelope correo"></i>
+        <input type="email" id="correo" name="correo" placeholder="Ingrese su correo" required> <br>
+
+        <i class="fa-regular fa-comment comentario"></i>
+        <textarea id="comentario" name="comentario" rows="5" placeholder="Comentario" required></textarea> <br> <br>
+
+        <button type="submit" class="btn btn-primary"> Enviar </button>
+      </form>
     </div>
 
-    <div class="row">
-      <div class="col-md-12">
-        <div class="redes">
-          <a href="#" target="_blank"> <i class="fab fa-brands fa-whatsapp tamaños wpp"></i></a>
-          <a href="#" target="_blank"> <i class="fab fa-brands fa-instagram tamaños ig"></i></a>
-          <a href="#" target="_blank"> <i class="fa-brands fa-twitter tamaños tw"></i> </a>
-          <a href="#" target="_blank"> <i class="fa-brands fa-facebook-f tamaños fb"></i> </a>
-          <a href="#" target="_blank"> <i class="fa-brands fa-tiktok tamaños tk"></i> </a>
+    <div class="col-md-2 centrar" style="background-color: rgb(67, 101, 104);">
+      <img src="imágenes/intento1.png" height="306vh">
+    </div>
+
+
+    <!-- contacto -->
+    <div class="col-md-6 text-light fondoContacto" id="contact">
+      <div class="row fila">
+        <div class="col-md-12">
+          <h2 class="titulo pt-1">Información de Contacto</h2>
+          <p><strong class="letra"><i class="fa-solid fa-location-dot" style="color: #e8e8e8;"></i> Dirección:
+            </strong>
+            Barrio piñalito Calle -11 Carrera - #11-43 <br> Montelíbano-Córdoba
+
+          </p>
+          <p><strong class="letra"><i class="fa-solid fa-phone" style="color: #e8e8e8;"></i> Teléfono:</strong>
+            604-342-3954</p>
+          <p><strong class="letra"> <i class="fa-solid fa-envelope" style="color: #e8e8e8;"></i> Email: </strong>
+            CentroHospitalario@MontCare.com</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="redes">
+            <a href="#" target="_blank"> <i class="fab fa-brands fa-whatsapp tamaños wpp"></i></a>
+            <a href="#" target="_blank"> <i class="fab fa-brands fa-instagram tamaños ig"></i></a>
+            <a href="#" target="_blank"> <i class="fa-brands fa-twitter tamaños tw"></i> </a>
+            <a href="#" target="_blank"> <i class="fa-brands fa-facebook-f tamaños fb"></i> </a>
+            <a href="#" target="_blank"> <i class="fa-brands fa-tiktok tamaños tk"></i> </a>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-</div>
-<hr class="lineap">
-<footer>
+  </div>
+  <hr class="lineap">
+  <footer>
     <p>Derechos Reservados &copy; 2023 Hospital Privado MontCare</p>
-</footer>
-
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+  crossorigin="anonymous"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/all.js"></script>
 
 </body>
 
