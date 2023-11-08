@@ -71,6 +71,14 @@
                 </form>
             </div>
         </div>
+        
+        <script>
+    // Obtiene la fecha actual en formato ISO (AAAA-MM-DD)
+    var fechaActual = new Date().toISOString().split("T")[0];
+
+    // Establece el valor máximo para el input date
+    document.getElementById("fechaInput").setAttribute("max", fechaActual);
+</script>
 
     </main>
 
