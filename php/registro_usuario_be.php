@@ -1,6 +1,6 @@
 <?php
 include("citas-medicas/includes/db.php");
-
+include 'conexion_be.php';
 
 
 $tipo_documento = $_POST['format'];
