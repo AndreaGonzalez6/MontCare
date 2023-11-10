@@ -73,7 +73,7 @@ if ($varsesion == null || $varsesion = '') {
                             <tr>
                                 <td><?php echo $fila['cedula']; ?></td>
                                 <td><?php echo $fila['nombres']; ?></td>
-                                <td><?php echo $fila['id_especialidad']; ?></td>
+                                <td><?php echo $fila['especialidad']; ?></td>
                                 <td><?php echo $fila['sexo']; ?></td>
                                 <td><?php echo $fila['telefono']; ?></td>
                                 <td><?php echo $fila['fecha']; ?></td>
@@ -157,3 +157,4 @@ if ($varsesion == null || $varsesion = '') {
 </body>
 
 </html>
+

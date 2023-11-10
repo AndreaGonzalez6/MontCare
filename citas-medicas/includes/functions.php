@@ -166,8 +166,8 @@ function insert_cita()
     include "db.php";
     extract($_POST);
 
-    $consulta = "INSERT INTO citas (fecha, hora, id_paciente, id_doctor , id_especialidad, observacion, estado)
-    VALUES ('$fecha', '$hora', '$id_paciente', '$id_doctor', '$id_especialidad', '$observacion', '$estado')";
+    $consulta = "INSERT INTO citas (fecha, hora, id_paciente, id_doctor , especialidad, observacion, estado)
+    VALUES ('$fecha', '$hora', '$id_paciente', '$id_doctor', '$especialidad', '$observacion', '$estado')";
     $resultado = mysqli_query($conexion, $consulta);
 
     if ($resultado) {
@@ -187,8 +187,8 @@ function insert_doctor()
 {
     include "db.php";
     extract($_POST);
-    $consulta = "INSERT INTO doctor (cedula, nombres, id_especialidad, sexo,  telefono, fecha, correo)
-    VALUES ('$cedula', '$nombres', '$id_especialidad','$sexo', '$telefono',  '$fecha', '$correo')";
+    $consulta = "INSERT INTO doctor (cedula, nombres, especialidad, sexo,  telefono, fecha, correo)
+    VALUES ('$cedula', '$nombres', '$especialidad','$sexo', '$telefono',  '$fecha', '$correo')";
     $resultado = mysqli_query($conexion, $consulta);
 
     if ($resultado) {
@@ -271,7 +271,7 @@ function editar_doctor()
 {
     include "db.php";
     extract($_POST);
-    $consulta = "UPDATE doctor SET cedula = '$cedula', nombres = '$nombres', id_especialidad = '$id_especialidad',  sexo = '$sexo',
+    $consulta = "UPDATE doctor SET cedula = '$cedula', nombres = '$nombres', especialidad = '$especialidad',  sexo = '$sexo',
     telefono = '$telefono', fecha = '$fecha',  correo = '$correo' WHERE id = '$id' ";
     $resultado = mysqli_query($conexion, $consulta);
 
@@ -313,7 +313,7 @@ function editar_cita()
     include "db.php";
     extract($_POST);
     $consulta = "UPDATE citas SET fecha = '$fecha', hora = '$hora', id_paciente = '$id_paciente', id_doctor = '$id_doctor',
-    id_especialidad = '$id_especialidad', observacion = '$observacion' , estado= '$estado' 
+    especialidad = '$especialidad', observacion = '$observacion' , estado= '$estado' 
     WHERE id = '$id' ";
     $resultado = mysqli_query($conexion, $consulta);
 

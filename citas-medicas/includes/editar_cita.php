@@ -79,8 +79,8 @@ $usuario = mysqli_fetch_assoc($resultado);
 
                     <div class="form-group ">
                         <label>Especialidad</label>
-                        <select class="form-control" id="id_especialidad" name="id_especialidad">
-                            <option <?php echo $usuario['id_especialidad'] === 'id_especialidad' ? "selected='selected' " : "" ?> value="<?php echo $usuario['id_especialidad']; ?>"><?php echo $usuario['id_especialidad']; ?> </option>
+                        <select class="form-control" id="especialidad" name="especialidad">
+                            <option <?php echo $usuario['especialidad'] === 'especialidad' ? "selected='selected' " : "" ?> value="<?php echo $usuario['especialidad']; ?>"><?php echo $usuario['especialidad']; ?> </option>
                             <?php
 
                             include("db.php");

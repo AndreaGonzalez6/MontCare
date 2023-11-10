@@ -30,9 +30,14 @@ $sentencia->bindParam('fyh_creacion',$fechaHora);
 $sentencia->bindParam('fyh_actualizacion',$fechaHora);
 
 
-if($sentencia->execute()){
-echo 'Su cita ha sido agendada correctamente';
-//header('Location:' .$URL.'/');
-}else{
-echo 'Lo siento, su cita no se pudo agendar';
+if ($sentencia->execute()) {
+    session_start();
+    $_SESSION['mensaje'] = "Su cita ha sido agendada correctamente";
+    $_SESSION['icono'] = 'success'; // Corrección del nombre del icono
+    header('Location: http://localhost/MontCare/reservar.php'); // Corrección en la URL
+} else {
+    session_start();
+    $_SESSION['mensaje'] = "Lo siento, su cita no se pudo agendar";
+    $_SESSION['icono'] = 'error';
+    header('Location: http://localhost/MontCare/reservar.php'); // Corrección en la URL
 }

@@ -1,7 +1,7 @@
 <?php
 include('reservas/parte.php');
+include('reservas/mensaje.php');
 include("php/conexion_be.php");
-
 ?>
 
 
@@ -14,7 +14,7 @@ include("php/conexion_be.php");
 
 
   <link rel="stylesheet" href="css/all.css" />
-  <link rel="stylesheet" href="css/bootstrap.css"/>
+  <link rel="stylesheet" href="css/bootstrap.css" />
   <link rel="preload" href="css/normalize.css" as="style"> <!--Para cargar la hoja de estilos más rápido -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -81,29 +81,29 @@ include("php/conexion_be.php");
               </a>
             </li>
             <li class="item">
-                <a href="#" class="link flex">
-                  <i class="bx bx-cog"></i>
-                  <span>Configuraciones</span>
-                </a>
-              </li>
-              <li class="item">
-                    <a href="php/cerrar_sesion.php" class="link flex">
-                      <i class="bx bx-award"></i>
-                      <span>Cerrar Sesión</span>
-                    </a>
-                  </li>
+              <a href="#" class="link flex">
+                <i class="bx bx-cog"></i>
+                <span>Configuraciones</span>
+              </a>
+            </li>
+            <li class="item">
+              <a href="php/cerrar_sesion.php" class="link flex">
+                <i class="bx bx-award"></i>
+                <span>Cerrar Sesión</span>
+              </a>
+            </li>
           </ul>
         </div>
 
         <div class="sidebar_profile flex">
-        <?php
+          <?php
           if ($usuario_sesion == "") {
             //echo "sin";
-            ?>
+          ?>
             <div class="data_text">
-            <a href="http://localhost/MontCare/" class="ms-lg-3">
-              <p style="color: #000000"><i class="fa-solid fa-user" style="color: #000000"></i>ingresar </p>
-            </a>
+              <a href="http://localhost/MontCare/" class="ms-lg-3">
+                <p style="color: #000000"><i class="fa-solid fa-user" style="color: #000000"></i>ingresar </p>
+              </a>
             </div>
           <?php
           } else {
@@ -114,8 +114,8 @@ include("php/conexion_be.php");
             <a href="http://localhost/MontCare/" class="ms-lg-3">
               <p style="color: #000000"><i class="fa-solid fa-user" style="color: #000000"></i>Bienvenid@ <?php echo $usuario_sesion; ?> </p>
             </a>
-            </div>
-            
+          </div>
+
         </div>
       </div>
     </nav>
@@ -142,8 +142,29 @@ include("php/conexion_be.php");
             if ((numeroDia == "6")) {
               alert("No hay atención el día domingo");
             } else {
-              $('#modal_reservas').modal("show");
-              $('#dia_de_la_semana').html(dias[numeroDia] + " " + a);
+              var anio = new Date().getFullYear();
+              var mes = new Date().getMonth() + 1;
+              var dia = new Date().getDate();
+              var hoy = anio + "-" + mes + "-" + dia;
+
+              if (hoy <= a) {
+                $('#modal_reservas').modal("show");
+                $('#dia_de_la_semana').html(dias[numeroDia] + " " + a);
+
+                var fecha = info.dateStr;
+                var res = "";
+                var url = "reservas/verificar_horario.php";
+                $.get(url, {
+                  fecha: fecha
+                }, function(datos) {
+                  //alert("entro");
+                  res = datos;
+                  $('#respuesta_horario').html(res);
+                });
+              } else {
+                alert("No se pueden reservar días pasados")
+              }
+
             }
           },
         });
@@ -193,15 +214,17 @@ include("php/conexion_be.php");
 
 
 <!-- Modal -->
-<div class="modal fade" id="modal_reservas" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+<div class="modal fade" id="modal_reservas" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalLabel">Reserva tu cita para el día <span id="dia_de_la_semana"></span></h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
+
       <div class="modal-body">
+        <center>
+          <h2>Reserva tu cita</h2>
+        </center>
+        <hr>
         <div class="row">
+          <div id="respuesta_horario"></div>
           <div class="col-md-6">
             <center><b>Turno Mañana</b></center>
             <br>
@@ -225,8 +248,9 @@ include("php/conexion_be.php");
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar cita</button>
-
+        <a href="" class="btn btn-primary">
+          Escoger otra fecha
+        </a>
       </div>
     </div>
   </div>
@@ -250,19 +274,57 @@ include("php/conexion_be.php");
             <div class="row">
               <div class="col-md-6">
                 <label for="">Nombre usuario</label>
-                <input type="text" class="form-control" value="<?php echo $nombre_completo;?>" disabled>
+                <input type="text" class="form-control" value="<?php echo $nombre_completo; ?>" disabled>
               </div>
               <div class="col-md-6">
                 <label for="">email usuario</label>
-                <input type="text" class="form-control" value="<?php echo $email;?>" disabled>
-                <input type="text" name="id_usuario" value="<?php echo $id;?>" hidden>
+                <input type="text" class="form-control" value="<?php echo $email; ?>" disabled>
+                <input type="text" name="id_usuario" value="<?php echo $id; ?>" hidden>
               </div>
+
+
+              <?php
+              include("php/conexion_be.php");
+
+              $sql = "SELECT id, nombres FROM doctor";
+              $result = $conexion->query($sql);
+
+              $medicos = array();
+
+              if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                  $medicos[] = $row;
+                }
+              }
+              ?>
               <div class="col-md-6">
                 <label for="">Nombre Medico</label>
-                <input type="text" name="nombre_medico" class="form-control">
+                <select name="nombre_medico" id="nombre_medico" class="form-control">
+                  <option value=""></option>
+
+                  <?php
+                  foreach ($medicos as $medico) {
+                    $especialidad = $medico[""];
+
+                    echo '<option value="' . $medico['id'] . '">' . $medico['nombres'] . '</option>';
+                  }
+                  ?>
+
+                </select>
               </div>
+              <script>
+                document.getElementById('nombre_medico').addEventListener('change', function() {
+                  var selectedMedicoId = this.value;
+
+                  // Puedes usar selectedMedicoId para realizar acciones adicionales si es necesario.
+
+                  // Ejemplo: Imprimir el ID seleccionado en la consola.
+                  console.log(selectedMedicoId);
+                });
+              </script>
+
               <div class="col-md-6">
-                <label for="">Tipo de servicio</label>
+                <label for="">Tipo de especialista</label>
                 <select name="tipo_especialista" id="" class="form-control">
                   <option value="PEDIATRIA">PEDIATRÍA</option>
                   <option value="TRAUMATOLOGIA">TRAUMATOLOGÍA</option>

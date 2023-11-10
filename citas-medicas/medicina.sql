@@ -33,7 +33,7 @@ CREATE TABLE `citas` (
   `hora` time NOT NULL,
   `id_paciente` int(11) NOT NULL,
   `id_doctor` int(11) NOT NULL,
-  `id_especialidad` int(11) NOT NULL,
+  `especialidad` int(11) NOT NULL,
   `observacion` varchar(250) NOT NULL,
   `estado` int(11) NOT NULL,
   `fecha_registro` timestamp NOT NULL DEFAULT current_timestamp()
@@ -43,7 +43,7 @@ CREATE TABLE `citas` (
 -- Volcado de datos para la tabla `citas`
 --
 
-INSERT INTO `citas` (`id`, `fecha`, `hora`, `id_paciente`, `id_doctor`, `id_especialidad`, `observacion`, `estado`, `fecha_registro`) VALUES
+INSERT INTO `citas` (`id`, `fecha`, `hora`, `id_paciente`, `id_doctor`, `especialidad`, `observacion`, `estado`, `fecha_registro`) VALUES
 (10, '2023-08-26', '09:12:00', 6, 7, 8, 'Ninguna1', 1, '2023-08-19 15:09:38');
 
 -- --------------------------------------------------------
@@ -56,7 +56,7 @@ CREATE TABLE `doctor` (
   `id` int(11) NOT NULL,
   `cedula` int(50) NOT NULL,
   `nombres` varchar(50) NOT NULL,
-  `id_especialidad` int(11) NOT NULL,
+  `especialidad` int(11) NOT NULL,
   `sexo` varchar(50) NOT NULL,
   `telefono` varchar(50) NOT NULL,
   `fecha` date NOT NULL,
@@ -68,7 +68,7 @@ CREATE TABLE `doctor` (
 -- Volcado de datos para la tabla `doctor`
 --
 
-INSERT INTO `doctor` (`id`, `cedula`, `nombres`, `id_especialidad`, `sexo`, `telefono`, `fecha`, `correo`, `fecha_registro`) VALUES
+INSERT INTO `doctor` (`id`, `cedula`, `nombres`, `especialidad`, `sexo`, `telefono`, `fecha`, `correo`, `fecha_registro`) VALUES
 (6, 101, 'Alex Castillo Cervantes', 8, 'Masculino', '99111656701', '2022-09-05', 'mugarte5672@gmail.com.mx', '2022-09-05 15:56:14'),
 (7, 8, 'Emmanuel Mugarte', 5, 'Masculino', '99111656701', '2023-08-19', 'lex@hotmail.com', '2023-08-19 14:54:13'),
 (9, 57, 'Kelly Castillo Cervantes', 6, 'Masculino', '99111656701', '2023-08-19', 'lex@hotmail.com', '2023-08-19 14:58:13');

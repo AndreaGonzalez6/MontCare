@@ -67,7 +67,7 @@ if ($varsesion == null || $varsesion = '') {
 
                         include "../includes/db.php";
                         $result = mysqli_query($conexion, "SELECT c.id, c.fecha, c.hora, c.id_paciente, 
-                        c.id_doctor, c.id_especialidad, c.observacion, c.fecha_registro, e.estado FROM citas c 
+                        c.id_doctor, c.especialidad, c.observacion, c.fecha_registro, e.estado FROM citas c 
                         LEFT JOIN estado e ON c.estado= e.id  ");
                         while ($fila = mysqli_fetch_assoc($result)) :
 
@@ -78,7 +78,7 @@ if ($varsesion == null || $varsesion = '') {
                                 <td><?php echo $fila['hora']; ?></td>
                                 <td><?php echo $fila['id_paciente']; ?></td>
                                 <td><?php echo $fila['id_doctor']; ?></td>
-                                <td><?php echo $fila['id_especialidad']; ?></td>
+                                <td><?php echo $fila['especialidad']; ?></td>
                                 <td><?php echo $fila['observacion']; ?></td>
                                 <td><?php echo $fila['estado']; ?></td>
                                 <td><?php echo $fila['fecha_registro']; ?></td>

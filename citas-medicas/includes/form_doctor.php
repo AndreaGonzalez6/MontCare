@@ -35,7 +35,7 @@ if ($varsesion == null || $varsesion = '') {
 
                     <div class="form-group ">
                         <label>Especialidad</label>
-                        <select class="form-control" id="id_especialidad" name="id_especialidad">
+                        <select class="form-control" id="especialidad" name="especialidad">
                             <option value="0">--Selecciona una opcion--</option>
                             <?php
 
