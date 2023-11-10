@@ -469,9 +469,38 @@
           <i class="fa-solid fa-envelope correo"></i>
           <input type="email" id="correo" name="correo" placeholder="Ingrese su correo" required> <br>
 
+          <i class="fa-solid fa-bullhorn megafono"></i>
+          <select name="format" id="miSelect" onchange="cambiarPlaceholder()" required>
+            <option selected disabled>P-Q-R-S
+            <option class="peticion" value="peticion">Petición</option>
+            <option class="queja" value="queja">Queja</option>
+            <option class="reclamo" value="reclamo">Reclamo</option>
+            <option class="solicitud" value="solicitud">Solicitud</option>
+        </select> <br>
+
           <i class="fa-regular fa-comment comentario"></i>
           <textarea id="comentario" name="comentario" rows="5" placeholder="Comentario" required></textarea> <br> <br>
 
+          <script>
+            function cambiarPlaceholder() {
+              var select = document.getElementById("miSelect");
+              var textarea = document.getElementById("comentario");
+              var selectedOption = select.options[select.selectedIndex];
+          
+              if (selectedOption.value === "peticion"){
+                textarea.placeholder = "Escriba aquí su petición";
+              }
+              else if (selectedOption.value === "reclamo") {
+                textarea.placeholder = "Escriba aquí su reclamo";
+              } else if (selectedOption.value === "queja") {
+                textarea.placeholder = "Escriba aquí su queja";
+              } else if (selectedOption.value === "solicitud") {
+                textarea.placeholder = "Escriba aquí su solicitud";
+              } else {
+                textarea.placeholder = "Comentario";
+              }
+            }
+          </script>      
           <button type="submit" class="btn btn-primary"> Enviar </button>
         </form>
       </div>
