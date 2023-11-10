@@ -281,7 +281,7 @@
   </div>
 
   <!-- Planes-->
-    <div class="contenedor_planes" id="planes">
+  <div class="contenedor_planes" id="planes">
     <div class="planes planes_laterales">
       <div class="planes_header header_laterales">
         <h2 class="title">BÁSICO</h2>
@@ -460,7 +460,8 @@
     <!-- comentarios -->
     <div class="row">
       <div class="col-md-4 text-light centrar" style="background-color: rgb(67, 101, 104);">
-        <form action="#" method="post">
+        <form action="https://formsubmit.co/alexabedoyarojas123@gmail.com" method="POST" id="miFormulario"
+          onsubmit="return mostrarConfirmacion()">
           <h2 class="titulo"> ¡Sección de comentarios! </h2>
 
           <i class="fa-solid fa-user nombre"></i>
@@ -469,15 +470,51 @@
           <i class="fa-solid fa-envelope correo"></i>
           <input type="email" id="correo" name="correo" placeholder="Ingrese su correo" required> <br>
 
+          <i class="fa-solid fa-bullhorn megafono"></i>
+          <select name="format" id="miSelect" onchange="cambiarPlaceholder()" required>
+            <option selected disabled>P-Q-R-S
+            <option class="peticion" value="peticion">Petición</option>
+            <option class="queja" value="queja">Queja</option>
+            <option class="reclamo" value="reclamo">Reclamo</option>
+            <option class="solicitud" value="solicitud">Solicitud</option>
+          </select> <br>
+
           <i class="fa-regular fa-comment comentario"></i>
           <textarea id="comentario" name="comentario" rows="5" placeholder="Comentario" required></textarea> <br> <br>
 
-          <button type="submit" class="btn btn-primary"> Enviar </button>
+          <script>
+            function cambiarPlaceholder() {
+              var select = document.getElementById("miSelect");
+              var textarea = document.getElementById("comentario");
+              var selectedOption = select.options[select.selectedIndex];
+
+              if (selectedOption.value === "peticion") {
+                textarea.placeholder = "Escriba aquí su petición";
+              }
+              else if (selectedOption.value === "reclamo") {
+                textarea.placeholder = "Escriba aquí su reclamo";
+              } else if (selectedOption.value === "queja") {
+                textarea.placeholder = "Escriba aquí su queja";
+              } else if (selectedOption.value === "solicitud") {
+                textarea.placeholder = "Escriba aquí su solicitud";
+              } else {
+                textarea.placeholder = "Comentario";
+              }
+            }
+
+            function mostrarConfirmacion() {
+              alert("¡El formulario se envió correctamente!");
+              return true; 
+            }
+          </script>
+          <button type="submit" class="btn btn-primary mandar"> Enviar </button>
+          <input type="hidden" name="_next" value="http://127.0.0.1:5502/index.html">
+          <input type="hidden" name="_captcha" value="false">
         </form>
       </div>
 
       <div class="col-md-2 centrar" style="background-color: rgb(67, 101, 104);">
-        <img src="imágenes/intento1.png" height="306vh">
+        <img src="imágenes/intento1.png" height="345vh">
       </div>
 
 
@@ -501,9 +538,10 @@
         <div class="row">
           <div class="col-md-12">
             <div class="redes">
-              <a href="#" target="_blank"> <i class="fab fa-brands fa-whatsapp tamaños wpp"></i></a>
-              <a href="#" target="_blank"> <i class="fab fa-brands fa-instagram tamaños ig"></i></a>
-              <a href="#" target="_blank"> <i class="fa-brands fa-twitter tamaños tw"></i> </a>
+              <a href="https://api.whatsapp.com/send?phone=3052781531" target="_blank"> <i
+                  class="fab fa-brands fa-whatsapp tamaños wpp"></i></a>
+              <a href="https://instagram.com/ice.cream_draws?igshid=MTRjd3RlbmNtMHYybQ==" target="_blank"> <i class="fab fa-brands fa-instagram tamaños ig"></i></a>
+              <a href="https://x.com/ice_cream2903?t=XOiJhroPm4P0Hyo2vaBxrg&s=09" target="_blank"> <i class="fa-brands fa-twitter tamaños tw"></i> </a>
               <a href="#" target="_blank"> <i class="fa-brands fa-facebook-f tamaños fb"></i> </a>
               <a href="#" target="_blank"> <i class="fa-brands fa-tiktok tamaños tk"></i> </a>
             </div>
@@ -529,4 +567,5 @@
   <script src="js/javaScript.js"></script>
   <script src="//code.tidio.co/ptgoankg7hqle2tty7pkcysd7hzrikor.js" async></script>
 </body>
+
 </html>
