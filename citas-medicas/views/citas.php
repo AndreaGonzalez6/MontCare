@@ -50,38 +50,36 @@ if ($varsesion == null || $varsesion = '') {
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>NumCita#</th>
-                                <th>Fecha_Cita</th>
-                                <th>Horario</th>
-                                <th>Paciente</th>
-                                <th>Doctor</th>
-                                <th>Especialidad</th>
-                                <th>Observacion</th>
-                                <th>Estado</th>
-                                <th>Fecha_Registro</th>
+                                <th>id_reserva#</th>
+                                <th>id_usuario</th>
+                                <th>nombre_medico</th>
+                                <th>tipo_especialista</th>
+                                <th>fecha_cita</th>
+                                <th>hora_cita</th>
+                                <th>titulo</th>
+                                <th>fyh_creación</th>
+                                <th>fyh_actualizacion</th>
                                 <th>Acciones..</th>
                             </tr>
                         </thead>
 
                         <?php
 
-                        include "../includes/db.php";
-                        $result = mysqli_query($conexion, "SELECT c.id, c.fecha, c.hora, c.id_paciente, 
-                        c.id_doctor, c.especialidad, c.observacion, c.fecha_registro, e.estado FROM citas c 
-                        LEFT JOIN estado e ON c.estado= e.id  ");
+                        include "../../php/conexion_be.php";
+                        $result = mysqli_query($conexion, "SELECT * FROM reservas ");
                         while ($fila = mysqli_fetch_assoc($result)) :
 
                         ?>
                             <tr>
-                                <td><?php echo $fila['id']; ?></td>
-                                <td><?php echo $fila['fecha']; ?></td>
-                                <td><?php echo $fila['hora']; ?></td>
-                                <td><?php echo $fila['id_paciente']; ?></td>
-                                <td><?php echo $fila['id_doctor']; ?></td>
-                                <td><?php echo $fila['especialidad']; ?></td>
-                                <td><?php echo $fila['observacion']; ?></td>
-                                <td><?php echo $fila['estado']; ?></td>
-                                <td><?php echo $fila['fecha_registro']; ?></td>
+                                <td><?php echo $fila['id_reserva']; ?></td>
+                                <td><?php echo $fila['id_usuario']; ?></td>
+                                <td><?php echo $fila['nombre_medico']; ?></td>
+                                <td><?php echo $fila['tipo_especialista']; ?></td>
+                                <td><?php echo $fila['fecha_cita']; ?></td>
+                                <td><?php echo $fila['hora_cita']; ?></td>
+                                <td><?php echo $fila['title']; ?></td>
+                                <td><?php echo $fila['fyh_creacion']; ?></td>
+                                <td><?php echo $fila['fyh_actualizacion']; ?></td>
 
                                 <td>
                                     <a class="btn btn-warning" href="../includes/editar_cita.php?id=<?php echo $fila['id'] ?> ">

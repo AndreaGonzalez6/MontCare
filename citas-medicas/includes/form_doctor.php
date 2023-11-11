@@ -23,7 +23,7 @@ if ($varsesion == null || $varsesion = '') {
 
                 <form action="../includes/functions.php" method="POST">
                     <div class="form-group">
-                        <label for="folio" class="form-label">Folio*</label>
+                        <label for="folio" class="form-label">Cedula*</label>
                         <input type="number" id="cedula" name="cedula" class="form-control" required>
                     </div>
 
@@ -32,26 +32,38 @@ if ($varsesion == null || $varsesion = '') {
                         <input type="text" id="nombres" name="nombres" class="form-control" required>
                     </div>
 
+                    <?php
+                    include("db.php");
 
-                    <div class="form-group ">
+                    // Verificar si el formulario ha sido enviado
+                    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                        // Obtener el valor seleccionado en el formulario
+                        $especialidad = $_POST["especialidad"];
+
+                        // Tu lógica para insertar en la base de datos
+                        $sql = "INSERT INTO doctor (nombre_especialidad) VALUES ('$especialidad')";
+                        // Resto del código...
+                    }
+                    ?>
+
+                    <div class="form-group">
                         <label>Especialidad</label>
                         <select class="form-control" id="especialidad" name="especialidad">
                             <option value="0">--Selecciona una opcion--</option>
                             <?php
-
                             include("db.php");
-                            //Codigo para mostrar categorias desde otra tabla
-                            $sql = "SELECT * FROM especialidades ";
+
+                            // Código para mostrar categorías desde otra tabla
+                            $sql = "SELECT * FROM especialidades";
                             $resultado = mysqli_query($conexion, $sql);
+
                             while ($consulta = mysqli_fetch_array($resultado)) {
-                                echo '<option value="' . $consulta['id'] . '">' . $consulta['nombre'] . '</option>';
+                                echo '<option value="' . $consulta['nombre'] . '">' . $consulta['nombre'] . '</option>';
                             }
-
                             ?>
-
-
                         </select>
                     </div>
+
 
 
 

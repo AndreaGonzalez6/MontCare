@@ -282,55 +282,70 @@ include("php/conexion_be.php");
                 <input type="text" name="id_usuario" value="<?php echo $id; ?>" hidden>
               </div>
 
-
               <?php
               include("php/conexion_be.php");
 
-              $sql = "SELECT id, nombres FROM doctor";
-              $result = $conexion->query($sql);
+              // Obtener todas las especialidades
+              $sql_especialidades = "SELECT DISTINCT especialidad FROM doctor";
+              $result_especialidades = $conexion->query($sql_especialidades);
 
-              $medicos = array();
+              $especialidades = array();
 
-              if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                  $medicos[] = $row;
+              if ($result_especialidades->num_rows > 0) {
+                while ($row_especialidad = $result_especialidades->fetch_assoc()) {
+                  $especialidades[] = $row_especialidad['especialidad'];
                 }
               }
               ?>
+
               <div class="col-md-6">
-                <label for="">Nombre Medico</label>
-                <select name="nombre_medico" id="nombre_medico" class="form-control">
+                <label for="">Tipo de especialista</label>
+                <select name="tipo_especialista" id="tipo_especialista" class="form-control">
                   <option value=""></option>
 
                   <?php
-                  foreach ($medicos as $medico) {
-                    $especialidad = $medico[""];
-
-                    echo '<option value="' . $medico['id'] . '">' . $medico['nombres'] . '</option>';
+                  foreach ($especialidades as $especialidad) {
+                    echo '<option value="' . $especialidad . '">' . $especialidad . '</option>';
                   }
                   ?>
 
                 </select>
               </div>
-              <script>
-                document.getElementById('nombre_medico').addEventListener('change', function() {
-                  var selectedMedicoId = this.value;
-
-                  // Puedes usar selectedMedicoId para realizar acciones adicionales si es necesario.
-
-                  // Ejemplo: Imprimir el ID seleccionado en la consola.
-                  console.log(selectedMedicoId);
-                });
-              </script>
 
               <div class="col-md-6">
-                <label for="">Tipo de especialista</label>
-                <select name="tipo_especialista" id="" class="form-control">
-                  <option value="PEDIATRIA">PEDIATRÍA</option>
-                  <option value="TRAUMATOLOGIA">TRAUMATOLOGÍA</option>
-                  <option value="CARDIOLOGIA">CARDIOLOGÍA</option>
+                <label for="">Nombre Medico</label>
+                <select name="nombre_medico" id="nombre_medico" class="form-control">
+                  <option value=""></option>
                 </select>
               </div>
+
+              <script>
+                document.getElementById('tipo_especialista').addEventListener('change', function() {
+                  var selectedEspecialista = this.value;
+
+                  // Realizar una petición AJAX para obtener los médicos con la especialidad seleccionada
+                  var xhr = new XMLHttpRequest();
+                  xhr.onreadystatechange = function() {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                      var medicos = JSON.parse(xhr.responseText);
+                      actualizarDropdownMedicos(medicos);
+                    }
+                  };
+                  xhr.open("GET", "obtener_medicos.php?especialidad=" + selectedEspecialista, true);
+                  xhr.send();
+                });
+
+                function actualizarDropdownMedicos(medicos) {
+                  var dropdownMedicos = document.getElementById('nombre_medico');
+                  dropdownMedicos.innerHTML = '<option value=""></option>';
+
+                  for (var i = 0; i < medicos.length; i++) {
+                    dropdownMedicos.innerHTML += '<option value="' + medicos[i].id + '">' + medicos[i].nombres + '</option>';
+                  }
+                }
+              </script>
+
+
             </div>
             <br>
             <div class="row">

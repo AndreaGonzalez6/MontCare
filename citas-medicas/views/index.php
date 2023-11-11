@@ -40,9 +40,9 @@ include '../includes/header.php';
                             Numero de citas</a>
                         <div class="h5 mb-0 font-weight-bold text-gray-800">
                             <?php 
-                               include "../includes/db.php"; 
+                               include "../../php/conexion_be.php"; 
     
-                                $SQL="SELECT id FROM citas ORDER BY id";
+                                $SQL="SELECT * FROM reservas ";
                                 $dato = mysqli_query($conexion, $SQL);
                                 $fila= mysqli_num_rows($dato);
     

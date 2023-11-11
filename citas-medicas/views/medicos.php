@@ -51,7 +51,7 @@ if ($varsesion == null || $varsesion = '') {
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>Folio#</th>
+                                <th>Cedula#</th>
                                 <th>Nombre</th>
                                 <th>Especialidad</th>
                                 <th>Sexo</th>
