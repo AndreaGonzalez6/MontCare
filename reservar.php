@@ -324,15 +324,15 @@ include("php/conexion_be.php");
                   var selectedEspecialista = this.value;
 
                   // Realizar una petición AJAX para obtener los médicos con la especialidad seleccionada
-                  var xhr = new XMLHttpRequest();
-                  xhr.onreadystatechange = function() {
-                    if (xhr.readyState == 4 && xhr.status == 200) {
-                      var medicos = JSON.parse(xhr.responseText);
+                  var medicoN = new XMLHttpRequest();
+                  medicoN.onreadystatechange = function() {
+                    if (medicoN.readyState == 4 && medicoN.status == 200) {
+                      var medicos = JSON.parse(medicoN.responseText);
                       actualizarDropdownMedicos(medicos);
                     }
                   };
-                  xhr.open("GET", "obtener_medicos.php?especialidad=" + selectedEspecialista, true);
-                  xhr.send();
+                  medicoN.open("GET", "obtener_medicos.php?especialidad=" + selectedEspecialista, true);
+                  medicoN.send();
                 });
 
                 function actualizarDropdownMedicos(medicos) {
