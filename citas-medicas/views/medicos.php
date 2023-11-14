@@ -58,6 +58,7 @@ if ($varsesion == null || $varsesion = '') {
                                 <th>Telefono#</th>
                                 <th>Fecha_Nacimiento</th>
                                 <th>Correo</th>
+                                <th>Contraseña</th>
                                 <th>Fecha_Registro</th>
                                 <th>Acciones..</th>
                             </tr>
@@ -78,6 +79,7 @@ if ($varsesion == null || $varsesion = '') {
                                 <td><?php echo $fila['telefono']; ?></td>
                                 <td><?php echo $fila['fecha']; ?></td>
                                 <td><?php echo $fila['correo']; ?></td>
+                                <td><?php echo $fila['contrasena']; ?></td>
                                 <td><?php echo $fila['fecha_registro']; ?></td>
 
                                 <td>
