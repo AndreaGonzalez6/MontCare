@@ -272,7 +272,7 @@ function editar_doctor()
     include "db.php";
     extract($_POST);
     $consulta = "UPDATE doctor SET cedula = '$cedula', nombres = '$nombres', especialidad = '$especialidad',  sexo = '$sexo',
-    telefono = '$telefono', fecha = '$fecha',  correo = '$correo' WHERE id = '$id' ";
+    telefono = '$telefono', fecha = '$fecha',  correo = '$correo', contrasena = '$contrasena' WHERE id = '$id' ";
     $resultado = mysqli_query($conexion, $consulta);
 
     if ($resultado) {
