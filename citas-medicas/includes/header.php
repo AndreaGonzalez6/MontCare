@@ -145,7 +145,7 @@ if ($actualsesion == null || $actualsesion == '') {
             <!-- Nav Item - user -->
             <li class="nav-item">
 
-                <a class="nav-link" href="../views/acceso.php">
+                <a class="nav-link" href="../views/usuarios.php">
                     <i class="fa fa-user" aria-hidden="true"></i>
                     <span>Usuarios</span></a>
             </li>

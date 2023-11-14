@@ -40,7 +40,7 @@ if(!isset($_SESSION['usuario'])){
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mi Página con Modal</title>
+    <title></title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="ruta_a_bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css"/>

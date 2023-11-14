@@ -165,6 +165,130 @@ if(!isset($_SESSION['usuario'])){
     </aside>
     <main class="content">
       <!-- Contenido principal -->
+      <body id="page-top">
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Lista de Citas</h6>
+
+
+
+
+        </div>
+
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            
+                            <th>Usuario</th>
+                            <th>Email</th>
+                            <th>Cita</th>
+                            <th>Nombre del medico</th>
+                            <th>Tipo de especialista</th>
+                            <th>Fecha de la cita</th>
+                            <th>Hora de la cita</th>
+                            
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+
+
+
+
+                    <?php
+
+                    
+
+
+                    $usuario_sesion = $_SESSION['usuario'];
+
+                    // Obtener el ID del usuario actual
+                    $sql_usuario = "SELECT id FROM usuarios WHERE usuario = '$usuario_sesion'";
+                    $query_usuario = $pdo->prepare($sql_usuario);
+                    $query_usuario->execute();
+                    $usuario = $query_usuario->fetch(PDO::FETCH_ASSOC);
+                    $id_usuario = $usuario['id'];
+
+                    $result = mysqli_query($conexion, "SELECT *, usu.nombre_completo as nombre_completo, usu.email as email, doc.nombres as nombres FROM reservas as res INNER JOIN usuarios as usu ON usu.id = res.id_usuario INNER JOIN doctor as doc ON doc.id = res.nombre_medico WHERE res.id_usuario = $id_usuario");
+
+                    while ($reservas = mysqli_fetch_assoc($result)) :
+                    ?>
+                        <tr>
+                            
+                            <td><?php echo $reservas['nombre_completo']; ?></td>
+                            <td><?php echo $reservas['email']; ?></td>
+                            <td><?php echo $reservas['cita']; ?></td>
+                            <td><?php echo $reservas['nombres']; ?></td>
+                            <td><?php echo $reservas['tipo_especialista']; ?></td>
+                            <td><?php echo $reservas['fecha_cita']; ?></td>
+                            <td><?php echo $reservas['hora_cita']; ?></td>
+                            
+
+                            <td>
+                                <a href="eliminar_miCita.php?id_reserva=<?php echo $reservas['id_reserva'] ?> " class="btn btn-danger btn-del">
+                                    <i class="fa fa-trash "></i></a></button>
+                            </td>
+                        </tr>
+                    <?php endwhile; ?>
+
+
+                    </tbody>
+                </table>
+
+
+                <script>
+                    $('.btn-del').on('click', function(e) {
+                        e.preventDefault();
+                        const href = $(this).attr('href')
+
+                        Swal.fire({
+                            title: '¿Estás seguro de eliminar esta cita?',
+                            text: '¡No podrás revertir esto!',
+                            icon: 'warning',
+                            showCancelButton: true,
+                            confirmButtonColor: '#3085d6',
+                            cancelButtonColor: '#d33',
+                            confirmButtonText: 'Sí, eliminar',
+                            cancelButtonText: 'Cancelar',
+                        }).then((result) => {
+                            if (result.value) {
+                                if (result.isConfirmed) {
+                                    Swal.fire(
+                                        'Eliminado',
+                                        'El usuario fue eliminado',
+                                        'success'
+                                    );
+
+                                    // Delay the redirection after showing the success message
+                                    setTimeout(function() {
+                                        document.location.href = href;
+                                    }, 5000); // Set the delay time (in milliseconds)
+                                }
+                            }
+                        });
+                    });
+                </script>
+
+
+                <script src="../citas-medicas/package/dist/sweetalert2.all.js"></script>
+                <script src="../citas-medicas/package/dist/sweetalert2.all.min.js"></script>
+
+                <script src="../citas-medicas/package/jquery-3.6.0.min.js"></script>
+                <style>
+                    .card {
+                        border-radius: 1px;
+                        border: white;
+                        margin-top: 10px;
+                    }
+                </style>
+
 
 
       <!-- Circulitos -->
@@ -178,6 +302,7 @@ if(!isset($_SESSION['usuario'])){
               <p class="citas">Citas</p>
             </a>
           </div>
+          
           <div class="col-lg-3">
             <a href="recomendaciones.html" class="text-decoration-none">
               <div class="bolita color2">

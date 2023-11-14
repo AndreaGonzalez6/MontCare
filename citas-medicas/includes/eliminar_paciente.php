@@ -15,3 +15,4 @@ $varsesion = $_SESSION['nombre'];
 	header ('Location: ../views/pacientes.php?m=1');
 
 ?>
+

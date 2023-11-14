@@ -4,6 +4,7 @@ include("../citas-medicas/includes/db.php");
 include("../php/conexion_be.php");
 
 $id_usuario = $_POST['id_usuario'];
+$cita = $_POST['cita'];
 $nombre_medico = $_POST['nombre_medico'];
 $tipo_especialista = $_POST['tipo_especialista'];
 $fecha_cita = $_POST['fecha_cita'];
@@ -14,10 +15,11 @@ $end = $fecha_cita;
 $color = "#2324ff";
 
 $sentencia = $pdo->prepare('INSERT INTO reservas
-(id_usuario,nombre_medico,tipo_especialista,fecha_cita,hora_cita,title,start,end,color, fyh_creacion, fyh_actualizacion)
-VALUES ( :id_usuario,:nombre_medico,:tipo_especialista,:fecha_cita,:hora_cita,:title,:start,:end,:color,:fyh_creacion,:fyh_actualizacion)');
+(id_usuario,cita,nombre_medico,tipo_especialista,fecha_cita,hora_cita,title,start,end,color, fyh_creacion, fyh_actualizacion)
+VALUES ( :id_usuario,:cita,:nombre_medico,:tipo_especialista,:fecha_cita,:hora_cita,:title,:start,:end,:color,:fyh_creacion,:fyh_actualizacion)');
 
 $sentencia->bindParam(':id_usuario',$id_usuario);
+$sentencia->bindParam(':cita',$cita);
 $sentencia->bindParam(':nombre_medico',$nombre_medico);
 $sentencia->bindParam(':tipo_especialista',$tipo_especialista);
 $sentencia->bindParam(':fecha_cita',$fecha_cita);

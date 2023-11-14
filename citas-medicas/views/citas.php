@@ -54,6 +54,7 @@ if ($varsesion == null || $varsesion = '') {
                                 <th>id_usuario</th>
                                 <th>nombre_usuario</th>
                                 <th>email_usuario</th>
+                                <th>cita</th>
                                 <th>nombre_medico</th>
                                 <th>tipo_especialista</th>
                                 <th>fecha_cita</th>
@@ -78,6 +79,7 @@ if ($varsesion == null || $varsesion = '') {
                                 <td><?php echo $reservas['id_usuario']; ?></td>
                                 <td><?php echo $reservas['nombre_completo']; ?></td>
                                 <td><?php echo $reservas['email']; ?></td>
+                                <td><?php echo $reservas['cita']; ?></td>
                                 <td><?php echo $reservas['nombres']; ?></td>
                                 <td><?php echo $reservas['tipo_especialista']; ?></td>
                                 <td><?php echo $reservas['fecha_cita']; ?></td>

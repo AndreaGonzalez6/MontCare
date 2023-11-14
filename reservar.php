@@ -279,9 +279,22 @@ include("php/conexion_be.php");
               <div class="col-md-6">
                 <label for="">email usuario</label>
                 <input type="text" class="form-control" value="<?php echo $email; ?>" disabled>
+                
+              </div>
+              <div class="col-md-6">
+                
                 <input type="text" name="id_usuario" value="<?php echo $id; ?>" hidden>
               </div>
+              <div class="col-md-6">
+                <label for="">Cómo quiere la cita</label>
+                <select name="cita" id="cita">
+                  <option value="Presencial">Presencial</option>
+                  <option value="Chat">Chat</option>
+                  <option value="Videollamada">Videollamada</option>
 
+                </select>
+              </div>
+              
               <?php
               include("php/conexion_be.php");
 
