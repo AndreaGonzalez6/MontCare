@@ -94,6 +94,11 @@ if ($varsesion == null || $varsesion = '') {
                         <input type="email" name="correo" id="correo" class="form-control" placeholder="No se puede repetir con alguno de la lista...">
                     </div>
 
+                    <div class="form-group">
+                        <label for="contrasena">Contraseña:</label><br>
+                        <input type="password" name="contrasena" id="contrasena" class="form-control">
+                    </div>
+
                     <input type="hidden" name="accion" value="insert_doctor">
 
                     <br>
