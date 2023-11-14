@@ -22,8 +22,8 @@ if (isset($_SESSION['usuario'])) {
   // Puedes agregar un mensaje o redirigir al usuario si lo deseas
 }
 
-if(!isset($_SESSION['usuario'])){
-  echo'
+if (!isset($_SESSION['usuario'])) {
+  echo '
     <script> 
     alert("Debes iniciar sesión para acceder a esta página");
     window.location = "index.php"; 
@@ -43,33 +43,31 @@ if(!isset($_SESSION['usuario'])){
 <!DOCTYPE html>
 <!-- Coding by CodingNepal || www.codingnepalweb.com -->
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   
-    
-    <link rel="stylesheet" href="css/all.css" />
-    <link rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="preload" href="css/normalize.css" as="style"> <!--Para cargar la hoja de estilos más rápido -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
-    <link rel="shortcut icon" href="imágenes/loguito.png" type="image/x-icon" />
-    <title>Centro Hospitalario MontCare</title>
-    <link rel="preload" href="css/estilos.css" as="style">
-    <link rel="stylesheet" href="css/estilos.css" />
-    <!-- Boxicons CSS -->
-    <link flex href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css" />
-    
-  </head>
-  <body>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+  <link rel="stylesheet" href="css/all.css" />
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="preload" href="css/normalize.css" as="style"> <!--Para cargar la hoja de estilos más rápido -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+  <link rel="shortcut icon" href="imágenes/loguito.png" type="image/x-icon" />
+  <title>Centro Hospitalario MontCare</title>
+  <link rel="preload" href="css/estilos.css" as="style">
+  <link rel="stylesheet" href="css/estilos.css" />
+  <!-- Boxicons CSS -->
+  <link flex href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body>
 
 
   <div class="container-1">
@@ -124,171 +122,55 @@ if(!isset($_SESSION['usuario'])){
                 </a>
               </li>
               <li class="item">
-                <a href="#" class="link flex">
-                  <i class="bx bx-cog"></i>
-                  <span>Configuraciones</span>
+                <a href="http://localhost/MontCare/reservas/mis_citas.php" class="link flex">
+                  <i class="fa-solid fa-clipboard-user user"></i>
+                  <style>
+                    .user{
+                      font-size: 22px;
+                      margin-left: 6px;
+                      padding: 15px;
+                    }
+                  </style>
+                  <span>Mis Citas</span>
                 </a>
               </li>
               <li class="item">
-                    <a href="php/cerrar_sesion.php" class="link flex">
-                      <i class="bx bx-award"></i>
-                      <span>Cerrar Sesión</span>
-                    </a>
-                  </li>
+                <a href="php/cerrar_sesion.php" class="link flex">
+                  <i class="bx bx-award"></i>
+                  <span>Cerrar Sesión</span>
+                </a>
+              </li>
             </ul>
-            
 
-          <div class="sidebar_profile flex">
-          <?php
-          if ($usuario_sesion == "") {
-            //echo "sin";
-            ?>
-            <div class="data_text">
-            <a href="http://localhost/MontCare/" class="ms-lg-3">
-              <p style="color: #000000"><i class="fa-solid fa-user" style="color: #000000"></i>ingresar </p>
-            </a>
+
+            <div class="sidebar_profile flex">
+              <?php
+              if ($usuario_sesion == "") {
+                //echo "sin";
+              ?>
+                <div class="data_text">
+                  <a href="http://localhost/MontCare/" class="ms-lg-3">
+                    <p style="color: #000000"><i class="fa-solid fa-user" style="color: #000000"></i>ingresar </p>
+                  </a>
+                </div>
+              <?php
+              } else {
+                //echo "Ya";
+              }
+              ?>
+              <div class="data_text">
+                <a href="http://localhost/MontCare/" class="ms-lg-3">
+                  <p style="color: #000000"><i class="fa-solid fa-user" style="color: #000000"></i><?php echo $usuario_sesion; ?> </p>
+                </a>
+              </div>
+              
             </div>
-          <?php
-          } else {
-            //echo "Ya";
-          }
-          ?>
-          <div class="data_text">
-            <a href="http://localhost/MontCare/" class="ms-lg-3">
-              <p style="color: #000000"><i class="fa-solid fa-user" style="color: #000000"></i>Bienvenid@ <?php echo $usuario_sesion; ?> </p>
-            </a>
-            </div>
-            
           </div>
-        </div>
       </nav>
     </aside>
     <main class="content">
       <!-- Contenido principal -->
-      <body id="page-top">
-
-<!-- Begin Page Content -->
-<div class="container-fluid">
-
-
-    <!-- DataTales Example -->
-    <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Lista de Citas</h6>
-
-
-
-
-        </div>
-
-        <div class="card-body">
-            <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                    <thead>
-                        <tr>
-                            
-                            <th>Usuario</th>
-                            <th>Email</th>
-                            <th>Cita</th>
-                            <th>Nombre del medico</th>
-                            <th>Tipo de especialista</th>
-                            <th>Fecha de la cita</th>
-                            <th>Hora de la cita</th>
-                            
-                            <th>Acción</th>
-                        </tr>
-                    </thead>
-
-
-
-
-                    <?php
-
-                    
-
-
-                    $usuario_sesion = $_SESSION['usuario'];
-
-                    // Obtener el ID del usuario actual
-                    $sql_usuario = "SELECT id FROM usuarios WHERE usuario = '$usuario_sesion'";
-                    $query_usuario = $pdo->prepare($sql_usuario);
-                    $query_usuario->execute();
-                    $usuario = $query_usuario->fetch(PDO::FETCH_ASSOC);
-                    $id_usuario = $usuario['id'];
-
-                    $result = mysqli_query($conexion, "SELECT *, usu.nombre_completo as nombre_completo, usu.email as email, doc.nombres as nombres FROM reservas as res INNER JOIN usuarios as usu ON usu.id = res.id_usuario INNER JOIN doctor as doc ON doc.id = res.nombre_medico WHERE res.id_usuario = $id_usuario");
-
-                    while ($reservas = mysqli_fetch_assoc($result)) :
-                    ?>
-                        <tr>
-                            
-                            <td><?php echo $reservas['nombre_completo']; ?></td>
-                            <td><?php echo $reservas['email']; ?></td>
-                            <td><?php echo $reservas['cita']; ?></td>
-                            <td><?php echo $reservas['nombres']; ?></td>
-                            <td><?php echo $reservas['tipo_especialista']; ?></td>
-                            <td><?php echo $reservas['fecha_cita']; ?></td>
-                            <td><?php echo $reservas['hora_cita']; ?></td>
-                            
-
-                            <td>
-                                <a href="eliminar_miCita.php?id_reserva=<?php echo $reservas['id_reserva'] ?> " class="btn btn-danger btn-del">
-                                    <i class="fa fa-trash "></i></a></button>
-                            </td>
-                        </tr>
-                    <?php endwhile; ?>
-
-
-                    </tbody>
-                </table>
-
-
-                <script>
-                    $('.btn-del').on('click', function(e) {
-                        e.preventDefault();
-                        const href = $(this).attr('href')
-
-                        Swal.fire({
-                            title: '¿Estás seguro de eliminar esta cita?',
-                            text: '¡No podrás revertir esto!',
-                            icon: 'warning',
-                            showCancelButton: true,
-                            confirmButtonColor: '#3085d6',
-                            cancelButtonColor: '#d33',
-                            confirmButtonText: 'Sí, eliminar',
-                            cancelButtonText: 'Cancelar',
-                        }).then((result) => {
-                            if (result.value) {
-                                if (result.isConfirmed) {
-                                    Swal.fire(
-                                        'Eliminado',
-                                        'El usuario fue eliminado',
-                                        'success'
-                                    );
-
-                                    // Delay the redirection after showing the success message
-                                    setTimeout(function() {
-                                        document.location.href = href;
-                                    }, 5000); // Set the delay time (in milliseconds)
-                                }
-                            }
-                        });
-                    });
-                </script>
-
-
-                <script src="../citas-medicas/package/dist/sweetalert2.all.js"></script>
-                <script src="../citas-medicas/package/dist/sweetalert2.all.min.js"></script>
-
-                <script src="../citas-medicas/package/jquery-3.6.0.min.js"></script>
-                <style>
-                    .card {
-                        border-radius: 1px;
-                        border: white;
-                        margin-top: 10px;
-                    }
-                </style>
-
+      <h1 style="color: #000000" align="center"><i class="fa-solid fa-user" style="color: #000000"></i>Bienvenid@ <?php echo $usuario_sesion; ?> </h1>
 
 
       <!-- Circulitos -->
@@ -302,7 +184,7 @@ if(!isset($_SESSION['usuario'])){
               <p class="citas">Citas</p>
             </a>
           </div>
-          
+
           <div class="col-lg-3">
             <a href="recomendaciones.html" class="text-decoration-none">
               <div class="bolita color2">
@@ -507,8 +389,8 @@ if(!isset($_SESSION['usuario'])){
 
           </div>
 
-             <!-- Modal 1-->
-             <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <!-- Modal 1-->
+          <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
               <div class="modal-content">
                 <div class="modal-header">
@@ -559,8 +441,8 @@ if(!isset($_SESSION['usuario'])){
 
           </div>
 
-        <!-- Modal 2-->
-        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <!-- Modal 2-->
+          <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
               <div class="modal-content">
                 <div class="modal-header">
@@ -609,8 +491,8 @@ if(!isset($_SESSION['usuario'])){
             </button>
           </div>
 
-         <!-- Modal 3-->
-         <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <!-- Modal 3-->
+          <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
               <div class="modal-content">
                 <div class="modal-header">
@@ -712,7 +594,7 @@ if(!isset($_SESSION['usuario'])){
   <script src="js/all.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/javaScript.js"></script>
-  
+
 
 
 </body>

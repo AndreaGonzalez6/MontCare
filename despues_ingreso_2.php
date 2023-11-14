@@ -104,9 +104,9 @@ if(!isset($_SESSION['usuario'])){
                 </a>
               </li>
               <li class="item">
-                <a href="#" class="link flex">
-                  <i class="bx bx-cog"></i>
-                  <span>Configuraciones</span>
+              <a href="http://localhost/MontCare/reservas/mis_citas.php" class="link flex">
+                <i class="fa-solid fa-clipboard-user"></i>
+                  <span>Mis Citas</span>
                 </a>
               </li>
               <li class="item">

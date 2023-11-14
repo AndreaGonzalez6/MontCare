@@ -139,9 +139,9 @@ body {
 }
 
 .sidebar_profile {
-  padding-top: 15px;
-  margin-top: 15px;
-  gap: 15px;
+  padding-top: -13px;
+  margin-top: 1px;
+  gap: 5px;
   border-top: 2px solid rgba(0, 0, 0, 0.1);
 }
 .sidebar_profile .name {

@@ -82,8 +82,8 @@ include("php/conexion_be.php");
             </li>
             <li class="item">
               <a href="#" class="link flex">
-                <i class="bx bx-cog"></i>
-                <span>Configuraciones</span>
+              <i class="fa-solid fa-clipboard-user"></i>
+                <span>Mis Citas</span>
               </a>
             </li>
             <li class="item">

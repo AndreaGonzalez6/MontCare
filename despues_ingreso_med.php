@@ -26,3 +26,4 @@ if(!isset($_SESSION['correo'])){
     <a href="php/cerrar_sesion.php"> Cerrar sesión </a> 
 </body>
 </html>
+    

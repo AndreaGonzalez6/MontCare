@@ -93,13 +93,13 @@ if (isset($_SESSION['usuario'])) {
                     <ul class="menu_item">
 
                         <li class="item">
-                            <a href="despues_ingreso.php" class="link flex">
+                            <a href="../despues_ingreso.php" class="link flex">
                                 <i class="bx bx-home-alt"></i>
                                 <span>Inicio</span>
                             </a>
                         </li>
                         <li class="item">
-                            <a href="des_ing_info_planes.php" class="link flex">
+                            <a href="../des_ing_info_planes.php" class="link flex">
                                 <i class="bx bx-grid-alt"></i>
                                 <span>Planes</span>
                             </a>
@@ -108,13 +108,13 @@ if (isset($_SESSION['usuario'])) {
 
                     <ul class="menu_item">
                         <li class="item">
-                            <a href="des_ingre_nosotros.php" class="link flex">
+                            <a href="../des_ingre_nosotros.php" class="link flex">
                                 <i class="bx bxs-magic-wand"></i>
                                 <span>¿Quiénes somos?</span>
                             </a>
                         </li>
                         <li class="item">
-                            <a href="#" class="link flex">
+                            <a href="http://localhost/MontCare/reservar.php" class="link flex">
                                 <i class="bx bx-folder"></i>
                                 <span>Citas</span>
                             </a>
@@ -123,19 +123,19 @@ if (isset($_SESSION['usuario'])) {
 
                     <ul class="menu_item">
                         <li class="item">
-                            <a href="despues_ingreso_recomendaciones.php" class="link flex">
+                            <a href="../despues_ingreso_recomendaciones.php" class="link flex">
                                 <i class="bx bx-flag"></i>
                                 <span>Recomendaciones</span>
                             </a>
                         </li>
                         <li class="item">
                             <a href="#" class="link flex">
-                                <i class="bx bx-cog"></i>
-                                <span>Configuraciones</span>
+                            <i class="fa-solid fa-clipboard-user"></i>
+                                <span>Mis Citas</span>
                             </a>
                         </li>
                         <li class="item">
-                            <a href="php/cerrar_sesion.php" class="link flex">
+                            <a href="../php/cerrar_sesion.php" class="link flex">
                                 <i class="bx bx-award"></i>
                                 <span>Cerrar Sesión</span>
                             </a>
@@ -163,7 +163,7 @@ if (isset($_SESSION['usuario'])) {
                     ?>
                     <div class="data_text">
                         <a href="http://localhost/MontCare/" class="ms-lg-3">
-                            <p style="color: #000000"><i class="fa-solid fa-user" style="color: #000000"></i>Bienvenid@ <?php echo $usuario_sesion; ?> </p>
+                            <p style="color: #000000"><i class="fa-solid fa-user" style="color: #000000"></i><?php echo $usuario_sesion; ?> </p>
                         </a>
                     </div>
 
