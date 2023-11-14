@@ -112,7 +112,7 @@ function insert_esp()
         </script>";
     } else {
         echo "<script language='JavaScript'>
-         alert('Uy no! ya valio hablale al ing :v');
+         alert('Uy no! ya valió háblale al ing :v');
          location.assign('../views/especialidades.php');
          </script>";
     }
@@ -133,7 +133,7 @@ function insert_horario()
         </script>";
     } else {
         echo "<script language='JavaScript'>
-         alert('Uy no! ya valio hablale al ing :v');
+         alert('Uy no! ya valió háblale al ing :v');
          location.assign('../views/horarios.php');
          </script>";
     }
@@ -155,7 +155,7 @@ function insert_paciente()
         </script>";
     } else {
         echo "<script language='JavaScript'>
-         alert('Uy no! ya valio hablale al ing :v');
+         alert('Uy no! ya valió háblale al ing :v');
          location.assign('../views/pacientes.php');
          </script>";
     }
@@ -177,7 +177,7 @@ function insert_cita()
         </script>";
     } else {
         echo "<script language='JavaScript'>
-         alert('Uy no! ya valio hablale al ing :v');
+         alert('Uy no! ya valió háblale al ing :v');
          location.assign('../views/citas.php');
          </script>";
     }
@@ -187,8 +187,8 @@ function insert_doctor()
 {
     include "db.php";
     extract($_POST);
-    $consulta = "INSERT INTO doctor (cedula, nombres, especialidad, sexo,  telefono, fecha, correo)
-    VALUES ('$cedula', '$nombres', '$especialidad','$sexo', '$telefono',  '$fecha', '$correo')";
+    $consulta = "INSERT INTO doctor (cedula, nombres, id_especialidad, sexo,  telefono, fecha, correo, contrasena)
+    VALUES ('$cedula', '$nombres', '$id_especialidad','$sexo', '$telefono',  '$fecha', '$correo', '$contrasena')";
     $resultado = mysqli_query($conexion, $consulta);
 
     if ($resultado) {
@@ -198,7 +198,7 @@ function insert_doctor()
         </script>";
     } else {
         echo "<script language='JavaScript'>
-         alert('Uy no! ya valio hablale al ing :v');
+         alert('Uy no! ya valió háblale al ing :v');
          location.assign('../views/medicos.php');
          </script>";
     }
@@ -220,7 +220,7 @@ function editar_user()
         </script>";
     } else {
         echo "<script language='JavaScript'>
-         alert('Uy no! ya valio hablale al ing :v');
+         alert('Uy no! ya valió háblale al ing :v');
          location.assign('../views/usuarios.php');
          </script>";
     }
@@ -241,7 +241,7 @@ function editar_paciente()
         </script>";
     } else {
         echo "<script language='JavaScript'>
-         alert('Uy no! ya valio hablale al ing :v');
+         alert('Uy no! ya valió háblale al ing :v');
          location.assign('../views/pacientes.php');
          </script>";
     }
@@ -261,7 +261,7 @@ function editar_esp()
         </script>";
     } else {
         echo "<script language='JavaScript'>
-         alert('Uy no! ya valio hablale al ing :v');
+         alert('Uy no! ya valió háblale al ing :v');
          location.assign('../views/especialidades.php');
          </script>";
     }
@@ -282,7 +282,7 @@ function editar_doctor()
         </script>";
     } else {
         echo "<script language='JavaScript'>
-         alert('Uy no! ya valio hablale al ing :v');
+         alert('Uy no! ya valió háblale al ing :v');
          location.assign('../views/medicos.php');
          </script>";
     }
@@ -302,7 +302,7 @@ function editar_hora()
         </script>";
     } else {
         echo "<script language='JavaScript'>
-         alert('Uy no! ya valio hablale al ing :v');
+         alert('Uy no! ya valió háblale al ing :v');
          location.assign('../views/horarios.php');
          </script>";
     }
@@ -324,7 +324,7 @@ function editar_cita()
         </script>";
     } else {
         echo "<script language='JavaScript'>
-         alert('Uy no! ya valio hablale al ing :v');
+         alert('Uy no! ya valió háblale al ing :v');
          location.assign('../views/citas.php');
          </script>";
     }
