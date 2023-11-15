@@ -1,0 +1,346 @@
+body {
+    height: 100vh;
+    background: #98e1e6 !important;
+}
+
+.titulo {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.wrapper,
+.single-card {
+    height: 450px;
+    max-width: 310px;
+    margin: auto;
+    position: relative;
+
+}
+.wrapper {
+    perspective: 900px;
+    margin-bottom: 20px;
+}
+
+.single-card {
+    text-align: center;
+    transition: all 1.5s cubic-bezier(0.7, -.05, 0.3, 1.8);
+    transform-style: preserve-3d;
+}
+
+.wrapper:hover .single-card {
+    transform: rotateY(180deg);
+}
+.front{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    
+}
+.front,
+.back {
+    width: 320px;
+    position: relative;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+}
+
+.back{
+    transform: rotateY(180deg);
+    position: absolute;
+    border-radius: 30px;
+    height: 450px;
+    background: #fff;
+}
+
+.content {
+    padding-top: 5%;
+}
+
+.content h2{
+    font-size: 35px;
+    margin: 0;
+    font-weight: 300;
+}
+
+.content p {
+    padding-top: 10px;
+    font-size: 18px;
+    font-family: poppins;
+    margin: 0;
+}
+
+
+/* Imágenes */
+
+.front1, .front2, .front3, .front4, .front5, .front6, .front7, .front8,
+.front9, .front10, .front11, .front12, .front13, .front14, .front15 {
+    cursor: pointer;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 50px;
+    background-size: cover;
+    background-position: center center;
+    background-color: rgba(240, 255, 255, 0.616);
+}
+
+.front1 {
+    background-image: url(../imágenes/cardiologia.png) ;
+}
+.front2 {
+    background-image: url(../imágenes/radiologia.jpg);
+}
+.front3 {
+    background-image: url(../imágenes/ginecologia.jpg);
+}
+.front4 {
+    background-image: url(../imágenes/dermatologia.jpg);
+}
+.front5 {
+    background-image: url(../imágenes/pediatria.jpg)
+}
+.front6 {
+    background-image: url(../imágenes/nefrologia.jpg);
+}
+.front7 {
+    background-image: url(../imágenes/neumologia.jpg);
+}
+.front8 {
+    background-image: url(../imágenes/oncologia.jpg);
+}
+.front9 {
+    background-image: url(../imágenes/otorrino.jpg);
+}
+.front10 {
+    background-image: url(../imágenes/traumatologiaa.jpg);
+}
+.front11 {
+    background-image: url(../imágenes/neurologia.jpg);
+}
+.front12 {
+    background-image: url(../imágenes/neurocirugia.jpg);
+}
+.front13 {
+    background-image: url(../imágenes/cirugia.jpg);
+}
+.front14 {
+    background-image: url(../imágenes/fisioterapia.jpg);
+}
+.front15 {
+    background-image: url(../imágenes/urologia.jpg);
+}
+
+.front1::before, .front2::before, .front3::before, .front4::before, .front5::before, .front6::before, .front7::before, .front8::before, 
+.front9::before, .front10::before, .front11::before, .front12::before, .front13::before, .front14::before, .front15::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.2); 
+    z-index: 1; 
+}
+
+
+.front1 p, .front2 p, .front4 p, .front5 p, .front6 p, .front7 p, .front8 p,
+.front9 p, .front11 p, .front12 p, .front13 p, .front14 p, .front15 p{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    height: 45px;
+    width: 92%;
+    font-size: 32px;
+    font-weight: 500;
+    color: rgb(77, 73, 73);
+    background-color: rgba(255, 247, 247, 0.541);
+    border-radius: 2vh;
+}
+
+.front3 p, .front10 p{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    height: 80px;
+    width: 92%;
+    font-size: 32px;
+    font-weight: 500;
+    color: rgb(77, 73, 73);
+    background-color: rgba(255, 247, 247, 0.541);
+    border-radius: 2vh;
+}
+
+.quitar{
+    text-decoration: none;
+    padding-top: 12px;
+}
+.texto {
+    color: black;
+}
+
+/* Contacto y mapa */
+
+/*MAPA - CONTACTO*/
+.fondoContacto {
+    background-color: rgb(36, 36, 36);
+    padding-bottom: 15px;
+}
+
+input, textarea, select{
+    border-radius: 4px;
+}
+.color-blanco {
+    color: white;
+}
+
+.nombre {
+    background-color: #1877F2;
+    padding: 7px; 
+    padding-left: 8px;
+    padding-right: 8px;
+    position: absolute;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.correo {
+    background-color: #1877F2;
+    padding: 7px; 
+    position: absolute;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.comentario{
+    background-color: #1877F2;
+    padding: 7.2px;
+    padding-top: 56px;
+    padding-bottom: 56px;
+    position: absolute;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.megafono{
+    background-color: #1877F2;
+    padding: 7px;
+    padding-top: 8.6px;
+    padding-bottom: 8.5px;
+    position: absolute;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.centrar{
+    text-align: center;
+}
+#nombre, #correo{
+    border: none;
+    width: 250px;
+    height: 30px;
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-left: 28px;
+    padding-left: 10px;
+}
+#miSelect {
+    width: 278px; 
+    height: 33px; 
+    font-size: 16px;
+    color: rgb(100, 99, 99);
+    margin-bottom: 5px;
+    padding-left: 32px;
+  }
+#comentario{
+    width: 250px;
+    margin-left: 28px;
+    padding-left: 9px;
+    padding-top: 5px;
+}
+.imagen {
+    margin-right: 21px;
+}
+.lineap{
+    height: 7px;
+    margin: 0;
+    padding: 0;
+}
+.mandar{
+    margin-bottom: 10px;
+}
+.redes {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-top: 10px;
+    padding-top: 10px;
+    transition: .2s;
+}
+.wpp,
+.ig,
+.fb,
+.tk,
+.tw {
+    color: #797979;
+}
+.redes a:hover .wpp {
+    transform: translateY(-3px) scale(1.2);
+    color: #25D366;
+}
+.redes a:hover .ig {
+    transform: translateY(-3px) scale(1.2);
+    color: #E4405F;
+}
+.redes a:hover .tw {
+    transform: translateY(-3px) scale(1.2);
+    color: #1DA1F2;
+}
+.redes a:hover .fb {
+    transform: translateY(-3px) scale(1.2);
+    color: #1877F2;
+}
+.redes a:hover .tk {
+    transform: translateY(-3px) scale(1.2);
+    color: #000;
+}
+.fila {
+    margin-left: 15px;
+    margin-right: 0px;
+}
+.tamaños {
+    font-size: 45px;
+    margin-left: 50px;
+}
+.titulo {
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    margin-top: 10px;
+}
+.letra {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+input:focus, textarea:focus {
+    outline: none; 
+}
+
+.bajar{
+    margin-bottom: 25px;
+}
+
+/*RECOMENDACIONES*/
+#recomendaciones{
+    text-align: center;
+}
+
+ /* FOOTER */
+ footer {
+    background-color: #1E4BAF;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 10px 0;
+}
