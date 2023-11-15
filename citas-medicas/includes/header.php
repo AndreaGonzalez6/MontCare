@@ -156,11 +156,11 @@ if ($actualsesion == null || $actualsesion == '') {
             ?>
 
             <!-- Nav Item - infor -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="../views/acerca.php">
                     <i class="fa fa-question-circle" aria-hidden="true"></i>
                     <span>Acerca de</span></a>
-            </li>
+            </li> -->
 
 
 
