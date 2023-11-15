@@ -44,7 +44,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     if ($conn->query($sql) === TRUE) {
-        echo "El historial clínico se ha guardado correctamente";
+        echo ' <script>
+        alert("El historial clínico se ha guardado correctamente");
+        window.location = "despues_ingreso_med.php"
+        </script>';
+        
+
     } else {
         echo "Error al guardar el historial clínico: " . $conn->error;
     }
