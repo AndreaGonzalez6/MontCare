@@ -1,43 +1,8 @@
+
+
+
 <?php
-include("php/conexion_be.php");
-
-
 session_start();
-$usuario_sesion = "";
-
-if (isset($_SESSION['usuario'])) {
-  $usuario_sesion = $_SESSION['usuario'];
-  $sql = "SELECT * FROM usuarios WHERE usuario = '$usuario_sesion'";
-  $query = $pdo->prepare($sql);
-  $query->execute();
-  $usuarios = $query->fetchAll(PDO::FETCH_ASSOC);
-
-  foreach ($usuarios as $usuario) {
-    $id_usuario_sesion = $usuario["id"];
-    $nombre_completo_sesion = $usuario["nombre_completo"];
-    $email = $usuario["email"];
-  }
-} else {
-  // No se ha iniciado sesión
-  // Puedes agregar un mensaje o redirigir al usuario si lo deseas
-}
-
-if (!isset($_SESSION['usuario'])) {
-  echo '
-    <script> 
-    alert("Debes iniciar sesión para acceder a esta página");
-    window.location = "index.php"; 
-    </script>    
-  ';
-  session_destroy();
-  die();
-}
-
-?>
-
-
-<?php
-
 
 if (!isset($_SESSION['correo'])) {
     echo '
@@ -168,25 +133,7 @@ if (!isset($_SESSION['correo'])) {
 
 
                         <div class="sidebar_profile flex">
-                            <?php
-                            if ($usuario_sesion == "") {
-                                //echo "sin";
-                            ?>
-                                <div class="data_text">
-                                    <a href="http://localhost/MontCare/" class="ms-lg-3">
-                                        <p style="color: #000000"><i class="fa-solid fa-user" style="color: #000000"></i>ingresar </p>
-                                    </a>
-                                </div>
-                            <?php
-                            } else {
-                                //echo "Ya";
-                            }
-                            ?>
-                            <div class="data_text">
-                                <a href="http://localhost/MontCare/" class="ms-lg-3">
-                                    <p style="color: #000000"><i class="fa-solid fa-user" style="color: #000000"></i><?php echo $usuario_sesion; ?> </p>
-                                </a>
-                            </div>
+                           
 
                         </div>
                     </div>
