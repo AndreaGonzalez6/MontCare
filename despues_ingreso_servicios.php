@@ -1,83 +1,123 @@
+<?php
+include("citas-medicas/includes/db.php");
+include("php/conexion_be.php");
+
+
+
+session_start();
+
+if(!isset($_SESSION['usuario'])){
+    echo'
+      <script> 
+      alert("Debes iniciar sesión para acceder a esta página");
+      window.location = "index.php"; 
+      </script>    
+    ';
+    session_destroy();
+    die();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Servicios </title>
-    <link rel="stylesheet" href="css/all.css" />
-    <link rel="stylesheet" href="css/bootstrap.css"/>
-    <link rel="stylesheet" href="css/servicios.css">
-
+    <title>Recomendaciones</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="shortcut icon" href="imágenes/loguito.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link flex href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/servicios2.css">
 </head>
-
 <body>
-     <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg bg-white nav sticky-top">
-    <div class="container-fluid">
 
-      <a class="navbar-brand" href="#">
-        <img src="imágenes/logo.png" alt="MontCare" style="width: 19rem" class="img-logo" />
-      </a>
+    <div class="container-1">
+        <aside class="sidebar">
+          <!-- Contenido del sidebar -->
+          <nav class="sidebar locked">
+        <div class="logo_items flex">
+          <span class="nav_image">
+            <img src="imágenes/logo.png" alt="logo_img" />
+          </span>
+          <span class="logo_name">MontCare</span>
+        </div>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <div class="menu_container">
+          <div class="menu_items">
+            <ul class="menu_item">
 
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link texto" href="index.html">Inicio</a>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle texto" href="quienessomos2.html" id="quienesSomos" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              ¿Quiénes somos?
-            </a>
-
-            <ul class="dropdown-menu" aria-labelledby="paquetesDropdown">
-              <li>
-                <a class="dropdown-item texto" href="quienessomos2.html#nosotros">Nosotros</a>
+              <li class="item">
+                <a href="despues_ingreso.php" class="link flex">
+                  <i class="bx bx-home-alt"></i>
+                  <span>Inicio</span>
+                </a>
               </li>
-              <li>
-                <a class="dropdown-item texto" href="quienessomos2.html#mision">Misión</a>
-              </li>
-              <li>
-                <a class="dropdown-item texto" href="quienessomos2.html#vision">Visión</a>
-              </li>
-              <li>
-                <a class="dropdown-item texto" href="profesionales.html">Profesionales</a>
+              <li class="item">
+                <a href="des_ing_info_planes.php" class="link flex">
+                  <i class="bx bx-grid-alt"></i>
+                  <span>Planes</span>
+                </a>
               </li>
             </ul>
 
-          </li>
+            <ul class="menu_item">
+              <li class="item">
+                <a href="des_ingre_nosotros.php" class="link flex">
+                  <i class="bx bxs-magic-wand"></i>
+                  <span>¿Quiénes somos?</span>
+                </a>
+              </li>
+              <li class="item">
+                <a href="http://localhost/MontCare/reservar.php" class="link flex">
+                  <i class="bx bx-folder"></i>
+                  <span>Citas</span>
+                </a>
+              </li>
+            </ul>
 
-          <li class="nav-item">
-            <a class="nav-link texto" href="planes.html">Planes</a>
-          </li>
+            <ul class="menu_item">
+              <li class="item">
+                <a href="despues_ingreso_recomendaciones.php" class="link flex">
+                  <i class="bx bx-flag"></i>
+                  <span>Recomendaciones</span>
+                </a>
+              </li>
+              <li class="item">
+              <a href="http://localhost/MontCare/reservas/mis_citas.php" class="link flex">
+                <i class="fa-solid fa-clipboard-user"></i>
+                  <span>Mis Citas</span>
+                </a>
+              </li>
+              <li class="item">
+                    <a href="php/cerrar_sesion.php" class="link flex">
+                      <i class="bx bx-award"></i>
+                      <span>Cerrar Sesión</span>
+                    </a>
+                  </li>
+            </ul>
+            <div class="sidebar_profile flex">
+                <span class="nav_image">
+                    <i class="fa-solid fa-user"></i>
+                </span>
+                <div class="data_text">
+                  <span class="name">Bienvenid@</span>
+                  
+                </div>
+          </div>
 
-          <li class="nav-item">
-            <a class="nav-link texto" href="recomendaciones.html">Recomendaciones</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link texto" href="#contact">Contacto</a>
-          </li>
-        </ul>
-
-        <a href="roles.html" class="ms-lg-3 quitar">
-          <p style="color: #000000"><i class="fa-solid fa-user" style="color: #000000"></i> Ingresar</p>
-        </a>
-      </div>
-    </div>
-  </nav>
-
-
-    <h1 class="titulo"> ¡Nuestros servicios! </h1>
-
-    <div class="container">
+          <div class="sidebar_profile flex">
+            
+        
+            
+            
+          </div>
+        </div>
+      </nav>
+        </aside>
+        <main class="content">
+        <div class="container-fluid">
         <div class="row">
             <div class="col-md-4">
                 <div class="wrapper">
@@ -86,7 +126,7 @@
                             <p> Cardiología </p>
                         </div>
                         <div class="back">
-                            <div class="content">
+                            <div class="content1">
                                 <h2> Cardiología </h2>
                                 <p> <img src="imágenes/intento2.png" alt="intento" height="21px" width="21px">
                                     Evaluación de riesgos cardiovasculares. </p>
@@ -118,7 +158,7 @@
                             <p> Radiología </p>
                         </div>
                         <div class="back">
-                            <div class="content">
+                            <div class="content1">
                                 <h2> Radiología </h2>
                                 <p> <img src="imágenes/intento2.png" alt="intento" height="21px" width="21px">
                                     Radiografías convencionales para diagnóstico de fracturas y problemas óseos. </p>
@@ -143,7 +183,7 @@
                             <p> Ginecología y Obstetricia </p>
                         </div>
                         <div class="back">
-                            <div class="content">
+                            <div class="content1">
                                 <h2> Ginecología y Obstetricia </h2>
                                 <p> <img src="imágenes/intento2.png" alt="intento" height="21px" width="21px">
                                     Exámenes de rutina y chequeos ginecológicos. </p>
@@ -176,7 +216,7 @@
                             <p> Dermatología </p>
                         </div>
                         <div class="back">
-                            <div class="content">
+                            <div class="content1">
                                 <h2> Dermatología </h2>
                                 <p> <img src="imágenes/intento2.png" alt="intento" height="21px" width="21px">
                                     Diagnóstico y tratamiento de enfermedades de la piel. </p>
@@ -205,7 +245,7 @@
                             <p> Pediatría </p>
                         </div>
                         <div class="back">
-                            <div class="content">
+                            <div class="content1">
                                 <h2> Pediatría </h2>
                                 <p> <img src="imágenes/intento2.png" alt="intento" height="21px" width="21px">
                                     Atención preventiva y exámenes regulares. </p>
@@ -235,7 +275,7 @@
                             <p> Nefrología </p>
                         </div>
                         <div class="back">
-                            <div class="content">
+                            <div class="content1">
                                 <h2> Nefrología </h2>
                                 <p> <img src="imágenes/intento2.png" alt="intento" height="21px" width="21px">
                                     Evaluación y tratamiento de enfermedades renales. </p>
@@ -260,7 +300,7 @@
                             <p> Neumología </p>
                         </div>
                         <div class="back">
-                            <div class="content">
+                            <div class="content1">
                                 <h2> Neumología </h2>
                                 <p> <img src="imágenes/intento2.png" alt="intento" height="21px" width="21px">
                                     Diagnóstico y tratamiento de enfermedades respiratorias. </p>
@@ -283,7 +323,7 @@
                             <p> Oncología </p>
                         </div>
                         <div class="back">
-                            <div class="content">
+                            <div class="content1">
                                 <h2> Oncología </h2>
                                 <p> <img src="imágenes/intento2.png" alt="intento" height="21px" width="21px">
                                     Radioterapia. </p>
@@ -308,7 +348,7 @@
                             <p> Otorrinolaringología </p>
                         </div>
                         <div class="back">
-                            <div class="content">
+                            <div class="content1">
                                 <h2> Otorrinolaringología </h2>
                                 <p> <img src="imágenes/intento2.png" alt="intento" height="21px" width="21px">
                                     Tratamiento de infecciones del oído. </p>
@@ -339,7 +379,7 @@
                             <p> Traumatología y Ortopedia </p>
                         </div>
                         <div class="back">
-                            <div class="content">
+                            <div class="content1">
                                 <h2> Traumatología y Ortopedia </h2>
                                 <p> <img src="imágenes/intento2.png" alt="intento" height="21px" width="21px">
                                     Consulta de diagnóstico y evaluación de lesiones óseas y articulares. </p>
@@ -364,7 +404,7 @@
                             <p> Neurología </p>
                         </div>
                         <div class="back">
-                            <div class="content">
+                            <div class="content1">
                                 <h2> Neurología </h2>
                                 <p> <img src="imágenes/intento2.png" alt="intento" height="21px" width="21px">
                                     Evaluación y diagnóstico de trastornos neurológicos como migrañas y epilepsia. </p>
@@ -388,7 +428,7 @@
                             <p> Neurocirugía </p>
                         </div>
                         <div class="back">
-                            <div class="content">
+                            <div class="content1">
                                 <h2> Neurocirugía </h2>
                                 <p> <img src="imágenes/intento2.png" alt="intento" height="21px" width="21px">
                                     Cirugía de tumores cerebrales y espinales. </p>
@@ -422,7 +462,7 @@
                             <p> Cirugía </p>
                         </div>
                         <div class="back">
-                            <div class="content">
+                            <div class="content1">
                                 <h2> Cirugía </h2>
                                 <p> <img src="imágenes/intento2.png" alt="intento" height="21px" width="21px">
                                     Cirugía abdominal (apendicectomía, colecistectomía). </p>
@@ -445,7 +485,7 @@
                             <p> Fisioterapia </p>
                         </div>
                         <div class="back">
-                            <div class="content">
+                            <div class="content1">
                                 <h2> Fisioterapia </h2>
                                 <p> <img src="imágenes/intento2.png" alt="intento" height="21px" width="21px">
                                     Terapia de ejercicios. </p>
@@ -480,7 +520,7 @@
                             <p> Urología </p>
                         </div>
                         <div class="back">
-                            <div class="content">
+                            <div class="content1">
 
                                 <h2> Urología </h2>
                                 <p> <img src="imágenes/intento2.png" alt="intento" height="21px" width="21px">
@@ -622,15 +662,8 @@
     <footer>
         <p>Derechos Reservados &copy; 2023 Hospital Privado MontCare</p>
     </footer>
-</div><!-- Contenedor contenido  -->
-
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-  crossorigin="anonymous"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/all.js"></script>
-    <script src="js/javaScript.js"></script>
+        </main>
+      </div>
+    
 </body>
-
 </html>
-

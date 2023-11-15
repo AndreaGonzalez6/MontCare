@@ -159,7 +159,7 @@ if(!isset($_SESSION['usuario'])){
             </a>
           </div>
           <div class="col-lg-3">
-            <a href="servicios.html" class="text-decoration-none">
+            <a href="despues_ingreso_servicios.php" class="text-decoration-none">
               <div class="bolita color3">
                 <i class="tamaño iconos fa-regular fa-clipboard" style="color: #ffffff"></i>
               </div>

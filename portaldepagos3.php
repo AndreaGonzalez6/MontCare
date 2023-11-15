@@ -75,10 +75,8 @@
             </div>
             <div class="col-md-10">
                 <button class="boton" data-tarjeta="visa" data-imagen="imágenes/visa.png"> <img src="imágenes/visa.png" alt="" height="40vh"></button>
-
                 <button class="boton" data-tarjeta="mastercard" data-imagen="imágenes/mastercard.png"> <img src="imágenes/mastercard.png" alt="" height="40vh"></button>
-                <button class="boton" data-tarjeta="american" data-imagen="imágenes/mastercard.png> <img src=imágenes/mastercard.png alt=""
-                        height=" 40vh"></button>
+                <button class="boton" data-tarjeta="american" data-imagen="imágenes/american.png"> <img src="imágenes/american.png" alt="" height="40vh"></button>
                 <script>
                     function actualizarImagenTarjeta(tipoTarjeta) {
                         const inputNumeroTarjeta = document.getElementById("numeroTarjeta");
@@ -122,15 +120,10 @@
                     <select name="format" id="format" required>
                         <option selected disabled>
                         <option class="ola2" value="CC">Cédula de ciudadanía</option>
-                        <option class="ola2" value="CE">Cédula de extranjería</option>
-                        <option class="ola2" value="DE">Documento de extranjería</option>
+                        <option class="ola2" value="CE">Cédula de extranjería</option>>
                         <option class="ola2" value="PAS">Pasaporte</option>
                         <option class="ola2" value="RC">Registro Civil</option>
                         <option class="ola2" value="TI">Tarjeta de identidad</option>
-                        <option class="ola2" value="PE">Permiso especial</option>
-                        <option class="ola2" value="CD">Carnet diplomático</option>
-                        <option class="ola2" value="SC">Salvoconducto</option>
-                        <option class="ola2" value="PPT">Permiso por Protección Temporal</option>
                     </select>
                 </div>
                 <div class="mb-3">
@@ -181,9 +174,11 @@
                 document.querySelector("#formulario2").style.display = "none";
             }
         </script>
+
     </div><!-- Cierre container -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 
 </html>
+
