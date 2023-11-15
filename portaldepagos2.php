@@ -121,15 +121,10 @@
                     <select name="format" id="format" required>
                         <option selected disabled>
                         <option class="ola2" value="CC">Cédula de ciudadanía</option>
-                        <option class="ola2" value="CE">Cédula de extranjería</option>
-                        <option class="ola2" value="DE">Documento de extranjería</option>
+                        <option class="ola2" value="CE">Cédula de extranjería</option>>
                         <option class="ola2" value="PAS">Pasaporte</option>
                         <option class="ola2" value="RC">Registro Civil</option>
                         <option class="ola2" value="TI">Tarjeta de identidad</option>
-                        <option class="ola2" value="PE">Permiso especial</option>
-                        <option class="ola2" value="CD">Carnet diplomático</option>
-                        <option class="ola2" value="SC">Salvoconducto</option>
-                        <option class="ola2" value="PPT">Permiso por Protección Temporal</option>
                     </select>
                 </div>
                 <div class="mb-3">
@@ -187,3 +182,4 @@
 </body>
 
 </html>
+
