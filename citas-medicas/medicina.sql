@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-11-2023 a las 15:45:20
+-- Tiempo de generación: 15-11-2023 a las 04:15:52
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -61,6 +61,7 @@ CREATE TABLE `doctor` (
   `telefono` varchar(50) NOT NULL,
   `fecha` date NOT NULL,
   `correo` varchar(50) NOT NULL DEFAULT current_timestamp(),
+  `contrasena` varchar(50) NOT NULL,
   `fecha_registro` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -68,10 +69,10 @@ CREATE TABLE `doctor` (
 -- Volcado de datos para la tabla `doctor`
 --
 
-INSERT INTO `doctor` (`id`, `cedula`, `nombres`, `especialidad`, `sexo`, `telefono`, `fecha`, `correo`, `fecha_registro`) VALUES
-(6, 101, 'Alex Castillo Cervantes', 8, 'Masculino', '99111656701', '2022-09-05', 'mugarte5672@gmail.com.mx', '2022-09-05 15:56:14'),
-(7, 8, 'Emmanuel Mugarte', 5, 'Masculino', '99111656701', '2023-08-19', 'lex@hotmail.com', '2023-08-19 14:54:13'),
-(9, 57, 'Kelly Castillo Cervantes', 6, 'Masculino', '99111656701', '2023-08-19', 'lex@hotmail.com', '2023-08-19 14:58:13');
+INSERT INTO `doctor` (`id`, `cedula`, `nombres`, `especialidad`, `sexo`, `telefono`, `fecha`, `correo`, `contrasena`, `fecha_registro`) VALUES
+(6, 101, 'Alex Castillo Cervantes', 8, 'Masculino', '99111656701', '2022-09-05', 'mugarte5672@gmail.com.mx', '123', '2022-09-05 15:56:14'),
+(7, 8, 'Emmanuel Mugarte', 5, 'Masculino', '99111656701', '2023-08-19', 'lex@hotmail.com', '1234', '2023-08-19 14:54:13'),
+(9, 57, 'Kelly Castillo Cervantes', 6, 'Masculino', '99111656701', '2023-08-19', 'lex@hotmail.com', '123', '2023-08-19 14:58:13');
 
 -- --------------------------------------------------------
 
@@ -91,10 +92,10 @@ CREATE TABLE `especialidades` (
 
 INSERT INTO `especialidades` (`id`, `nombre`, `fecha`) VALUES
 (1, 'Medicina General', '2022-08-25 01:20:04'),
-(5, 'Cardiologia', '2022-08-25 01:51:36'),
-(6, 'Pediatria', '2022-08-25 01:51:51'),
-(7, 'Dermatologia', '2022-08-25 06:11:51'),
-(8, 'Odontologia', '2022-08-25 16:46:32'),
+(5, 'Cardiología', '2022-08-25 01:51:36'),
+(6, 'Pediatría', '2022-08-25 01:51:51'),
+(7, 'Dermatología', '2022-08-25 06:11:51'),
+(8, 'Nefrología', '2022-08-25 16:46:32'),
 (9, 'Fisioterapia', '2023-08-19 15:20:32');
 
 -- --------------------------------------------------------
@@ -152,6 +153,15 @@ CREATE TABLE `pagos` (
   `usuario` varchar(50) NOT NULL,
   `plan` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `pagos`
+--
+
+INSERT INTO `pagos` (`id`, `nombre`, `tipo_id`, `num_id`, `usuario`, `plan`) VALUES
+(1, 'Alexa', 'CC', '28937823', 'alexxab_19', 1),
+(2, 'Alexa', 'CE', '23232', 'andrea', 2),
+(3, 'skjandjksa', 'CC', '232321', 'sofia1', 3);
 
 -- --------------------------------------------------------
 
@@ -261,7 +271,8 @@ INSERT INTO `usuarios` (`id`, `tipo_id`, `num_id`, `nombre_completo`, `apellidos
 (5, 'CC', '232333', 'maria', 'lopera', '2023-11-02', 'maria@gmail.com', '3333', 'Maria', '3627909a29c31381a071ec27f7c9ca', '3627909a29c31381a071ec27f7c9ca'),
 (6, 'CC', '23334555', 'sofia', 'lopera', '2023-10-31', 'sofiaL@gmail.com', '44444555', 'sofiaL', 'd404559f602eab6fd602ac7680dacb', 'd404559f602eab6fd602ac7680dacb'),
 (7, 'CC', '2333422', 'sofia', 'lopera', '2023-11-10', 'sofia1@gmail.com', '333322', 'sofia1', '133', '133'),
-(8, 'CC', '23334223', 'andrea', 'lopera', '2023-11-08', 'andrea@gmail.com', '32455', 'andrea', '1223', '1223');
+(8, 'CC', '23334223', 'andrea', 'lopera', '2023-11-08', 'andrea@gmail.com', '32455', 'andrea', '1223', '1223'),
+(9, 'TI', '1063276090', 'Alexa', 'Bedoya', '2023-10-30', 'alexa@gmail.com', '3052781540', 'alexxab_19', '123', '123');
 
 --
 -- Índices para tablas volcadas
@@ -373,7 +384,7 @@ ALTER TABLE `horario`
 -- AUTO_INCREMENT de la tabla `pagos`
 --
 ALTER TABLE `pagos`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `reservas`
@@ -397,7 +408,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Restricciones para tablas volcadas
