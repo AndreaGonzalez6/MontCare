@@ -183,15 +183,15 @@ body {
 
 /* Contacto y mapa */
 
+/*MAPA - CONTACTO*/
 .fondoContacto {
     background-color: rgb(36, 36, 36);
     padding-bottom: 15px;
 }
 
-input, textarea{
+input, textarea, select{
     border-radius: 4px;
 }
-
 .color-blanco {
     color: white;
 }
@@ -215,8 +215,17 @@ input, textarea{
 .comentario{
     background-color: #1877F2;
     padding: 7.2px;
-    padding-top: 41px;
-    padding-bottom: 41px;
+    padding-top: 56px;
+    padding-bottom: 56px;
+    position: absolute;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.megafono{
+    background-color: #1877F2;
+    padding: 7px;
+    padding-top: 8.6px;
+    padding-bottom: 8.5px;
     position: absolute;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -224,7 +233,6 @@ input, textarea{
 .centrar{
     text-align: center;
 }
-
 #nombre, #correo{
     border: none;
     width: 250px;
@@ -234,13 +242,20 @@ input, textarea{
     margin-left: 28px;
     padding-left: 10px;
 }
+#miSelect {
+    width: 278px; 
+    height: 33px; 
+    font-size: 16px;
+    color: rgb(100, 99, 99);
+    margin-bottom: 5px;
+    padding-left: 32px;
+  }
 #comentario{
     width: 250px;
     margin-left: 28px;
     padding-left: 9px;
     padding-top: 5px;
 }
-
 .imagen {
     margin-right: 21px;
 }
@@ -249,7 +264,9 @@ input, textarea{
     margin: 0;
     padding: 0;
 }
-
+.mandar{
+    margin-bottom: 10px;
+}
 .redes {
     display: flex;
     justify-content: center;
@@ -259,7 +276,6 @@ input, textarea{
     padding-top: 10px;
     transition: .2s;
 }
-
 .wpp,
 .ig,
 .fb,
@@ -267,57 +283,56 @@ input, textarea{
 .tw {
     color: #797979;
 }
-
 .redes a:hover .wpp {
     transform: translateY(-3px) scale(1.2);
     color: #25D366;
 }
-
 .redes a:hover .ig {
     transform: translateY(-3px) scale(1.2);
     color: #E4405F;
 }
-
 .redes a:hover .tw {
     transform: translateY(-3px) scale(1.2);
     color: #1DA1F2;
 }
-
 .redes a:hover .fb {
     transform: translateY(-3px) scale(1.2);
     color: #1877F2;
 }
-
 .redes a:hover .tk {
     transform: translateY(-3px) scale(1.2);
     color: #000;
 }
-
 .fila {
     margin-left: 15px;
     margin-right: 0px;
 }
-
 .tamaños {
     font-size: 45px;
     margin-left: 50px;
 }
-
 .titulo {
     text-align: center;
     font-family: 'Pacifico', cursive;
     margin-top: 10px;
 }
-
 .letra {
     font-family: 'Nanum Gothic', sans-serif;
 }
-
 input:focus, textarea:focus {
     outline: none; 
 }
 
- /* footer */
+.bajar{
+    margin-bottom: 25px;
+}
+
+/*RECOMENDACIONES*/
+#recomendaciones{
+    text-align: center;
+}
+
+ /* FOOTER */
  footer {
     background-color: #1E4BAF;
     color: white;
@@ -329,5 +344,3 @@ input:focus, textarea:focus {
 footer p {
     margin: 10px 0;
 }
-
-
