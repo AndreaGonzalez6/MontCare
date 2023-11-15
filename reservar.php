@@ -285,7 +285,7 @@ include("php/conexion_be.php");
                 
                 <input type="text" name="id_usuario" value="<?php echo $id; ?>" hidden>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6 mt-4 mb-3">
                 <label for="">Cómo quiere la cita</label>
                 <select name="cita" id="cita">
                   <option value="Presencial">Presencial</option>
