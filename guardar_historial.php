@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Recibir los datos del formulario
-    
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Recibir los datos del formulario
         $id_usuario = $_POST["id_usuario"];
@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $tratamiento = $_POST["tratamiento"];
         $observaciones = $_POST["observaciones"];
         $referencias_especialistas = $_POST["referencias_especialistas"];
-        
+
         // Resto del código para la inserción en la base de datos
         // ...
     }
@@ -39,9 +39,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Preparar la consulta SQL para insertar los datos en la tabla historial
     $sql = "INSERT INTO historial (id_usuario, alergias, grupo_sanguineo, antecedentes_familiares, cirugias_realizadas, enfermedades_previas, medicamentos, sintomas, tratamiento, observaciones, referencias_especialistas) 
     VALUES ('$id_usuario', '$alergias', '$grupo_sanguineo', '$antecedentes_familiares', '$cirugias_realizadas', '$enfermedades_previas', '$medicamentos', '$sintomas', '$tratamiento', '$observaciones', '$referencias_especialistas')";
-    
-    
-    
+
+
+
 
     if ($conn->query($sql) === TRUE) {
         echo "El historial clínico se ha guardado correctamente";
