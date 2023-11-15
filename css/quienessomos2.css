@@ -245,6 +245,10 @@ input:focus, textarea:focus {
     outline: none; 
 }
 
+.bajar{
+    margin-bottom: 25px;
+}
+
 /*RECOMENDACIONES*/
 #recomendaciones{
     text-align: center;
