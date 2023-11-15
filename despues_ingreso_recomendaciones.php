@@ -30,6 +30,7 @@ if(!isset($_SESSION['usuario'])){
     <link flex href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/recomendaciones.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="servicios.css">
 </head>
 <body>
 
@@ -326,70 +327,127 @@ if(!isset($_SESSION['usuario'])){
               </div>
         
             </div>
-          </div>
-        
-        
-          <!-- comentarios -->
-          <div class="row">
-            <div class="col-md-4 text-light centrar" style="background-color: rgb(67, 101, 104);">
-              <form action="#" method="post">
-                <h2 class="titulo"> ¡Sección de comentarios! </h2>
-        
-                <i class="fa-solid fa-user nombre"></i>
-                <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required> <br>
-        
-                <i class="fa-solid fa-envelope correo"></i>
-                <input type="email" id="correo" name="correo" placeholder="Ingrese su correo" required> <br>
-        
-                <i class="fa-regular fa-comment comentario"></i>
-                <textarea id="comentario" name="comentario" rows="5" placeholder="Comentario" required></textarea> <br> <br>
-        
-                <button type="submit" class="btn btn-primary"> Enviar </button>
-              </form>
-            </div>
-        
-            <div class="col-md-2 centrar" style="background-color: rgb(67, 101, 104);">
-              <img src="imágenes/intento1.png" height="306vh">
-            </div>
-        
-        
-            <!-- contacto -->
-            <div class="col-md-6 text-light fondoContacto" id="contact">
-              <div class="row fila">
-                <div class="col-md-12">
-                  <h2 class="titulo pt-1">Información de Contacto</h2>
-                  <p><strong class="letra"><i class="fa-solid fa-location-dot" style="color: #e8e8e8;"></i> Dirección:
-                    </strong>
-                    Barrio piñalito Calle -11 Carrera - #11-43 <br> Montelíbano-Córdoba
-        
-                  </p>
-                  <p><strong class="letra"><i class="fa-solid fa-phone" style="color: #e8e8e8;"></i> Teléfono:</strong>
-                    604-342-3954</p>
-                  <p><strong class="letra"> <i class="fa-solid fa-envelope" style="color: #e8e8e8;"></i> Email: </strong>
-                    CentroHospitalario@MontCare.com</p>
+            </div> <!-- Contenedor información -->
+        <div class="container-fluid">
+
+            <!-- mapa -->
+            <div class="row">
+                <div class="col-12 p-0 m-0">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1012038.5073239644!2d-76.87803499835161!3d7.760587790236882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e5b1bdbcca8e949%3A0x4915ae745046fafe!2zTW9udGVsw61iYW5v!5e0!3m2!1ses-419!2sco!4v1692743172174!5m2!1ses-419!2sco"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"> </iframe>
                 </div>
-              </div>
-        
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="redes">
-                    <a href="#" target="_blank"> <i class="fab fa-brands fa-whatsapp tamaños wpp"></i></a>
-                    <a href="#" target="_blank"> <i class="fab fa-brands fa-instagram tamaños ig"></i></a>
-                    <a href="#" target="_blank"> <i class="fa-brands fa-twitter tamaños tw"></i> </a>
-                    <a href="#" target="_blank"> <i class="fa-brands fa-facebook-f tamaños fb"></i> </a>
-                    <a href="#" target="_blank"> <i class="fa-brands fa-tiktok tamaños tk"></i> </a>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
-        
-          </div>
-          <hr class="lineap">
-          <footer>
+
+            <!-- comentarios -->
+            <div class="row">
+                <div class="col-md-4 text-light centrar" style="background-color: rgb(67, 101, 104);">
+                    <form action="https://formsubmit.co/alexabedoyarojas123@gmail.com" method="POST" id="miFormulario"
+                        onsubmit="return mostrarConfirmacion()">
+                        <h2 class="titulo"> ¡Sección de comentarios! </h2>
+
+                        <i class="fa-solid fa-user nombre"></i>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required> <br>
+
+                        <i class="fa-solid fa-envelope correo"></i>
+                        <input type="email" id="correo" name="correo" placeholder="Ingrese su correo" required> <br>
+
+                        <i class="fa-solid fa-bullhorn megafono"></i>
+                        <select name="format" id="miSelect" onchange="cambiarPlaceholder()" required>
+                            <option selected disabled>P-Q-R-S
+                            <option class="peticion" value="peticion">Petición</option>
+                            <option class="queja" value="queja">Queja</option>
+                            <option class="reclamo" value="reclamo">Reclamo</option>
+                            <option class="solicitud" value="solicitud">Solicitud</option>
+                        </select> <br>
+
+                        <i class="fa-regular fa-comment comentario"></i>
+                        <textarea id="comentario" name="comentario" rows="5" placeholder="Comentario"
+                            required></textarea> <br> <br>
+
+                        <script>
+                            function cambiarPlaceholder() {
+                                var select = document.getElementById("miSelect");
+                                var textarea = document.getElementById("comentario");
+                                var selectedOption = select.options[select.selectedIndex];
+
+                                if (selectedOption.value === "peticion") {
+                                    textarea.placeholder = "Escriba aquí su petición";
+                                }
+                                else if (selectedOption.value === "reclamo") {
+                                    textarea.placeholder = "Escriba aquí su reclamo";
+                                } else if (selectedOption.value === "queja") {
+                                    textarea.placeholder = "Escriba aquí su queja";
+                                } else if (selectedOption.value === "solicitud") {
+                                    textarea.placeholder = "Escriba aquí su solicitud";
+                                } else {
+                                    textarea.placeholder = "Comentario";
+                                }
+                            }
+
+                            function mostrarConfirmacion() {
+                                alert("¡El formulario se envió correctamente!");
+                                return true;
+                            }
+                        </script>
+                        <button type="submit" class="btn btn-primary mandar"> Enviar </button>
+                        <input type="hidden" name="_next" value="http://127.0.0.1:5502/index.html">
+                        <input type="hidden" name="_captcha" value="false">
+                    </form>
+                </div>
+
+                <div class="col-md-2 centrar" style="background-color: rgb(67, 101, 104);">
+                    <img src="imágenes/intento1.png" height="345vh">
+                </div>
+
+
+                <!-- contacto -->
+                <div class="col-md-6 text-light fondoContacto" id="contact">
+                    <div class="row fila">
+                        <div class="col-md-12">
+                            <h2 class="titulo pt-1">Información de Contacto</h2>
+                            <p><strong class="letra"><i class="fa-solid fa-location-dot" style="color: #e8e8e8;"></i>
+                                    Dirección:
+                                </strong>
+                                Barrio piñalito Calle -11 Carrera - #11-43 <br> Montelíbano-Córdoba
+
+                            </p>
+                            <p><strong class="letra"><i class="fa-solid fa-phone" style="color: #e8e8e8;"></i>
+                                    Teléfono:</strong>
+                                604-342-3954</p>
+                            <p><strong class="letra"> <i class="fa-solid fa-envelope" style="color: #e8e8e8;"></i>
+                                    Email: </strong>
+                                CentroHospitalario@MontCare.com</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="redes">
+                                <a href="https://api.whatsapp.com/send?phone=3052781531" target="_blank"> <i
+                                        class="fab fa-brands fa-whatsapp tamaños wpp"></i></a>
+                                <a href="https://instagram.com/ice.cream_draws?igshid=MTRjd3RlbmNtMHYybQ=="
+                                    target="_blank"> <i class="fab fa-brands fa-instagram tamaños ig"></i></a>
+                                <a href="https://x.com/ice_cream2903?t=XOiJhroPm4P0Hyo2vaBxrg&s=09" target="_blank"> <i
+                                        class="fa-brands fa-twitter tamaños tw"></i> </a>
+                                <a href="#" target="_blank"> <i class="fa-brands fa-facebook-f tamaños fb"></i> </a>
+                                <a href="#" target="_blank"> <i class="fa-brands fa-tiktok tamaños tk"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <hr class="lineap">
+
+        <footer>
             <p>Derechos Reservados &copy; 2023 Hospital Privado MontCare</p>
-          </footer>
+        </footer>
+          </div>
         
+         
         </main>
       </div>
     
