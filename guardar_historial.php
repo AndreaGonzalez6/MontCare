@@ -19,6 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Recibir los datos del formulario
+        $id_usuario = $_POST["id_usuario"];
         $alergias = $_POST["alergias"];
         $grupo_sanguineo = $_POST["grupo_sanguineo"];
         $antecedentes_familiares = $_POST["antecedentes_familiares"];

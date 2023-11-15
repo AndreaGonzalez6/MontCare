@@ -85,11 +85,16 @@ if (!isset($_SESSION['correo'])) {
             $conexion->close();
             ?>
         </section>
-
+            <style>
+                .paciente:hover{
+                    color: blue;
+                }
+            </style>
         <section class="historial-clinico">
             <!-- Aquí se mostrará el historial clínico del paciente seleccionado -->
-            <h1>Formulario Historial Clínico</h1>
             <form class="form-historial" action="http://localhost/MontCare/guardar_historial.php" method="post" style="display: none;">
+            <h1>Formulario Historial Clínico</h1>
+                
                 <label for="alergias">Alergias conocidas:</label>
                 <input type="text" id="alergias" name="alergias" required><br><br>
 
@@ -131,13 +136,20 @@ if (!isset($_SESSION['correo'])) {
 
     <script>
         const pacientes = document.querySelectorAll('.paciente');
+        const formHistorial = document.querySelector('.form-historial');
+        const idUsuarioInput = document.createElement('input');
+        idUsuarioInput.type = 'hidden';
+        idUsuarioInput.name = 'id_usuario'; // Nombre del campo para enviar al formulario PHP
+        formHistorial.appendChild(idUsuarioInput);
 
         pacientes.forEach(paciente => {
             paciente.addEventListener('click', () => {
                 const idPaciente = paciente.dataset.id;
 
-                const formHistorial = document.querySelector('.form-historial');
-        formHistorial.style.display = 'block'; // Mostrar el formulario
+                // Actualizar el valor del campo oculto con el id del usuario seleccionado
+                idUsuarioInput.value = idPaciente;
+
+                formHistorial.style.display = 'block'; // Mostrar el formulario
             });
         });
     </script>
