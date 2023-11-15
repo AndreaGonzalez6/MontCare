@@ -63,7 +63,8 @@ if (!isset($_SESSION['usuario'])) {
   <link rel="stylesheet" href="css/estilos.css" />
   <!-- Boxicons CSS -->
   <link flex href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css">
+  
 
 </head>
 
@@ -194,7 +195,7 @@ if (!isset($_SESSION['usuario'])) {
             </a>
           </div>
           <div class="col-lg-3">
-            <a href="servicios.html" class="text-decoration-none">
+            <a href="despues_ingreso_servicios.php" class="text-decoration-none">
               <div class="bolita color3">
                 <i class="tamaño iconos fa-regular fa-clipboard" style="color: #ffffff"></i>
               </div>
