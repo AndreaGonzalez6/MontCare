@@ -186,7 +186,7 @@ if (!isset($_SESSION['usuario'])) {
           </div>
 
           <div class="col-lg-3">
-            <a href="recomendaciones.html" class="text-decoration-none">
+            <a href="despues_ingreso_recomendaciones.php" class="text-decoration-none">
               <div class="bolita color2">
                 <i class="tamaño iconos fa-solid fa-heart-pulse" style="color: #ffffff"></i>
               </div>
