@@ -81,7 +81,7 @@ include("php/conexion_be.php");
               </a>
             </li>
             <li class="item">
-              <a href="#" class="link flex">
+              <a href="http://localhost/MontCare/reservas/mis_citas.php" class="link flex">
               <i class="fa-solid fa-clipboard-user"></i>
                 <span>Mis Citas</span>
               </a>
@@ -299,14 +299,14 @@ include("php/conexion_be.php");
               include("php/conexion_be.php");
 
               // Obtener todas las especialidades
-              $sql_especialidades = "SELECT DISTINCT especialidad FROM doctor";
+              $sql_especialidades = "SELECT DISTINCT id_especialidad FROM doctor";
               $result_especialidades = $conexion->query($sql_especialidades);
 
               $especialidades = array();
 
               if ($result_especialidades->num_rows > 0) {
                 while ($row_especialidad = $result_especialidades->fetch_assoc()) {
-                  $especialidades[] = $row_especialidad['especialidad'];
+                  $especialidades[] = $row_especialidad['id_especialidad'];
                 }
               }
               ?>
@@ -317,8 +317,8 @@ include("php/conexion_be.php");
                   <option value=""></option>
 
                   <?php
-                  foreach ($especialidades as $especialidad) {
-                    echo '<option value="' . $especialidad . '">' . $especialidad . '</option>';
+                  foreach ($especialidades as $id_especialidad) {
+                    echo '<option value="' . $id_especialidad . '">' . $id_especialidad . '</option>';
                   }
                   ?>
 
@@ -344,7 +344,7 @@ include("php/conexion_be.php");
                       actualizarDropdownMedicos(medicos);
                     }
                   };
-                  medicoN.open("GET", "obtener_medicos.php?especialidad=" + selectedEspecialista, true);
+                  medicoN.open("GET", "obtener_medicos.php?id_especialidad=" + selectedEspecialista, true);
                   medicoN.send();
                 });
 

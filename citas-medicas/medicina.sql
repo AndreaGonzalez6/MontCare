@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-11-2023 a las 17:05:21
+-- Tiempo de generación: 24-11-2023 a las 04:39:45
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -56,7 +56,7 @@ CREATE TABLE `doctor` (
   `id` int(11) NOT NULL,
   `cedula` int(50) NOT NULL,
   `nombres` varchar(50) NOT NULL,
-  `especialidad` varchar(100) NOT NULL,
+  `id_especialidad` varchar(100) NOT NULL,
   `sexo` varchar(50) NOT NULL,
   `telefono` varchar(50) NOT NULL,
   `fecha` date NOT NULL,
@@ -69,10 +69,14 @@ CREATE TABLE `doctor` (
 -- Volcado de datos para la tabla `doctor`
 --
 
-INSERT INTO `doctor` (`id`, `cedula`, `nombres`, `especialidad`, `sexo`, `telefono`, `fecha`, `correo`, `contrasena`, `fecha_registro`) VALUES
-(17, 43568480, 'Carlos Gonzalez', 'Cardiologia', 'Masculino', '3108972345', '1990-06-05', 'carlos.gonzalez@email.com', '', '2023-11-11 00:40:02'),
-(18, 45578934, 'Ana Martínez', 'Cardiologia', 'Femenino', '1234567891', '1990-10-01', 'ana.martinez@email.com', '123', '2023-11-11 01:22:42'),
-(19, 46569746, 'Manuel Jiménez', 'Dermatologia', 'Masculino', '1234567928', '1980-08-16', 'manuel.jimenez@email.com', '1234', '2023-11-11 01:25:23');
+INSERT INTO `doctor` (`id`, `cedula`, `nombres`, `id_especialidad`, `sexo`, `telefono`, `fecha`, `correo`, `contrasena`, `fecha_registro`) VALUES
+(17, 43568480, 'Carlos Gonzalez', 'Cardiología', 'Masculino', '3108972345', '1990-06-05', 'carlos.gonzalez@email.com', '789', '2023-11-11 00:40:02'),
+(18, 45578934, 'Ana Martínez', 'Cardiología', 'Femenino', '1234567891', '1990-10-01', 'ana.martinez@email.com', '123', '2023-11-11 01:22:42'),
+(19, 46569746, 'Manuel Jiménez', 'Dermatología', 'Masculino', '1234567928', '1980-08-16', 'manuel.jimenez@email.com', '1234', '2023-11-11 01:25:23'),
+(26, 43567894, 'Isabel Vargas', 'Dermatología', 'Femenino', '1234567929', '1996-02-14', 'isabel.vargas@email.com', '456', '2023-11-24 03:21:42'),
+(27, 43567345, 'Gabriel López', 'Ginecología y Obstetricia', 'Masculino', '3102460445', '1993-03-17', 'gabriel.lopez@email.com', '567', '2023-11-24 03:28:56'),
+(28, 4326478, 'Ángel González', 'Pediatría', 'Masculino', '3102460356', '1890-05-31', 'angel.gonzalez@email.com', '890', '2023-11-24 03:33:09'),
+(29, 4567896, 'Patricia Ramos', 'Nefrología', 'Femenino', '3102460673', '1995-02-20', 'patricia@email.com', '567', '2023-11-24 03:35:56');
 
 -- --------------------------------------------------------
 
@@ -91,12 +95,21 @@ CREATE TABLE `especialidades` (
 --
 
 INSERT INTO `especialidades` (`id`, `nombre`, `fecha`) VALUES
-(1, 'Medicina General', '2022-08-25 01:20:04'),
-(5, 'Cardiologia', '2022-08-25 01:51:36'),
-(6, 'Pediatria', '2022-08-25 01:51:51'),
-(7, 'Dermatologia', '2022-08-25 06:11:51'),
-(8, 'Odontologia', '2022-08-25 16:46:32'),
-(9, 'Fisioterapia', '2023-08-19 15:20:32');
+(1, 'Neumología', '2022-08-25 01:20:04'),
+(5, 'Cardiología', '2022-08-25 01:51:36'),
+(6, 'Pediatría', '2022-08-25 01:51:51'),
+(7, 'Dermatología', '2022-08-25 06:11:51'),
+(9, 'Nefrología', '2023-08-19 15:20:32'),
+(11, 'Radiología', '2023-11-24 00:39:02'),
+(12, 'Ginecología y Obstetricia', '2023-11-24 03:01:24'),
+(13, 'Oncología', '2023-11-24 03:03:49'),
+(14, 'Otorrinolaringología', '2023-11-24 03:04:39'),
+(15, 'Traumatología y Ortopedia', '2023-11-24 03:05:18'),
+(16, 'Neurología', '2023-11-24 03:05:38'),
+(17, 'Neurocirugía', '2023-11-24 03:06:06'),
+(18, 'Cirugía General', '2023-11-24 03:06:34'),
+(19, 'Fisioterapia', '2023-11-24 03:07:05'),
+(20, 'Urología', '2023-11-24 03:07:20');
 
 -- --------------------------------------------------------
 
@@ -205,22 +218,6 @@ CREATE TABLE `reservas` (
   `fyh_actualizacion` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
---
--- Volcado de datos para la tabla `reservas`
---
-
-INSERT INTO `reservas` (`id_reserva`, `id_usuario`, `cita`, `nombre_medico`, `tipo_especialista`, `fecha_cita`, `hora_cita`, `title`, `start`, `end`, `color`, `fyh_creacion`, `fyh_actualizacion`) VALUES
-(1, 8, 'Chat', 18, 'Cardiologia', '2023-11-22', '08:20 - 08:40', 'Cardiologia', '2023-11-22', '2023-11-22', '#2324ff', '2023-11-13 14:09:27', '2023-11-13 14:09:27'),
-(2, 1, 'Presencial', 19, 'Dermatologia', '2023-11-23', '08:20 - 08:40', 'Dermatologia', '2023-11-23', '2023-11-23', '#2324ff', '2023-11-13 14:15:43', '2023-11-13 14:15:43'),
-(6, 1, 'Presencial', 18, 'Cardiologia', '2023-11-24', '08:40 - 09:00', 'Cardiologia', '2023-11-24', '2023-11-24', '#2324ff', '2023-11-13 15:03:00', '2023-11-13 15:03:00'),
-(8, 1, 'Chat', 19, 'Dermatologia', '2023-11-18', '08:40 - 09:00', 'Dermatologia', '2023-11-18', '2023-11-18', '#2324ff', '2023-11-13 15:38:25', '2023-11-13 15:38:25'),
-(9, 1, 'Chat', 18, 'Cardiologia', '2023-11-17', '08:00 - 08:20', 'Cardiologia', '2023-11-17', '2023-11-17', '#2324ff', '2023-11-13 15:38:53', '2023-11-13 15:38:53'),
-(10, 1, 'Videollamada', 18, 'Cardiologia', '2023-11-16', '08:20 - 08:40', 'Cardiologia', '2023-11-16', '2023-11-16', '#2324ff', '2023-11-13 15:48:40', '2023-11-13 15:48:40'),
-(11, 8, 'Chat', 19, 'Dermatologia', '2023-11-21', '13:20 - 13:40', 'Dermatologia', '2023-11-21', '2023-11-21', '#2324ff', '2023-11-14 19:50:25', '2023-11-14 19:50:25'),
-(12, 8, 'Presencial', 18, 'Cardiologia', '2023-11-15', '08:00 - 08:20', 'Cardiologia', '2023-11-15', '2023-11-15', '#2324ff', '2023-11-14 19:53:45', '2023-11-14 19:53:45'),
-(13, 8, 'Videollamada', 17, 'Cardiologia', '2023-11-14', '08:00 - 08:20', 'Cardiologia', '2023-11-14', '2023-11-14', '#2324ff', '2023-11-14 21:56:24', '2023-11-14 21:56:24'),
-(14, 8, 'Presencial', 18, 'Cardiologia', '2023-11-22', '08:00 - 08:20', 'Cardiologia', '2023-11-22', '2023-11-22', '#2324ff', '2023-11-14 22:04:10', '2023-11-14 22:04:10');
-
 -- --------------------------------------------------------
 
 --
@@ -299,7 +296,8 @@ INSERT INTO `usuarios` (`id`, `tipo_id`, `num_id`, `nombre_completo`, `apellidos
 (7, 'CC', '2333422', 'sofia', 'lopera', '2023-11-10', 'sofia1@gmail.com', '333322', 'sofia1', '133', '133'),
 (8, 'CC', '23334223', 'andrea', 'lopera', '2023-11-08', 'andrea@gmail.com', '32455', 'andrea', '1223', '1223'),
 (9, 'CC', '8359', 'Lee', 'Jared Escobar', '2023-09-05', 'lee@gmail.com', '3108972761', 'Lee1', '123', '123'),
-(10, 'CC', '222', 'paula', 'gonzalez', '2019-01-29', 'paulagonzalez282002@gmail.com', '344444', 'paula', '12344', '12344');
+(10, 'CC', '222', 'paula', 'gonzalez', '2019-01-29', 'paulagonzalez282002@gmail.com', '344444', 'paula', '12344', '12344'),
+(11, 'CC', '1128452865', 'Andrea', 'Caldas', '1990-11-22', 'vcaldas@cesde.edu.co', '3102460437', 'andrea33', '12345', '12345');
 
 --
 -- Índices para tablas volcadas
@@ -316,8 +314,8 @@ ALTER TABLE `citas`
 --
 ALTER TABLE `doctor`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `id_especialidad` (`especialidad`),
-  ADD KEY `especialidad` (`especialidad`);
+  ADD KEY `id_especialidad` (`id_especialidad`),
+  ADD KEY `especialidad` (`id_especialidad`);
 
 --
 -- Indices de la tabla `especialidades`
@@ -398,13 +396,13 @@ ALTER TABLE `citas`
 -- AUTO_INCREMENT de la tabla `doctor`
 --
 ALTER TABLE `doctor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT de la tabla `especialidades`
 --
 ALTER TABLE `especialidades`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT de la tabla `estado`
@@ -434,7 +432,7 @@ ALTER TABLE `pagos`
 -- AUTO_INCREMENT de la tabla `reservas`
 --
 ALTER TABLE `reservas`
-  MODIFY `id_reserva` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_reserva` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
@@ -452,7 +450,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Restricciones para tablas volcadas

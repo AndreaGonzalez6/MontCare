@@ -43,8 +43,8 @@ $usuario = mysqli_fetch_assoc($resultado);
 
                     <div class="form-group ">
                         <label>Especialidad</label>
-                        <select class="form-control" id="especialidad" name="especialidad">
-                            <option <?php echo $usuario['especialidad'] === 'especialidad' ? "selected='selected' " : "" ?> value="<?php echo $usuario['especialidad']; ?>"><?php echo $usuario['especialidad']; ?> </option>
+                        <select class="form-control" id="id_especialidad" name="id_especialidad">
+                            <option <?php echo $usuario['id_especialidad'] === 'id_especialidad' ? "selected='selected' " : "" ?> value="<?php echo $usuario['id_especialidad']; ?>"><?php echo $usuario['id_especialidad']; ?> </option>
                             <?php
 
                             include("db.php");
@@ -52,7 +52,7 @@ $usuario = mysqli_fetch_assoc($resultado);
                             $sql = "SELECT * FROM especialidades ";
                             $resultado = mysqli_query($conexion, $sql);
                             while ($consulta = mysqli_fetch_array($resultado)) {
-                                echo '<option value="' . $consulta['id'] . '">' . $consulta['nombre'] . '</option>';
+                                echo '<option value="' . $consulta['nombre'] . '">' . $consulta['nombre'] . '</option>';
                             }
 
                             ?>

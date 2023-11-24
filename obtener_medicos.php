@@ -1,10 +1,10 @@
 <?php
 include("php/conexion_be.php");
 
-if (isset($_GET['especialidad'])) {
-    $especialidad = $_GET['especialidad'];
+if (isset($_GET['id_especialidad'])) {
+    $id_especialidad = $_GET['id_especialidad'];
 
-    $sql_medicos = "SELECT id, nombres FROM doctor WHERE especialidad = '$especialidad'";
+    $sql_medicos = "SELECT id, nombres FROM doctor WHERE id_especialidad = '$id_especialidad'";
     $result_medicos = $conexion->query($sql_medicos);
 
     $medicos = array();

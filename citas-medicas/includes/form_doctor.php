@@ -38,17 +38,17 @@ if ($varsesion == null || $varsesion = '') {
                     // Verificar si el formulario ha sido enviado
                     if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         // Obtener el valor seleccionado en el formulario
-                        $especialidad = $_POST["especialidad"];
+                        $id_especialidad = $_POST["id_especialidad"];
 
                         // Tu lógica para insertar en la base de datos
-                        $sql = "INSERT INTO doctor (nombre_especialidad) VALUES ('$especialidad')";
+                        $sql = "INSERT INTO doctor (nombre_especialidad) VALUES ('$id_especialidad')";
                         // Resto del código...
                     }
                     ?>
 
                     <div class="form-group">
                         <label>Especialidad</label>
-                        <select class="form-control" id="especialidad" name="especialidad">
+                        <select class="form-control" id="id_especialidad" name="id_especialidad">
                             <option value="0">--Selecciona una opcion--</option>
                             <?php
                             include("db.php");
