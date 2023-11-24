@@ -482,7 +482,7 @@ input:focus, textarea:focus {
     text-align: center;
     font-size: 100px;
     color: rgb(255, 255, 255);
-    margin-top: 10px;
+    margin-top: 120px;
     font-family: 'Amatic SC', sans-serif;
 }
 
@@ -497,6 +497,7 @@ input:focus, textarea:focus {
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-top: 30px;
 }
 
 #mostrarEspecialidades:hover {
@@ -517,8 +518,9 @@ input:focus, textarea:focus {
     align-items: center;
     justify-content: center;
     background-color: #797c8d;
-    height: 120vh;
+    height: 130vh;
     font-family: 'Urbanist', sans-serif;
+    margin-bottom: 130px;
 }
 
 .container {
