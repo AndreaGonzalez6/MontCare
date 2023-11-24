@@ -184,7 +184,7 @@ if(!isset($_SESSION['usuario'])){
                 </div>
             </div>
             <div class="row mision" id="vision">
-                <div class="col-md-6">
+                <div class="col-md-6 centrar_imagen">
                     <img src="imágenes/mision.jpg" class="img2">
                 </div>
                 <div class="col-md-6">
@@ -212,12 +212,13 @@ if(!isset($_SESSION['usuario'])){
                         que empodere a las comunidades y promueva la salud y el bienestar a largo plazo.
                     </p>
                 </div>
-                <div class="col-md-6">
+
+                <div class="col-md-6 centrar_imagen">
                     <img src="imágenes/vision.jpg" class="img3">
                 </div>
             </div>
             <div class="row propuesta" id="compromiso">
-                <div class="col-md-6">
+                <div class="col-md-6 centrar_imagen">
                     <img src="imágenes/propuesta.jpeg" class="img4">
                 </div>
                 <div class="col-md-6">
@@ -262,12 +263,12 @@ if(!isset($_SESSION['usuario'])){
                         de nuestra comunidad. Nos esforzamos por brindar atención médica compasiva y
                         efectiva a todos nuestros pacientes, sin importar su condición económica o geográfica.</p>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 ">
                     <img src="imágenes/compromiso2.jpg" class="img5">
                 </div>
             </div>
             <div class="row valores" id="principios">
-                <div class="col-md-6">
+                <div class="col-md-6 centrar_imagen">
                     <img src="imágenes/principios.jpg" class="img6" alt="">
                 </div>
                 <div class="col-md-6">
@@ -300,12 +301,12 @@ if(!isset($_SESSION['usuario'])){
                         <li>Colaboración con la comunidad y otros proveedores de atención médica.</li>
                     </ul>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 centrar_imagen">
                     <img src="imágenes/valores.jpg" class="img7" alt="">
                 </div>
             </div>
             <div class="row objetivos">
-                <div class="col-md-6">
+                <div class="col-md-6 centrar_imagen">
                     <img src="imágenes/objetivos.jpeg" class="img8" alt="">
                 </div>
                 <div class="col-md-6">
