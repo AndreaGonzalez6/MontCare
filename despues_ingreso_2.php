@@ -339,7 +339,7 @@ if(!isset($_SESSION['usuario'])){
             <p class="p-planes contenedor_price cursive_font">Consultas médicas</p>
           </div>
           <div class="parrafos-planes">
-            <p class="p-planes contenedor_price cursive_font"><i class="fa-solid fa-x margin_X" style="color: #a82610;"></i>Chat</p>
+            <p class="p-planes contenedor_price cursive_font"><i class="fa-solid fa-x margin_X" style="color: #a82610;"></i>No incluye Chat</p>
           </div>
           <div class="parrafos-planes">
             <p class="p-planes contenedor_price cursive_font">1 persona</p>
@@ -394,7 +394,7 @@ if(!isset($_SESSION['usuario'])){
             <p class="p-planes contenedor_price cursive_font">Consultas médicas+</p>
           </div>
           <div class="parrafos-planes">
-            <p class="p-planes contenedor_price cursive_font"><i class="fa-solid fa-check margin_X" style="color: #1e7406;"></i>Chat</p>
+            <p class="p-planes contenedor_price cursive_font"><i class="fa-solid fa-check margin_X" style="color: #1e7406;"></i>Incluye Chat</p>
           </div>
           <div class="parrafos-planes">
             <p class="p-planes contenedor_price cursive_font">1 persona</p>
