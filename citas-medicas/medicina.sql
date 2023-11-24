@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-11-2023 a las 04:39:45
+-- Tiempo de generación: 24-11-2023 a las 18:36:15
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -194,7 +194,10 @@ CREATE TABLE `pagos` (
 --
 
 INSERT INTO `pagos` (`id`, `nombre`, `tipo_id`, `num_id`, `usuario`, `plan`) VALUES
-(1, 'Pablo', 'DE', '34343', 'Lee1', 1);
+(2, 'Alexa', 'TI', '1133789201', 'alexxab19', 1),
+(3, 'Pablo', 'CC', '3787389473', 'Pablo1', 2),
+(4, 'Lee', 'CE', '17289372893', 'Lee1', 3),
+(5, 'Pablo', 'CC', '7687678', 'paola', 1);
 
 -- --------------------------------------------------------
 
@@ -217,6 +220,13 @@ CREATE TABLE `reservas` (
   `fyh_creacion` datetime NOT NULL,
   `fyh_actualizacion` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `reservas`
+--
+
+INSERT INTO `reservas` (`id_reserva`, `id_usuario`, `cita`, `nombre_medico`, `tipo_especialista`, `fecha_cita`, `hora_cita`, `title`, `start`, `end`, `color`, `fyh_creacion`, `fyh_actualizacion`) VALUES
+(2, 16, 'Presencial', 19, 'Dermatología', '2023-11-24', '08:00 - 08:20', 'Dermatología', '2023-11-24', '2023-11-24', '#2324ff', '2023-11-24 18:33:33', '2023-11-24 18:33:33');
 
 -- --------------------------------------------------------
 
@@ -288,16 +298,11 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `tipo_id`, `num_id`, `nombre_completo`, `apellidos`, `fecha_nacimiento`, `email`, `telefono`, `usuario`, `contrasena`, `confirm_contra`) VALUES
-(1, 'CC', '23334', 'laura', 'lopera', '2023-09-15', 'laura@gmail.com', '32455', 'Laura', '123', '123'),
-(3, 'CC', '122', 'sofia', 'arias', '2023-11-10', 'sofia@gmail.com', '32455', 'sofia', 'c82b8f1d225bf2f00fe91b6f238203', 'c82b8f1d225bf2f00fe91b6f238203'),
-(4, 'CC', '44444', 'mari', 'lopera', '2023-11-03', 'mari@gmail.com', '3444', 'mari', 'd404559f602eab6fd602ac7680dacb', 'd404559f602eab6fd602ac7680dacb'),
-(5, 'CC', '232333', 'maria', 'lopera', '2023-11-02', 'maria@gmail.com', '3333', 'Maria', '3627909a29c31381a071ec27f7c9ca', '3627909a29c31381a071ec27f7c9ca'),
-(6, 'CC', '23334555', 'sofia', 'lopera', '2023-10-31', 'sofiaL@gmail.com', '44444555', 'sofiaL', 'd404559f602eab6fd602ac7680dacb', 'd404559f602eab6fd602ac7680dacb'),
-(7, 'CC', '2333422', 'sofia', 'lopera', '2023-11-10', 'sofia1@gmail.com', '333322', 'sofia1', '133', '133'),
-(8, 'CC', '23334223', 'andrea', 'lopera', '2023-11-08', 'andrea@gmail.com', '32455', 'andrea', '1223', '1223'),
-(9, 'CC', '8359', 'Lee', 'Jared Escobar', '2023-09-05', 'lee@gmail.com', '3108972761', 'Lee1', '123', '123'),
-(10, 'CC', '222', 'paula', 'gonzalez', '2019-01-29', 'paulagonzalez282002@gmail.com', '344444', 'paula', '12344', '12344'),
-(11, 'CC', '1128452865', 'Andrea', 'Caldas', '1990-11-22', 'vcaldas@cesde.edu.co', '3102460437', 'andrea33', '12345', '12345');
+(12, 'CC', '1003678289', 'Paula', 'Gonzalez', '2002-10-24', 'paula@gmail.com', '31684379935', 'Andrea', '1223', '1223'),
+(13, 'TI', '1133789203', 'Alexa', 'Bedoya Rojas', '2004-02-10', 'alexa@gmail.com', '3052781530', 'alexxab19', '123', '123'),
+(14, 'CC', '1234567890', 'Pablo', 'Cardona', '2003-01-24', 'pablo@gmail.com', '30987252532', 'Pablo1', '123', '123'),
+(15, 'CC', '2333422', 'Lee', 'Jared Escobar', '2000-05-10', 'lee@gmail.com', '28372189321', 'Lee1', '123', '123'),
+(16, 'CC', '23334245', 'paola', 'perez', '2002-10-02', 'paola@gmail.com', '332334', 'paola', '123', '123');
 
 --
 -- Índices para tablas volcadas
@@ -426,13 +431,13 @@ ALTER TABLE `horario`
 -- AUTO_INCREMENT de la tabla `pagos`
 --
 ALTER TABLE `pagos`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `reservas`
 --
 ALTER TABLE `reservas`
-  MODIFY `id_reserva` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_reserva` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
@@ -450,7 +455,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- Restricciones para tablas volcadas
