@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
 body {
     height: 100vh;
     background: #98e1e6 !important;
@@ -5,7 +7,13 @@ body {
 
 .titulo {
     text-align: center;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
+}
+.parrafo{
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 23px;
+    padding-bottom: 25px;
 }
 
 .wrapper,
