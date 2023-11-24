@@ -133,11 +133,7 @@ if ($actualsesion == null || $actualsesion == '') {
             </li>
 
             <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="../views/horarios.php">
-                    <i class="fa fa-calendar" aria-hidden="true"></i>
-                    <span>Horarios</span></a>
-            </li>
+            
 
             <?php //if( $actualsesion == "Administrador"){
             ?>
