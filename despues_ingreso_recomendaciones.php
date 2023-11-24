@@ -30,7 +30,7 @@ if(!isset($_SESSION['usuario'])){
     <link flex href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/recomendaciones.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="servicios.css">
+    
 </head>
 <body>
 
@@ -121,326 +121,334 @@ if(!isset($_SESSION['usuario'])){
           <!-- Contenido principal -->
           <div class="inicio">
 
-          </div>
-          <div class="cuadros_links">
-            
-            <div class="cuadritos">
-        
-                <i class="fa-solid fa-heart-pulse tamaño_icono"></i>
-                <a href="#urgenciasGenerales">
-                <h5>Urgencias Generales</h5>
-                </a>
-            </div>
-            <div class="cuadritos">
-              <i class="fa-solid fa-baby-carriage tamaño_icono"></i>
-              <a href="#urgenciasPediatricas">
-              <h5>Urgencias Pediátricas</h5>
-              </a>
-            </div>
-            <div class="cuadritos">
-              <i class="fa-solid fa-person-pregnant tamaño_icono"></i>
-              <a href="#urgenciasObstetricia">
-                <h5>Urgencias Obstetricia</h5>
-              </a>
-            </div>
-            <div class="cuadritos">
-              <i class="fa-solid fa-user-injured tamaño_icono"></i>
-              <a href="#urgenciasTraumatologia">
-                <h5 id="h5-traumatología">Urgencias Traumatología</h5>
-              </a>
-            </div>
-          </div>
-        
-          <div id="urgenciasGenerales" class="tituloGeneral">
-            <h2>Prevención de Urgencias Generales</h2>
-          </div>
-          <div class="contenedor-1">
-            <div class="imagen">
-              <img src="imágenes/deporte.jpg" alt="">
-            </div>
-            <div class="informacion">
-        
-              <div class="info-general">
-                <div class="estiloVida">
-                  <h5>Mantén un Estilo de Vida Activo:</h6>
-                    <ul>
-                      <li><b>Realiza ejercicio regularmente:</b> Se recomienda al menos 150 minutos de actividad
-                        física moderada por semana.
-                        Esto puede incluir caminar, nadar, andar en bicicleta o actividades aeróbicas.</li>
-                      <li><b>Mantén un peso saludable:</b> El sobrepeso y la obesidad aumentan el riesgo de problemas
-                        de salud
-                        como enfermedades cardíacas, diabetes y presión arterial alta.
-                        Mantener un peso saludable es fundamental.</li>
-                    </ul>
-                </div>
-                <div class="estiloVida">
-                  <h5>Dieta Saludable:</h5>
-                  <ul>
-                    <li><b>Come una variedad de alimentos:</b> Incluye frutas, verduras, granos enteros, proteínas
-                      magras
-                      y productos lácteos bajos en grasa en tu dieta diaria.</li>
-                    <li><b>Limita la ingesta de sodio y grasas saturadas:</b> Reduce la cantidad de alimentos procesados
-                      y ricos en grasas trans en tu dieta. Lee las etiquetas de los alimentos para controlar la
-                      ingesta de sodio.</li>
-                  </ul>
-                </div>
-                <div class="estiloVida">
-                  <h5>Evita el Consumo Excesivo de Alcohol y Tabaco:</h5>
-                  <ul>
-                    <li><b>Bebe con moderación:</b> Si consumes alcohol, hazlo con moderación. El exceso de alcohol
-                      puede dañar el hígado y aumentar el riesgo de accidentes.</li>
-                    <li><b>Deja de fumar:</b> El tabaco aumenta el riesgo de enfermedades cardíacas, cáncer y
-                      enfermedades respiratorias.
-                      Busca ayuda para dejar de fumar si es necesario.</li>
-                  </ul>
-                </div>
-        
-        
-              </div>
-            </div>
-        
-          </div>
-        
-          <div id="urgenciasPediatricas" class="tituloGeneral">
-            <h2>Prevención de Urgencias Pediátricas</h2>
-          </div>
-          <div class="contenedor-1">
-            <div class="imagen">
-              <img src="imágenes/vacunacionPediatría.jpg" alt="">
-            </div>
-            <div class="informacion">
-        
-              <div class="info-general">
-                <div class="estiloVida">
-                  <h5>Vacunación:</h6>
-                    <ul>
-                      <li><b>Mantén el calendario de vacunación actualizado:</b>Las vacunas son esenciales para prevenir
-                        enfermedades graves como sarampión, paperas, rubéola, tos
-                        ferina y más.</li>
-                    </ul>
-                </div>
-                <div class="estiloVida">
-                  <h5>Seguridad en el Hogar:</h5>
-                  <ul>
-                    <li><b>Asegura el hogar:</b>Instala cercas alrededor de piscinas, asegura muebles
-                      peligrosos, guarda objetos afilados y productos químicos fuera del alcance de los niños.</li>
-                    <li><b>Educación en Primeros Auxilios: </b> Aprende técnicas básicas de primeros auxilios para saber cómo
-                      reaccionar
-                      en caso de lesiones menores.</li>
-                    <li><b>Educación Sobre el Uso de Dispositivos Electrónicos:</b> Limita el tiempo de pantalla de tus hijos y
-                      enséñales
-                      a usar dispositivos electrónicos de manera segura.</li>
-                  </ul>
-                </div>
-                <div class="estiloVida">
-                  <h5>Supervisión:</h5>
-                  <ul>
-                    <li><b>Vigila a tus hijos de cerca: </b> Supervisa a los niños en todo momento,
-                      especialmente en áreas potencialmente peligrosas, como piscinas y parques.</li>
-                  </ul>
-                </div>
-        
-        
-              </div>
-        
-            </div>
-          </div>
-        
-        
-          <div id="urgenciasObstetricia" class="tituloGeneral">
-            <h2>Prevención de Urgencias de Obstetricia y Ginecología:</h2>
-          </div>
-          <div class="contenedor-1">
-            <div class="imagen">
-              <img src="imágenes/recomendacionesObstetricia.jpg" alt="">
-            </div>
-            <div class="informacion">
-        
-              <div class="info-general">
-                <div class="estiloVida">
-                  <h5>Control Prenatal:</h6>
-                    <ul>
-                      <li><b>Realiza visitas prenatales regulares:</b>El seguimiento médico durante el embarazo es esencial para
-                        detectar y tratar problemas potenciales.
-                        Sigue el plan de cuidado prenatal recomendado por tu médico.</li>
-                    </ul>
-                </div>
-                <div class="estiloVida">
-                  <h5>Educación Prenatal:</h5>
-                  <ul>
-                    <li><b>Aprende sobre los signos de alarma:</b>Conoce los síntomas que podrían indicar una emergencia
-                      obstétrica,
-                      como sangrado vaginal abundante, contracciones prematuras o disminución de la actividad fetal.</li>
-                  </ul>
-                </div>
-                <div class="estiloVida">
-                  <h5>Seguridad en el Parto:</h5>
-                  <ul>
-                    <li><b>Elige una instalación médica adecuada: </b> Asegúrate de dar a luz en un hospital o centro médico con
-                      personal y equipo capacitados para atender emergencias obstétricas.</li>
-                  </ul>
-                </div>
-        
-        
-              </div>
-        
-            </div>
-          </div>
-        
-        
-          <div id="urgenciasTraumatologia" class="tituloGeneral">
-            <h2>Prevención de Urgencias de Traumatología, Rehabilitación y Quemados:</h2>
-          </div>
-          <div class="contenedor-1">
-            <div class="imagen">
-              <img src="imágenes/recomendacionesTraumatologiayQuemados.jpg" alt="">
-            </div>
-            <div class="informacion">
-        
-              <div class="info-general">
-                <div class="estiloVida">
-                  <h5>Seguridad en el Trabajo:</h6>
-                    <ul>
-                      <li><b>Sigue las normas de seguridad: </b>Cumple con las normas y prácticas
-                        de seguridad en tu lugar de trabajo. Usa el equipo de protección personal proporcionado.</li>
-                    </ul>
-                </div>
-                <div class="estiloVida">
-                  <h5>Prevención de Quemaduras:</h5>
-                  <ul>
-                    <li><b>Mantén objetos calientes fuera del alcance de los niños: </b> Los niños pueden resultar quemados por
-                      objetos calientes como planchas y sartenes. Manténlos fuera de su alcance.</li>
-                    <li><b>Ten cuidado con líquidos calientes: </b> Manipula con cuidado líquidos calientes, como café y sopas,
-                      para evitar quemaduras.</li>
-                  </ul>
-                </div>
-                <div class="estiloVida">
-                  <h5>Prevención de Lesiones Deportivas:</h5>
-                  <ul>
-                    <li><b>Practica deportes de manera segura:</b>Sigue las reglas del deporte y usa equipo
-                      de protección adecuado, como cascos, protectores y rodilleras.</li>
-                  </ul>
-                </div>
-        
-        
-        
-              </div>
-        
-            </div>
-            </div> <!-- Contenedor información -->
-        <div class="container-fluid">
+</div>
+<div class="cuadros_links">
+  
+  <a href="#urgenciasGenerales">
+    <div class="cuadritos">
+      <a href="#urgenciasGenerales"><i class="fa-solid fa-heart-pulse tamaño_icono"></i></a> 
+       <a href="#urgenciasGenerales">
+       <h5>Urgencias Generales</h5>
+       </a>
+   </div>
+  </a>
 
-            <!-- mapa -->
-            <div class="row">
-                <div class="col-12 p-0 m-0">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1012038.5073239644!2d-76.87803499835161!3d7.760587790236882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e5b1bdbcca8e949%3A0x4915ae745046fafe!2zTW9udGVsw61iYW5v!5e0!3m2!1ses-419!2sco!4v1692743172174!5m2!1ses-419!2sco"
-                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"> </iframe>
-                </div>
-            </div>
+  <a href="#urgenciasPediatricas">
+    <div class="cuadritos">
+      <a href="#urgenciasPediatricas"><i class="fa-solid fa-baby-carriage tamaño_icono"></i></a>
+      <a href="#urgenciasPediatricas">
+      <h5>Urgencias Pediátricas</h5>
+      </a>
+    </div>
+  </a>
 
-            <!-- comentarios -->
-            <div class="row">
-                <div class="col-md-4 text-light centrar" style="background-color: rgb(67, 101, 104);">
-                    <form action="https://formsubmit.co/alexabedoyarojas123@gmail.com" method="POST" id="miFormulario"
-                        onsubmit="return mostrarConfirmacion()">
-                        <h2 class="titulo"> ¡Sección de comentarios! </h2>
+  <a href="#urgenciasObstetricia">
+    <div class="cuadritos">
+      <a href="#urgenciasObstetricia"><i class="fa-solid fa-person-pregnant tamaño_icono"></i></a>
+      <a href="#urgenciasObstetricia">
+        <h5>Urgencias Obstetricia</h5>
+      </a>
+    </div>
+  </a>
 
-                        <i class="fa-solid fa-user nombre"></i>
-                        <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required> <br>
+  <a href="#urgenciasTraumatologia">
+    <div class="cuadritos">
+      <a href="#urgenciasTraumatologia"><i class="fa-solid fa-user-injured tamaño_icono"></i></a>
+      <a href="#urgenciasTraumatologia">
+        <h5 id="h5-traumatología">Urgencias Traumatología</h5>
+      </a>
+    </div>
+  </a>
 
-                        <i class="fa-solid fa-envelope correo"></i>
-                        <input type="email" id="correo" name="correo" placeholder="Ingrese su correo" required> <br>
+</div>
 
-                        <i class="fa-solid fa-bullhorn megafono"></i>
-                        <select name="format" id="miSelect" onchange="cambiarPlaceholder()" required>
-                            <option selected disabled>P-Q-R-S
-                            <option class="peticion" value="peticion">Petición</option>
-                            <option class="queja" value="queja">Queja</option>
-                            <option class="reclamo" value="reclamo">Reclamo</option>
-                            <option class="solicitud" value="solicitud">Solicitud</option>
-                        </select> <br>
+<div id="urgenciasGenerales" class="tituloGeneral">
+  <h2>Prevención de Urgencias Generales</h2>
+</div>
+<div class="contenedor-1">
+  <div class="imagen">
+    <img src="imágenes/deporte.jpg" alt="">
+  </div>
+  <div class="informacion">
 
-                        <i class="fa-regular fa-comment comentario"></i>
-                        <textarea id="comentario" name="comentario" rows="5" placeholder="Comentario"
-                            required></textarea> <br> <br>
-
-                        <script>
-                            function cambiarPlaceholder() {
-                                var select = document.getElementById("miSelect");
-                                var textarea = document.getElementById("comentario");
-                                var selectedOption = select.options[select.selectedIndex];
-
-                                if (selectedOption.value === "peticion") {
-                                    textarea.placeholder = "Escriba aquí su petición";
-                                }
-                                else if (selectedOption.value === "reclamo") {
-                                    textarea.placeholder = "Escriba aquí su reclamo";
-                                } else if (selectedOption.value === "queja") {
-                                    textarea.placeholder = "Escriba aquí su queja";
-                                } else if (selectedOption.value === "solicitud") {
-                                    textarea.placeholder = "Escriba aquí su solicitud";
-                                } else {
-                                    textarea.placeholder = "Comentario";
-                                }
-                            }
-
-                            function mostrarConfirmacion() {
-                                alert("¡El formulario se envió correctamente!");
-                                return true;
-                            }
-                        </script>
-                        <button type="submit" class="btn btn-primary mandar"> Enviar </button>
-                        <input type="hidden" name="_next" value="http://127.0.0.1:5502/index.html">
-                        <input type="hidden" name="_captcha" value="false">
-                    </form>
-                </div>
-
-                <div class="col-md-2 centrar" style="background-color: rgb(67, 101, 104);">
-                    <img src="imágenes/intento1.png" height="345vh">
-                </div>
+    <div class="info-general">
+      <div class="estiloVida">
+        <h5 style="color:rgb(6, 118, 166);"> <b> - Mantén un Estilo de Vida Activo: </b></h5>
+          <ul>
+            <li><b>Realiza ejercicio regularmente:</b> Se recomienda al menos 150 minutos de actividad
+              física moderada por semana.
+              Esto puede incluir caminar, nadar, andar en bicicleta o actividades aeróbicas.</li> <br>
+            <li><b>Mantén un peso saludable:</b> El sobrepeso y la obesidad aumentan el riesgo de problemas
+              de salud
+              como enfermedades cardíacas, diabetes y presión arterial alta.
+              Mantener un peso saludable es fundamental.</li>
+          </ul>
+      </div>
+      <div class="estiloVida">
+        <h5 style="color:rgb(6, 118, 166);"> <b> - Dieta Saludable: </b></h5>
+        <ul>
+          <li><b>Come una variedad de alimentos:</b> Incluye frutas, verduras, granos enteros, proteínas
+            magras
+            y productos lácteos bajos en grasa en tu dieta diaria.</li> <br>
+          <li><b>Limita la ingesta de sodio y grasas saturadas:</b> Reduce la cantidad de alimentos procesados
+            y ricos en grasas trans en tu dieta. Lee las etiquetas de los alimentos para controlar la
+            ingesta de sodio.</li>
+        </ul>
+      </div>
+      <div class="estiloVida">
+        <h5 style="color: rgb(6, 118, 166);"> <b> - Evita el Consumo Excesivo de Alcohol y Tabaco:</b> </h5>
+        <ul>
+          <li><b>Bebe con moderación:</b> Si consumes alcohol, hazlo con moderación. El exceso de alcohol
+            puede dañar el hígado y aumentar el riesgo de accidentes.</li> <br>
+          <li><b>Deja de fumar:</b> El tabaco aumenta el riesgo de enfermedades cardíacas, cáncer y
+            enfermedades respiratorias.
+            Busca ayuda para dejar de fumar si es necesario.</li>
+        </ul>
+      </div>
 
 
-                <!-- contacto -->
-                <div class="col-md-6 text-light fondoContacto" id="contact">
-                    <div class="row fila">
-                        <div class="col-md-12">
-                            <h2 class="titulo pt-1">Información de Contacto</h2>
-                            <p><strong class="letra"><i class="fa-solid fa-location-dot" style="color: #e8e8e8;"></i>
-                                    Dirección:
-                                </strong>
-                                Barrio piñalito Calle -11 Carrera - #11-43 <br> Montelíbano-Córdoba
+    </div>
+  </div>
 
-                            </p>
-                            <p><strong class="letra"><i class="fa-solid fa-phone" style="color: #e8e8e8;"></i>
-                                    Teléfono:</strong>
-                                604-342-3954</p>
-                            <p><strong class="letra"> <i class="fa-solid fa-envelope" style="color: #e8e8e8;"></i>
-                                    Email: </strong>
-                                CentroHospitalario@MontCare.com</p>
-                        </div>
-                    </div>
+</div>
 
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="redes">
-                                <a href="https://api.whatsapp.com/send?phone=3052781531" target="_blank"> <i
-                                        class="fab fa-brands fa-whatsapp tamaños wpp"></i></a>
-                                <a href="https://instagram.com/ice.cream_draws?igshid=MTRjd3RlbmNtMHYybQ=="
-                                    target="_blank"> <i class="fab fa-brands fa-instagram tamaños ig"></i></a>
-                                <a href="https://x.com/ice_cream2903?t=XOiJhroPm4P0Hyo2vaBxrg&s=09" target="_blank"> <i
-                                        class="fa-brands fa-twitter tamaños tw"></i> </a>
-                                <a href="#" target="_blank"> <i class="fa-brands fa-facebook-f tamaños fb"></i> </a>
-                                <a href="#" target="_blank"> <i class="fa-brands fa-tiktok tamaños tk"></i> </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div id="urgenciasPediatricas" class="tituloGeneral">
+  <h2>Prevención de Urgencias Pediátricas</h2>
+</div>
+<div class="contenedor-1">
+  <div class="imagen">
+    <img src="imágenes/vacunacionPediatría.jpg" alt="">
+  </div>
+  <div class="informacion">
 
+    <div class="info-general">
+      <div class="estiloVida">
+        <h5 style="color:rgb(6, 118, 166);"> <b> - Vacunación:</b> </h6>
+          <ul>
+            <li><b>Mantén el calendario de vacunación actualizado:</b>Las vacunas son esenciales para prevenir
+              enfermedades graves como sarampión, paperas, rubéola, tos
+              ferina y más.</li>
+          </ul>
+      </div>
+      <div class="estiloVida">
+        <h5 style="color:rgb(6, 118, 166);"> <b> - Seguridad en el Hogar:</b> </h5>
+        <ul>
+          <li><b>Asegura el hogar:</b>Instala cercas alrededor de piscinas, asegura muebles
+            peligrosos, guarda objetos afilados y productos químicos fuera del alcance de los niños.</li> <br>
+          <li><b>Educación en Primeros Auxilios: </b> Aprende técnicas básicas de primeros auxilios para saber cómo
+            reaccionar
+            en caso de lesiones menores.</li> <br>
+          <li><b>Educación Sobre el Uso de Dispositivos Electrónicos:</b> Limita el tiempo de pantalla de tus hijos y
+            enséñales
+            a usar dispositivos electrónicos de manera segura.</li>
+        </ul>
+      </div>
+      <div class="estiloVida">
+        <h5 style="color:rgb(6, 118, 166);"> <b> - Supervisión:</b> </h5>
+        <ul>
+          <li><b>Vigila a tus hijos de cerca: </b> Supervisa a los niños en todo momento,
+            especialmente en áreas potencialmente peligrosas, como piscinas y parques.</li>
+        </ul>
+      </div>
+
+
+    </div>
+
+  </div>
+</div>
+
+
+<div id="urgenciasObstetricia" class="tituloGeneral">
+  <h2>Prevención de Urgencias de Obstetricia y Ginecología:</h2>
+</div>
+<div class="contenedor-1">
+  <div class="imagen">
+    <img src="imágenes/recomendacionesObstetricia.jpg" alt="">
+  </div>
+  <div class="informacion">
+
+    <div class="info-general">
+      <div class="estiloVida">
+        <h5 style="color:rgb(6, 118, 166);"> <b> - Control Prenatal:</b> </h6>
+          <ul>
+            <li><b>Realiza visitas prenatales regulares:</b>El seguimiento médico durante el embarazo es esencial para
+              detectar y tratar problemas potenciales.
+              Sigue el plan de cuidado prenatal recomendado por tu médico.</li>
+          </ul>
+      </div>
+      <div class="estiloVida">
+        <h5 style="color:rgb(6, 118, 166);"> <b> - Educación Prenatal:</b> </h5>
+        <ul>
+          <li><b>Aprende sobre los signos de alarma:</b>Conoce los síntomas que podrían indicar una emergencia
+            obstétrica,
+            como sangrado vaginal abundante, contracciones prematuras o disminución de la actividad fetal.</li>
+        </ul>
+      </div>
+      <div class="estiloVida">
+        <h5 style="color:rgb(6, 118, 166);"> <b> - Seguridad en el Parto:</b> </h5>
+        <ul>
+          <li><b>Elige una instalación médica adecuada: </b> Asegúrate de dar a luz en un hospital o centro médico con
+            personal y equipo capacitados para atender emergencias obstétricas.</li>
+        </ul>
+      </div>
+
+
+    </div>
+
+  </div>
+</div>
+
+
+<div id="urgenciasTraumatologia" class="tituloGeneral">
+  <h2 style="font-size: 28px;">Prevención de Urgencias de Traumatología, Rehabilitación y Quemados:</h2>
+</div>
+<div class="contenedor-1">
+  <div class="imagen">
+    <img src="imágenes/recomendacionesTraumatologiayQuemados.jpg" alt="">
+  </div>
+  <div class="informacion">
+
+    <div class="info-general">
+      <div class="estiloVida">
+        <h5 style="color:rgb(6, 118, 166);"> <b> - Seguridad en el Trabajo:</b> </h6>
+          <ul>
+            <li><b>Sigue las normas de seguridad: </b>Cumple con las normas y prácticas
+              de seguridad en tu lugar de trabajo. Usa el equipo de protección personal proporcionado.</li>
+          </ul>
+      </div>
+      <div class="estiloVida">
+        <h5 style="color:rgb(6, 118, 166);"> <b> - Prevención de Quemaduras:</b> </h5>
+        <ul>
+          <li><b>Mantén objetos calientes fuera del alcance de los niños: </b> Los niños pueden resultar quemados por
+            objetos calientes como planchas y sartenes. Manténlos fuera de su alcance.</li> <br>
+          <li><b>Ten cuidado con líquidos calientes: </b> Manipula con cuidado líquidos calientes, como café y sopas,
+            para evitar quemaduras.</li>
+        </ul>
+      </div>
+      <div class="estiloVida">
+        <h5 style="color:rgb(6, 118, 166);"> <b> - Prevención de Lesiones Deportivas:</b> </h5>
+        <ul>
+          <li><b>Practica deportes de manera segura:</b>Sigue las reglas del deporte y usa equipo
+            de protección adecuado, como cascos, protectores y rodilleras.</li>
+        </ul>
+      </div>
+
+
+
+    </div>
+
+  </div>
+</div>
+
+
+<!-- mapa, contacto y comentarios-->
+<div class="container-fluid">
+
+<!-- mapa -->
+<div class="row">
+  <div class="col-12 p-0 m-0">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1012038.5073239644!2d-76.87803499835161!3d7.760587790236882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e5b1bdbcca8e949%3A0x4915ae745046fafe!2zTW9udGVsw61iYW5v!5e0!3m2!1ses-419!2sco!4v1692743172174!5m2!1ses-419!2sco"
+      width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"> </iframe>
+  </div>
+</div>
+
+<!-- comentarios -->
+<div class="row">
+  <div class="col-md-4 text-light centrar" style="background-color: rgb(67, 101, 104);">
+    <form action="https://formsubmit.co/alexabedoyarojas123@gmail.com" method="POST" id="miFormulario"
+      onsubmit="return mostrarConfirmacion()">
+      <h2 class="titulo"> ¡Sección de comentarios! </h2>
+
+      <i class="fa-solid fa-user nombre"></i>
+      <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required> <br>
+
+      <i class="fa-solid fa-envelope correo"></i>
+      <input type="email" id="correo" name="correo" placeholder="Ingrese su correo" required> <br>
+
+      <i class="fa-solid fa-bullhorn megafono"></i>
+      <select name="format" id="miSelect" onchange="cambiarPlaceholder()" required>
+        <option selected disabled>P-Q-R-S
+        <option class="peticion" value="peticion">Petición</option>
+        <option class="queja" value="queja">Queja</option>
+        <option class="reclamo" value="reclamo">Reclamo</option>
+        <option class="solicitud" value="solicitud">Solicitud</option>
+      </select> <br>
+
+      <i class="fa-regular fa-comment comentario"></i>
+      <textarea id="comentario" name="comentario" rows="5" placeholder="Comentario" required></textarea> <br> <br>
+
+      <script>
+        function cambiarPlaceholder() {
+          var select = document.getElementById("miSelect");
+          var textarea = document.getElementById("comentario");
+          var selectedOption = select.options[select.selectedIndex];
+
+          if (selectedOption.value === "peticion") {
+            textarea.placeholder = "Escriba aquí su petición";
+          }
+          else if (selectedOption.value === "reclamo") {
+            textarea.placeholder = "Escriba aquí su reclamo";
+          } else if (selectedOption.value === "queja") {
+            textarea.placeholder = "Escriba aquí su queja";
+          } else if (selectedOption.value === "solicitud") {
+            textarea.placeholder = "Escriba aquí su solicitud";
+          } else {
+            textarea.placeholder = "Comentario";
+          }
+        }
+
+        function mostrarConfirmacion() {
+          alert("¡El formulario se envió correctamente!");
+          return true; 
+        }
+      </script>
+      <button type="submit" class="btn btn-primary mandar"> Enviar </button>
+      <input type="hidden" name="_next" value="http://127.0.0.1:5502/index.html">
+      <input type="hidden" name="_captcha" value="false">
+    </form>
+  </div>
+
+  <div class="col-md-2 centrar" style="background-color: rgb(67, 101, 104);">
+    <img src="imágenes/intento1.png" height="345vh">
+  </div>
+
+
+  <!-- contacto -->
+  <div class="col-md-6 text-light fondoContacto" id="contact">
+    <div class="row fila">
+      <div class="col-md-12">
+        <h2 class="titulo pt-1">Información de Contacto</h2>
+        <p><strong class="letra"><i class="fa-solid fa-location-dot" style="color: #e8e8e8;"></i> Dirección:
+          </strong>
+          Barrio piñalito Calle -11 Carrera - #11-43 <br> Montelíbano-Córdoba
+
+        </p>
+        <p><strong class="letra"><i class="fa-solid fa-phone" style="color: #e8e8e8;"></i> Teléfono:</strong>
+          604-342-3954</p>
+        <p><strong class="letra"> <i class="fa-solid fa-envelope" style="color: #e8e8e8;"></i> Email: </strong>
+          CentroHospitalario@MontCare.com</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="redes">
+          <a href="https://api.whatsapp.com/send?phone=3052781531" target="_blank"> <i
+              class="fab fa-brands fa-whatsapp tamaños wpp"></i></a>
+          <a href="https://instagram.com/ice.cream_draws?igshid=MTRjd3RlbmNtMHYybQ==" target="_blank"> <i class="fab fa-brands fa-instagram tamaños ig"></i></a>
+          <a href="https://x.com/ice_cream2903?t=XOiJhroPm4P0Hyo2vaBxrg&s=09" target="_blank"> <i class="fa-brands fa-twitter tamaños tw"></i> </a>
+          <a href="#" target="_blank"> <i class="fa-brands fa-facebook-f tamaños fb"></i> </a>
+          <a href="#" target="_blank"> <i class="fa-brands fa-tiktok tamaños tk"></i> </a>
         </div>
-        <hr class="lineap">
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+<hr class="lineap">
 
         <footer>
             <p>Derechos Reservados &copy; 2023 Hospital Privado MontCare</p>

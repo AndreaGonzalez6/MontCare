@@ -62,9 +62,10 @@ if (!isset($_SESSION['usuario'])) {
 
   <!-- Boxicons CSS -->
   <link flex href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/estilos.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preload" href="css/estilos.css" as="style">
-  <link rel="stylesheet" href="css/estilos.css">
+  
   
 
 </head>

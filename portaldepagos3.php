@@ -151,7 +151,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="">Cuota a pagar* </label>
-                    <label for="">310.000 COP</label>
+                    <label for="">1'500.000 COP</label>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Pagar</button>
