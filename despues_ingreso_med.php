@@ -1,6 +1,3 @@
-
-
-
 <?php
 session_start();
 
@@ -29,6 +26,7 @@ if (!isset($_SESSION['correo'])) {
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
   <link rel="shortcut icon" href="imágenes/loguito.png" type="image/x-icon" />
+  <link rel="stylesheet" href="css/tratando.css">
   <title>Centro Hospitalario MontCare</title>
   <link rel="preload" href="css/estilos.css" as="style">
   <link rel="stylesheet" href="css/estilos.css" />
@@ -106,7 +104,7 @@ if (!isset($_SESSION['correo'])) {
 
     <main>
         <section class="historial">
-            <h2>Historial Clínico de Pacientes</h2>
+            <h4>Historial Clínico de Pacientes</h4>
 
             <?php
             // Establecer la conexión con la base de datos
@@ -148,9 +146,10 @@ if (!isset($_SESSION['correo'])) {
                     color: blue;
                 }
             </style>
+
         <section class="historial-clinico">
             <!-- Aquí se mostrará el historial clínico del paciente seleccionado -->
-            <form class="form-historial" action="http://localhost/MontCare/guardar_historial.php" method="post" style="display: none;">
+          <form class="form-historial" action="http://localhost/MontCare/guardar_historial.php" method="post" style="display: none;">
             <h1>Formulario Historial Clínico</h1>
                 
                 <label for="alergias">Alergias conocidas:</label>
@@ -183,14 +182,14 @@ if (!isset($_SESSION['correo'])) {
                 <label for="referencias_especialistas">Referencias a Especialistas:</label>
                 <input type="text" id="referencias_especialistas" name="referencias_especialistas" required><br><br>
 
-                <input type="submit" value="Guardar Historial Clínico">
-            </form>
+                <button type="submit" class="btn btn-warning" value="Guardar Historial Clínico"> Guardar Historial Clínico </button>
+          </form>
         </section>
     </main>
 
     <footer>
-        <!-- Puedes agregar información adicional, enlaces o detalles del médico aquí -->
-    </footer>
+    <p>Derechos Reservados &copy; 2023 Hospital Privado MontCare</p>
+  </footer>
 
     <script>
         const pacientes = document.querySelectorAll('.paciente');

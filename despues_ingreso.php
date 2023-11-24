@@ -59,11 +59,12 @@ if (!isset($_SESSION['usuario'])) {
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
   <link rel="shortcut icon" href="imágenes/loguito.png" type="image/x-icon" />
   <title>Centro Hospitalario MontCare</title>
-  <link rel="preload" href="css/estilos.css" as="style">
-  <link rel="stylesheet" href="css/estilos.css">
+
   <!-- Boxicons CSS -->
   <link flex href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="css/estilos.css" as="style">
+  <link rel="stylesheet" href="css/estilos.css">
   
 
 </head>
@@ -377,6 +378,9 @@ if (!isset($_SESSION['usuario'])) {
           <div class="parrafos-planes">
             <p class="p-planes contenedor_price cursive_font"><i class="fa-solid fa-x margin_X" style="color: #a82610;"></i>Chat</p>
           </div>
+          <div class="parrafos-planes">
+            <p class="p-planes contenedor_price cursive_font">1 persona</p>
+          </div>
           <div class="contenedor_price">
             <a href="planes.html">
               <button type="button" class="btn btn-planes btn-secondary xd cursive_font">
@@ -429,6 +433,9 @@ if (!isset($_SESSION['usuario'])) {
           <div class="parrafos-planes">
             <p class="p-planes contenedor_price cursive_font"><i class="fa-solid fa-check margin_X" style="color: #1e7406;"></i>Chat</p>
           </div>
+          <div class="parrafos-planes">
+            <p class="p-planes contenedor_price cursive_font">1 persona</p>
+          </div>
           <div class="contenedor_price">
             <a href="planes.html">
               <button type="button" class="btn btn-planes btn-secondary xd cursive_font">
@@ -470,7 +477,7 @@ if (!isset($_SESSION['usuario'])) {
           </div>
           <div class="colita_header"></div>
           <div class="contenedor_price">
-            <p class="price">310.000 COP</p>
+            <p class="price">1'500.000 COP</p>
           </div>
           <div class="parrafos-planes">
             <p class="p-planes contenedor_price cursive_font">15 Especialidades </p>
@@ -479,7 +486,10 @@ if (!isset($_SESSION['usuario'])) {
             <p class="p-planes contenedor_price cursive_font">Consultas médicas++</p>
           </div>
           <div class="parrafos-planes">
-            <p class="p-planes contenedor_price cursive_font"><i class="fa-solid fa-check margin_X" style="color: #1e7406;"></i>Chat</i></p>
+            <p class="p-planes contenedor_price cursive_font"><i class="fa-solid fa-check margin_X" style="color: #1e7406;"></i>Incluye Chat</i></p>
+          </div>
+          <div class="parrafos-planes">
+            <p class="p-planes contenedor_price cursive_font">10 personas</p>
           </div>
           <div class="contenedor_price">
             <a href="planes.html">

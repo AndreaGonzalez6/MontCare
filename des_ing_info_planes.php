@@ -162,7 +162,7 @@ if(!isset($_SESSION['usuario'])){
       <th colspan="3" class="fondoAzul-morado">Coberturas plan complementario hospital MontCare</th>
       <td class="fondoMarino" style="color: white;"><p class="centrar-texto">Básico <br> 110.000 COP </p></td>
       <td class="fondoVerde" style="color: white;"><p class="centrar-texto">Profesional <br> 200.000 COP </p></td>
-      <td class="fondoAzul-morado"><p class="centrar-texto">Empresarial <br> 310.000 COP</p></td>
+      <td class="fondoAzul-morado"><p class="centrar-texto">Empresarial <br> 1'500.000 COP</p></td>
     </tr>
     <tr>
       <td colspan="6" rowspan="1" class="fondoEncabezado">No requiere remisión de médico general, ni autorización del PBS. 
