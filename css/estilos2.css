@@ -518,7 +518,7 @@ input:focus, textarea:focus {
     align-items: center;
     justify-content: center;
     background-color: #797c8d;
-    height: 100vh;
+    height: 101vh;
     font-family: 'Urbanist', sans-serif;
     margin-bottom: 130px;
 }
